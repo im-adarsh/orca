@@ -1,0 +1,324 @@
+{
+  "version": "1.3.1",
+  "orca": "1.4.244",
+  "testProfile": "isolated temporary profile",
+  "installation": {
+    "ok": true,
+    "key": "im-adarsh.jetbrains-themes"
+  },
+  "themes": [
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-dark",
+      "label": "Islands Dark",
+      "mode": "dark",
+      "base": "#191A1C",
+      "computed": {
+        "outer": [
+          25,
+          26,
+          28
+        ],
+        "sidebar": [
+          25,
+          26,
+          28
+        ],
+        "inner": [
+          25,
+          26,
+          28
+        ],
+        "root": "#191A1C"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-dark-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-light",
+      "label": "Islands Light",
+      "mode": "light",
+      "base": "#FFFFFF",
+      "computed": {
+        "outer": [
+          255,
+          255,
+          255
+        ],
+        "sidebar": [
+          255,
+          255,
+          255
+        ],
+        "inner": [
+          255,
+          255,
+          255
+        ],
+        "root": "#FFFFFF"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-light-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-darcula",
+      "label": "Islands Darcula",
+      "mode": "dark",
+      "base": "#2B2B2B",
+      "computed": {
+        "outer": [
+          43,
+          43,
+          43
+        ],
+        "sidebar": [
+          43,
+          43,
+          43
+        ],
+        "inner": [
+          43,
+          43,
+          43
+        ],
+        "root": "#2B2B2B"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-darcula-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/jetbrains-dark",
+      "label": "New UI Dark",
+      "mode": "dark",
+      "base": "#1E1F22",
+      "computed": {
+        "outer": [
+          30,
+          31,
+          34
+        ],
+        "sidebar": [
+          30,
+          31,
+          34
+        ],
+        "inner": [
+          30,
+          31,
+          34
+        ],
+        "root": "#1E1F22"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/jetbrains-dark-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/jetbrains-light",
+      "label": "New UI Light",
+      "mode": "light",
+      "base": "#FFFFFF",
+      "computed": {
+        "outer": [
+          255,
+          255,
+          255
+        ],
+        "sidebar": [
+          255,
+          255,
+          255
+        ],
+        "inner": [
+          255,
+          255,
+          255
+        ],
+        "root": "#FFFFFF"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/jetbrains-light-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/classic-dark",
+      "label": "Classic Dark (Darcula)",
+      "mode": "dark",
+      "base": "#2B2B2B",
+      "computed": {
+        "outer": [
+          43,
+          43,
+          43
+        ],
+        "sidebar": [
+          43,
+          43,
+          43
+        ],
+        "inner": [
+          43,
+          43,
+          43
+        ],
+        "root": "#2B2B2B"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/classic-dark-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/classic-light",
+      "label": "Classic Light",
+      "mode": "light",
+      "base": "#FFFFFF",
+      "computed": {
+        "outer": [
+          255,
+          255,
+          255
+        ],
+        "sidebar": [
+          255,
+          255,
+          255
+        ],
+        "inner": [
+          255,
+          255,
+          255
+        ],
+        "root": "#FFFFFF"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/classic-light-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/high-contrast",
+      "label": "High Contrast",
+      "mode": "dark",
+      "base": "#000000",
+      "computed": {
+        "outer": [
+          0,
+          0,
+          0
+        ],
+        "sidebar": [
+          0,
+          0,
+          0
+        ],
+        "inner": [
+          0,
+          0,
+          0
+        ],
+        "root": "#000000"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/high-contrast-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/matte",
+      "label": "Matte",
+      "mode": "light",
+      "base": "#E4E1DA",
+      "computed": {
+        "outer": [
+          228,
+          225,
+          218
+        ],
+        "sidebar": [
+          228,
+          225,
+          218
+        ],
+        "inner": [
+          228,
+          225,
+          218
+        ],
+        "root": "#E4E1DA"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/matte-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/graphite",
+      "label": "Graphite",
+      "mode": "dark",
+      "base": "#2D3035",
+      "computed": {
+        "outer": [
+          45,
+          48,
+          53
+        ],
+        "sidebar": [
+          45,
+          48,
+          53
+        ],
+        "inner": [
+          45,
+          48,
+          53
+        ],
+        "root": "#2D3035"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/graphite-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/paper",
+      "label": "Paper",
+      "mode": "light",
+      "base": "#FAF6EE",
+      "computed": {
+        "outer": [
+          250,
+          246,
+          238
+        ],
+        "sidebar": [
+          250,
+          246,
+          238
+        ],
+        "inner": [
+          250,
+          246,
+          238
+        ],
+        "root": "#FAF6EE"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/paper-terminal"
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/slate",
+      "label": "Slate",
+      "mode": "dark",
+      "base": "#2A3541",
+      "computed": {
+        "outer": [
+          42,
+          53,
+          65
+        ],
+        "sidebar": [
+          42,
+          53,
+          65
+        ],
+        "inner": [
+          42,
+          53,
+          65
+        ],
+        "root": "#2A3541"
+      },
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/slate-terminal"
+    }
+  ],
+  "method": "Actual Settings screen; source-over background compositing compared outer, inner bg-card/50 panels and navigation. All root tokens and persisted terminal pairing were checked. No terminal process launched."
+}

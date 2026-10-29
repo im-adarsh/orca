@@ -6,7 +6,7 @@ Validated against the installed Orca 1.4.244 macOS build. This covers static che
 
 Orca's document-theme renderer discards token pairs with less than 4.5:1 text contrast and focus rings with less than 2:1 contrast. Rejected pairs fall back to built-in styling. The 1.1.0 JetBrains Dark palette retained only 31/37 tokens; JetBrains Light retained 30/37, including losing its background. Parsing the JSON did not catch this renderer behavior.
 
-The 1.3.0 palettes pass all 15 renderer text pairs, all three ring pairs, and the host's actual filtering function: 37/37 tokens retained for every palette. Tests also enforce cohesive dark/light surfaces, exact editor/terminal background matches, cursor and selection readability, and complete ANSI palettes.
+The 1.3.1 palettes pass all 15 renderer text pairs, all three ring pairs, and the host's actual filtering function: 37/37 tokens retained for every palette. Tests also enforce cohesive dark/light surfaces, exact editor/terminal background matches, cursor and selection readability, and complete ANSI palettes.
 
 ## Repeatable checks
 
@@ -50,3 +50,16 @@ The published 1.2.0 marketplace fetched the index separately from an SSH plugin 
 ## Published HTTPS release check
 
 After publishing tag `v1.3.0`, the temporary Orca instance refreshed the HTTPS marketplace, fetched the pinned release, prepared its real review, installed it through `installMarketplacePlugin`, and approved its current consent fingerprint. The host reported version 1.3.0 with marketplace provenance, no pending reconsent, all twelve theme pairs, and the installed sandbox panel correctly inherited the selected Slate palette. [Published installation results](marketplace-install-verification.json) retain the resolved commit and content hash. The dedicated test instance was then closed.
+
+
+## Version 1.3.1 consistent surfaces
+
+All twelve palettes now set background, card, popover, sidebar, worktree-sidebar, editor-surface, and terminal background to the same per-theme base. Controls, selections, and semantic colors retain contrast. Islands Dark uses #191A1C, the inner surface preferred in the supplied screenshot. Family base and exact surface-equality assertions were first run against 1.3.0 and failed, then passed after the palettes were changed.
+
+Focused REA Evidence `ev_a391772632664fd12096aa1f143aeb181fa090071adfe121eda315aa481efb4c` explains the original Settings split: the shell uses background, navigation uses worktree-sidebar, and inner panels blend card at 50% over their parent. Four bounded verbatim shipped-code excerpts parsed completely; excluded imports keep the application graph partial. [Provenance and limits](surface-consistency-rea.json) retain source hashes and offsets. REA did not execute the app or apply settings.
+
+A separate Orca 1.4.244 test profile installed and approved the clean 1.3.1 package. Every theme was selected on the actual Appearance screen. Browser Canvas source-over compositing of the real computed CSS confirmed equal outer, inner and sidebar colors for every theme; all 37 root tokens matched the package, and the paired terminal selection persisted. Canvas composited ancestor colors before readback to avoid intermediate alpha-rounding errors. [Results for all twelve themes](surface-consistency-verification.json) and actual Settings screenshots for [Islands Dark](../previews/islands-dark-settings.png) and [Islands Light](../previews/islands-light-settings.png) record this check. No terminal process was launched.
+
+The browser preview check also compares all seven representative surfaces for every palette and uses the actual panel token allowlist. All twelve startup selections and narrow sandbox previews passed. Token and host-schema checks pass for all twelve pairs.
+
+The personal profile was inspected read-only. It still used tinted sidebar styling and 30% inactive-pane opacity; those host overrides can change the rendered result. The inspected tint helper overrides sidebar CSS variables, while inactive opacity affects the entire terminal container. Use Default sidebar appearance and 100% active/inactive/background opacity. The marketplace cannot write these global settings. Applying them to the personal app was unavailable because macOS Accessibility permission for Orca Computer Use was not granted. Security dialogs, semantic badges, and terminal programs' explicit colors remain host/program controlled.

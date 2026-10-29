@@ -1,6 +1,6 @@
 # JetBrains UI compatibility
 
-This marketplace installs supported Orca app/terminal palettes and navigation helpers. It does not patch Orca's binary or inject global CSS.
+This marketplace installs supported Orca app/terminal palettes and navigation helpers. Version 1.3.1 deliberately unifies every major surface with its editor/terminal base; it preserves family accents rather than reproducing JetBrains chrome contrast. It does not patch Orca's binary or inject global CSS.
 
 | JetBrains feature | Marketplace support |
 |---|---|

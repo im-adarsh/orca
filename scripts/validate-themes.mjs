@@ -47,15 +47,15 @@ check(manifest.publisher === 'im-adarsh' && manifest.id === 'jetbrains-themes', 
 const apps = manifest.contributes.themes;
 const terminals = manifest.contributes.terminalThemes;
 check(apps.length === terminals.length && apps.length >= 6, 'Every app theme needs a terminal pair');
-// Family anchors prevent another accidental substitution of Darcula for New UI.
+// Family base anchors preserve Darcula/New UI identity while main surfaces stay uniform.
 const anchors = {
-  'jetbrains-dark': ['dark', '#2B2D30', '#1E1F22'],
-  'jetbrains-light': ['light', '#F7F8FA', '#FFFFFF'],
-  'classic-dark': ['dark', '#3C3F41', '#2B2B2B'],
-  'classic-light': ['light', '#F2F2F2', '#FFFFFF'],
-  'islands-dark': ['dark', '#26282C', '#191A1C'],
-  'islands-light': ['light', '#E9EAEE', '#FFFFFF'],
-  'islands-darcula': ['dark', '#3C3F41', '#2B2B2B'],
+  'jetbrains-dark': ['dark', '#1E1F22', '#1E1F22'],
+  'jetbrains-light': ['light', '#FFFFFF', '#FFFFFF'],
+  'classic-dark': ['dark', '#2B2B2B', '#2B2B2B'],
+  'classic-light': ['light', '#FFFFFF', '#FFFFFF'],
+  'islands-dark': ['dark', '#191A1C', '#191A1C'],
+  'islands-light': ['light', '#FFFFFF', '#FFFFFF'],
+  'islands-darcula': ['dark', '#2B2B2B', '#2B2B2B'],
   'high-contrast': ['dark', '#000000', '#000000']
 };
 for (const [id, [base, background, editor]] of Object.entries(anchors)) {
@@ -64,7 +64,7 @@ for (const [id, [base, background, editor]] of Object.entries(anchors)) {
   if (entry) {
     const app = load(entry.path);
     check(app.base === base && app.tokens['--background'] === background && app.tokens['--editor-surface'] === editor,
-      `${id}: preserve source family surfaces`);
+      `${id}: preserve family base surfaces`);
   }
 }
 check(new Set([...apps, ...terminals].map(v => v.id)).size === apps.length + terminals.length, 'Theme IDs must be unique');
@@ -85,6 +85,7 @@ for (const entry of apps) {
   const surfaces = ['background', 'editor-surface', 'card', 'popover', 'sidebar', 'worktree-sidebar'];
   for (const key of surfaces) {
     const value = t[`--${key}`];
+    check(value === t['--editor-surface'], `${entry.label}: ${key} must match the inner/editor/terminal surface`);
     check(app.base === 'light' ? luminance(value) > 0.45 : luminance(value) < 0.16,
       `${entry.label}: ${key} must stay within a cohesive ${app.base} surface range`);
   }

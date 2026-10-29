@@ -1,12 +1,12 @@
 {
   "base": "dark",
   "tokens": {
-    "--background": "#26282C",
+    "--background": "#191A1C",
     "--editor-surface": "#191A1C",
     "--foreground": "#D1D3D9",
     "--card": "#191A1C",
     "--card-foreground": "#D1D3D9",
-    "--popover": "#26282C",
+    "--popover": "#191A1C",
     "--popover-foreground": "#D1D3D9",
     "--primary": "#3871E1",
     "--primary-foreground": "#FFFFFF",

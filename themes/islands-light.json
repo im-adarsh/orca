@@ -1,10 +1,10 @@
 {
   "base": "light",
   "tokens": {
-    "--background": "#E9EAEE",
+    "--background": "#FFFFFF",
     "--editor-surface": "#FFFFFF",
     "--foreground": "#000000",
-    "--card": "#F7F8F9",
+    "--card": "#FFFFFF",
     "--card-foreground": "#000000",
     "--popover": "#FFFFFF",
     "--popover-foreground": "#000000",

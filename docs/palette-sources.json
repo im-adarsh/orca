@@ -53,5 +53,5 @@
       "sha256": "e88dae01b2234c4b13fe50fbe328f076b6e80489b8eb343c78e529df9e4efa97"
     }
   ],
-  "mapping": "Source surface values retained; text and accent pairs adapted only where required by the Orca contrast filter. ANSI colors are terminal adaptations, not a Go syntax scheme."
+  "mapping": "JetBrains editor/console base values retained. App chrome, cards, popovers, sidebars, editor and terminal deliberately share that base for consistency. Controls and selections retain tonal contrast. Text/accent pairs are adapted to Orca contrast rules; ANSI colors are terminal adaptations, not a Go syntax scheme."
 }

@@ -11,9 +11,9 @@ Requires **Orca 1.4.244 or newer**. In **Settings → Plugins → Marketplace so
 - **Git URL:** `https://github.com/im-adarsh/orca.git`
 - **Git ref:** `main`
 
-Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.3.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
+Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.3.1`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
 
-Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.3.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
+Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.3.1`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
 
 If Install says “Could not prepare this plugin for review,” follow [the installation troubleshooting guide](docs/install-troubleshooting.md).
 
@@ -21,13 +21,15 @@ If Install says “Could not prepare this plugin for review,” follow [the inst
 
 | Family | Dark | Light | Character |
 |---|---|---|---|
-| Islands | Islands Dark; Islands Darcula | Islands Light | Deep neutral surfaces or Darcula, blue selections, distinct tool areas |
+| Islands | Islands Dark; Islands Darcula | Islands Light | Deep neutral or Darcula surfaces with blue selections |
 | New UI | New UI Dark | New UI Light | GoLand's modern charcoal editor and cool light counterpart |
-| Classic | Classic Dark (Darcula) | Classic Light | Traditional Darcula charcoal or neutral gray chrome and a white editor |
+| Classic | Classic Dark (Darcula) | Classic Light | Traditional Darcula charcoal or white surfaces with classic blue accents |
 | Accessibility | High Contrast | — | Deliberate black surfaces, white text, cyan focus |
 | Matte alternatives | Graphite; Slate | Matte; Paper | Amber charcoal, blue-gray, stone/sage, and ivory |
 
-New UI Dark uses `#2B2D30` chrome and `#1E1F22` editor/terminal. Islands Dark uses `#26282C` chrome and `#191A1C` editor/terminal. Classic Dark keeps `#3C3F41` chrome and `#2B2B2B` editor/terminal. Existing theme IDs are preserved: `jetbrains-dark` and `jetbrains-light` now explicitly display as New UI Dark and New UI Light.
+Each theme uses one base across app chrome, settings panels, popovers, sidebars, editor, and terminal. Islands Dark uses the inner-panel `#191A1C` throughout; New UI Dark uses `#1E1F22`; Classic Dark and Islands Darcula use `#2B2B2B`. Light JetBrains families use white throughout. Matte, Graphite, Paper, and Slate each use their own editor/terminal base across all major surfaces. Controls, selections, and focus indicators retain subtle contrast. Existing theme IDs are preserved: `jetbrains-dark` and `jetbrains-light` now explicitly display as New UI Dark and New UI Light.
+
+[Actual Islands Dark Settings screenshot](previews/islands-dark-settings.png) · [Islands Light Settings screenshot](previews/islands-light-settings.png)
 
 Each pair defines all **37 public app tokens** and **22 terminal colors**. Editor and terminal backgrounds match exactly. Normal dark families remain dark throughout; light families remain light throughout.
 
@@ -45,7 +47,7 @@ After updating, reselect the app and terminal themes to refresh saved colors. St
 
 ## What matches JetBrains
 
-The palettes use official JetBrains surface colors from [Islands](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/islands), [New UI](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/expUI), [Darcula](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json), and [Classic Light](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/intellijlaf.theme.json). [Source identities and hashes](docs/palette-sources.json) record the inspected definitions. Some text and accent colors are adapted to Orca's enforced contrast thresholds. ANSI colors are terminal adaptations, not imported Go syntax highlighting.
+The palettes adapt official JetBrains editor/console colors from [Islands](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/islands), [New UI](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/expUI), [Darcula](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json), and [Classic Light](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/intellijlaf.theme.json). [Source identities and hashes](docs/palette-sources.json) record the inspected definitions. App surfaces are deliberately unified for consistency rather than copying JetBrains chrome/background differences. Some text and accent colors are adapted to Orca's enforced contrast thresholds. ANSI colors are terminal adaptations, not imported Go syntax highlighting.
 
 **These are palette adaptations.** Orca's public theme API cannot install Islands rounded pane geometry, Classic toolbars, global icon sets, global fonts, or GoLand `.icls` editor schemes. Its security dialogs deliberately use built-in colors. Fonts and host preferences must be selected separately. The [UI compatibility notes](docs/ui-compatibility.md) explain the scope of each family.
 
@@ -70,6 +72,6 @@ npm ci
 npm run test:browser
 ```
 
-The dependency-free validator checks contrast, complete pairs, modes, source family anchors, and portable release URLs. Host verification executes the installed Orca color filter and validates its schemas. Browser tests check every palette, the actual host CSP wrapper, responsive widths, and initial theme matching. See [verification details and limits](docs/verification.md).
+The dependency-free validator checks contrast, complete pairs, modes, family base anchors and equal major surfaces, and portable release URLs. Host verification executes the installed Orca color filter and validates its schemas. Browser tests check every palette, the actual host CSP wrapper, responsive widths, and initial theme matching. See [verification details and limits](docs/verification.md).
 
 The repository contains the installable manifests, `themes/`, `setup/`, the `presets/` checklist, source/verification notes in `docs/`, validators in `scripts/`, and palette previews in `previews/`.

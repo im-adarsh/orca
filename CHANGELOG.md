@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.1
+
+- Unify major app, settings, popover, sidebar, editor and terminal surfaces for every palette using its existing editor/terminal base. Islands Dark now uses the preferred inner-panel #191A1C throughout.
+- Retain contrast on controls, active selections, focus rings and semantic colors.
+- Enforce exact surface equality for every registered theme and verify rendered surfaces rather than permitting a range of mismatched fills.
+- Document the host sidebar tint and inactive-pane opacity overrides that can change the result.
+
 ## 1.3.0
 
 - Add distinct Islands Dark/Light/Darcula, Classic Dark/Light, and High Contrast palettes with matched terminals.

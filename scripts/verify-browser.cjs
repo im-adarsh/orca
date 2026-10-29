@@ -25,11 +25,12 @@ const fs=require('fs'),path=require('path');
    const filtered=window.hostFilter(p.tokens,p.tokens,probe);
    const editor=getComputedStyle(document.querySelector('.editor')).backgroundColor;
    const terminal=getComputedStyle(document.querySelector('.terminal')).backgroundColor;
-   return {tokens:Object.keys(filtered).length,editor,terminal,theme:document.documentElement.dataset.theme,mode:getComputedStyle(document.documentElement).colorScheme};
+   const surfaces=['body','.titlebar','.files','.editor','.terminal','.footer','.card'].map(selector=>getComputedStyle(document.querySelector(selector)).backgroundColor);
+   return {tokens:Object.keys(filtered).length,editor,terminal,surfaces,theme:document.documentElement.dataset.theme,mode:getComputedStyle(document.documentElement).colorScheme};
   });
-  if(result.tokens!==37||result.editor!==result.terminal||result.theme!==id)throw Error(name+JSON.stringify(result));
+  if(result.tokens!==37||new Set(result.surfaces).size!==1||result.theme!==id)throw Error(name+JSON.stringify(result));
   const png=await page.locator('.workspace').screenshot();cards.push({name,png:png.toString('base64')});
-  console.log(name+': browser retained all 37 tokens; editor and terminal backgrounds match');
+  console.log(name+': browser retained all 37 tokens; all seven preview surfaces match');
  }
  for(const width of [360,768]){await page.setViewportSize({width,height:1000});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Horizontal overflow at '+width);}
  await page.setViewportSize({width:1280,height:1100});

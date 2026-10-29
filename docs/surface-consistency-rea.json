@@ -1,0 +1,55 @@
+{
+  "purpose": "Bounded inert extracts of shipped Orca 1.4.244 renderer code for uniform Settings surfaces investigation. Snippets copied verbatim; dependencies not included and code not executed.",
+  "extracts": [
+    {
+      "extract": "settings-section.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/renderer/assets/Settings-B1mW_vdO.js",
+      "original_sha256": "084b66db328737b50e734414686d9bfcaca5c7257b47965bb2351ae1d06f0049",
+      "start_character": 49822,
+      "end_character_exclusive": 51015,
+      "start_byte": 49822,
+      "end_byte_exclusive": 51015,
+      "extract_sha256": "79138d434fdd62640d40de646b5ed98b6a13c1f78e7d4181facfb1a9faff90cd"
+    },
+    {
+      "extract": "settings-navigation.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/renderer/assets/Settings-B1mW_vdO.js",
+      "original_sha256": "084b66db328737b50e734414686d9bfcaca5c7257b47965bb2351ae1d06f0049",
+      "start_character": 53430,
+      "end_character_exclusive": 57371,
+      "start_byte": 53430,
+      "end_byte_exclusive": 57371,
+      "extract_sha256": "5f0aa3d9bdc026214aaf8cf7e7625be7f20f43cf471316067a2f6db82205e396"
+    },
+    {
+      "extract": "settings-shell.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/renderer/assets/Settings-B1mW_vdO.js",
+      "original_sha256": "084b66db328737b50e734414686d9bfcaca5c7257b47965bb2351ae1d06f0049",
+      "start_character": 1206284,
+      "end_character_exclusive": 1208097,
+      "start_byte": 1206284,
+      "end_byte_exclusive": 1208097,
+      "extract_sha256": "75350cd435ee01e80640bd253c00abf5039f982cace482806ad1d6c4fd82e11e"
+    },
+    {
+      "extract": "sidebar-appearance.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/renderer/assets/App-DeLl1XOw.js",
+      "original_sha256": "0ccec8db69b65b305325ece9ef76e28b1bd46c191e2670f3ebfbcf15f255c794",
+      "start_character": 1389688,
+      "end_character_exclusive": 1391188,
+      "start_byte": 1389688,
+      "end_byte_exclusive": 1391188,
+      "extract_sha256": "f179a0ee0435b453d58dab7e35d03ec32f51028c96d1419d84d5fd112e78f676"
+    },
+    {
+      "extract": "card-rule.css",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/renderer/assets/client-B5nW_NEB.css",
+      "original_sha256": "e0c58f72b8325a17f6a8bcb52596d2efb132600a2ee080e43dcd823666ab546d",
+      "start_character": 120893,
+      "end_character_exclusive": 121062
+    }
+  ],
+  "evidenceId": "ev_a391772632664fd12096aa1f143aeb181fa090071adfe121eda315aa481efb4c",
+  "evidenceSha256": "037a8dd596de658b004658169eb9330a43e0a8a8ee8fadff2cbefe49c4ec19be",
+  "limitations": "Static analysis of four bounded verbatim excerpts. Imported dependencies were excluded, so application graph is partial; no runtime code executed by REA."
+}
