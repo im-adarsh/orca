@@ -5,7 +5,7 @@
   "name": "JetBrains Dark and Light for Orca",
   "version": "1.0.0",
   "description": "JetBrains Dark and Light palettes for the Orca interface and terminal.",
-  "repository": "https://github.com/im-adarsh/orca-themes",
+  "repository": "https://github.com/im-adarsh/orca",
   "engines": { "orca": ">=1.4.244" },
   "pluginApi": 1,
   "contributes": {
