@@ -57,3 +57,5 @@ The schema verifier checks those hashes before validation. It does not claim run
 REA Evidence `ev_88e8123a4432a58f9390d65ca8542020060bf68898c6ae29c73b485c328f7143` records the bounded shipped agent/activation contracts. [Source identities and limits](developer-kit-rea.json) are retained. [Real-host panel installation results](developer-kit-runtime.json) distinguish actual host checks from sandbox bridge simulation. No agent was launched or terminal text written during the real-host probe.
 
 [Compatibility observations](developer-compatibility.json) record the host/release gate. Native Excalidraw installation remains blocked by that gate.
+
+The published legacy-compatible 1.4.0 tag was fetched over HTTPS, reviewed, installed and approved in the isolated 1.4.244 test profile. All three panels were registered and the extra permissions were reviewed. [Published installation result](developer-published-install.json). The personal Orca profile was not changed.

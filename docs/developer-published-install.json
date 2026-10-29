@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-30",
+  "host": "1.4.244",
+  "profile": "isolated temporary profile",
+  "version": "1.4.0",
+  "source": {
+    "kind": "marketplace",
+    "reference": "https://github.com/im-adarsh/orca.git",
+    "resolvedCommit": "6321edaaa2d0bca256894443b7c3058b3ce7f927",
+    "contentHash": "39b718f412d8c59d5ae8fda706ea29cbfc4290a456ce1da69f955db7c139d0f0",
+    "marketplace": {
+      "reference": "https://github.com/im-adarsh/orca.git",
+      "resolvedCommit": "f1600e4de72c0273288e4cc0e06a199589426087"
+    }
+  },
+  "panels": [
+    "GoLand Setup",
+    "Developer Commands",
+    "Agent Profiles"
+  ],
+  "capabilities": [
+    {
+      "kind": "workspace:read",
+      "description": "Read the name, branch, and terminal list of your focused worktree"
+    },
+    {
+      "kind": "terminal:send",
+      "description": "Type text into a terminal you can see (always a specific terminal)"
+    }
+  ],
+  "needsReconsent": false,
+  "excalidrawNativeInstalled": false,
+  "nativeIconsInstalled": false,
+  "nativeVersionGate": ">=1.4.245"
+}
