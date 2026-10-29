@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "name": "GoLand Style",
+  "format": "Reference checklist; this is not an Orca settings import file.",
+  "appearance": {
+    "ideFont": "Inter Variable (or Inter, depending on the installed font name)",
+    "leftSidebarAppearance": "Default",
+    "windowBlur": false
+  },
+  "editor": {
+    "fontFamily": "JetBrains Mono",
+    "minimap": false,
+    "wordWrap": true
+  },
+  "terminal": {
+    "fontFamily": "JetBrains Mono",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "boldFontWeight": 700,
+    "lineHeight": 1.2,
+    "backgroundOpacity": 1,
+    "activePaneOpacity": 1,
+    "inactivePaneOpacity": 1,
+    "windowBlur": false,
+    "cursorStyle": "bar",
+    "cursorBlink": true,
+    "cursorOpacity": 1,
+    "ligatures": "auto",
+    "separateLightTheme": true,
+    "colorOverrides": "Clear overrides for both dark and light modes"
+  },
+  "chat": {
+    "matchTerminalInterface": true,
+    "width": "wide",
+    "contrast": 100
+  },
+  "themePairs": [
+    {
+      "app": "JetBrains Dark",
+      "terminal": "JetBrains Dark",
+      "mode": "dark"
+    },
+    {
+      "app": "JetBrains Light",
+      "terminal": "JetBrains Light",
+      "mode": "light"
+    },
+    {
+      "app": "Matte",
+      "terminal": "Matte",
+      "mode": "light"
+    },
+    {
+      "app": "Graphite",
+      "terminal": "Graphite",
+      "mode": "dark"
+    },
+    {
+      "app": "Paper",
+      "terminal": "Paper",
+      "mode": "light"
+    },
+    {
+      "app": "Slate",
+      "terminal": "Slate",
+      "mode": "dark"
+    }
+  ],
+  "shortcuts": {
+    "CmdOrCtrl+Alt+1": "Project Window",
+    "CmdOrCtrl+Alt+9": "Version Control",
+    "CmdOrCtrl+Alt+Shift+F": "Find in Project"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "orca-theme-collection",
+  "private": true,
+  "version": "1.2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/validate-themes.mjs",
+    "verify:orca": "node scripts/verify-orca.mjs",
+    "test:browser": "node scripts/verify-browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Adarsh Orca Marketplace",
+  "owner": "im-adarsh",
+  "plugins": [
+    {
+      "id": "im-adarsh.jetbrains-themes",
+      "source": {
+        "kind": "git",
+        "url": "ssh://git@github.com/im-adarsh/orca.git",
+        "ref": "v1.2.0"
+      },
+      "description": "Six cohesive themes, a GoLand appearance setup guide, reusable settings reference, and navigation shortcuts.",
+      "categories": [
+        "themes",
+        "appearance",
+        "keybindings"
+      ]
+    }
+  ]
+}

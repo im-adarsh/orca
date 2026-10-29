@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
-  "name": "Orca Theme Collection",
-  "version": "1.1.0",
-  "description": "JetBrains Dark and Light, plus independent Matte, Graphite, Paper, and Slate app and terminal palettes.",
+  "name": "GoLand Style for Orca",
+  "version": "1.2.0",
+  "description": "Six cohesive app and terminal themes with a reusable GoLand-style appearance setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
     "orca": ">=1.4.244"
@@ -73,6 +73,51 @@
         "id": "slate-terminal",
         "label": "Slate",
         "path": "themes/slate-terminal.json"
+      }
+    ],
+    "panels": [
+      {
+        "id": "goland-setup",
+        "title": "GoLand Setup",
+        "icon": "Palette",
+        "entry": "setup/index.html"
+      }
+    ],
+    "commands": [
+      {
+        "id": "project-window",
+        "title": "GoLand Style: Project Window",
+        "context": "global",
+        "action": "sidebar.explorer.toggle"
+      },
+      {
+        "id": "version-control",
+        "title": "GoLand Style: Version Control",
+        "context": "global",
+        "action": "sidebar.sourceControl.toggle"
+      },
+      {
+        "id": "find-in-project",
+        "title": "GoLand Style: Find in Project",
+        "context": "global",
+        "action": "sidebar.search.toggle"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "project-window",
+        "key": "Mod+Alt+1",
+        "when": "global"
+      },
+      {
+        "command": "version-control",
+        "key": "Mod+Alt+9",
+        "when": "global"
+      },
+      {
+        "command": "find-in-project",
+        "key": "Mod+Alt+Shift+F",
+        "when": "global"
       }
     ]
   },

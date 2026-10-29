@@ -1,24 +1,62 @@
-# GoLand appearance setup
+# GoLand-style setup on each laptop
 
-Use the JetBrains Dark or Light app theme and its matching terminal theme, then set the fonts separately in Orca.
+## Install the collection
 
-## Fonts
+Add marketplace source `ssh://git@github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The release is pinned to tag `v1.2.0`. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
 
-JetBrains documents **Inter, 13 pt** as its IDE interface font and **JetBrains Mono** as its editor font. See the [official typography guide](https://plugins.jetbrains.com/docs/intellij/typography.html). Orca uses CSS pixels, so size numbers do not guarantee the same physical appearance as Java desktop font settings.
+## Use matching app and terminal modes
 
-1. Install [Inter](https://github.com/rsms/inter) and [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) on your computer if needed. Restart Orca if newly installed fonts are missing from its font suggestions.
-2. In **Settings → Appearance → IDE Font**, enter `Inter`.
-3. Search Settings for **Editor Font Family** and enter `JetBrains Mono`. This controls file editors and diff views.
-4. In **Settings → Terminal**, choose `JetBrains Mono` as the font family.
-5. For a starting terminal profile, use **Font Size: 14**, **Font Weight: 400**, **Bold Font Weight: 700**, and **Line Height: 1.2**. These are this project's recommended Orca settings, not a claim about GoLand's defaults. Adjust size and line height to match your GoLand installation.
-6. Set **Font Ligatures** to your preference. Choose **Off** for separate characters or **On** to use JetBrains Mono's ligatures.
+Orca selects app and terminal themes independently. Changing the app theme alone does not switch the saved terminal palette.
 
-Fonts are machine settings. Orca's theme plugin schema accepts color tokens only; it cannot install fonts or select them for the user.
+- Dark slot: JetBrains Dark, Graphite, or Slate.
+- Light slot: JetBrains Light, Matte, or Paper.
 
-## Color scheme
+Enable separate light/dark terminal themes. Select the same theme name for the app and for the active terminal slot. After an update, reselect the terminal theme to refresh its saved colors.
 
-Select **JetBrains Dark** or **JetBrains Light** in Appearance, and the matching palette in Terminal. The plugin maps JetBrains' UI palette into Orca's supported app and ANSI terminal color roles.
+## Remove blending and old overrides
 
-An editor color scheme also specifies syntax colors for keywords, strings, comments, numbers, and language-specific symbols. Orca's current plugin theme API does not expose those syntax rules or import GoLand `.icls` schemes. Selecting this plugin does not reproduce GoLand's Go syntax highlighting. Terminal ANSI colors also do not control semantic syntax colors chosen by individual terminal applications.
+Set these in Orca's Appearance and Terminal settings:
 
-The app palette and font family can resemble GoLand closely within these supported settings. Exact GoLand syntax highlighting requires editor theme support in Orca itself.
+| Setting | Value |
+|---|---|
+| Left Sidebar Appearance | Default |
+| Background Opacity | 100% |
+| Active Pane Opacity | 100% |
+| Inactive Pane Opacity | 100% |
+| Window Blur | Off |
+| Color Overrides | Clear values in both light and dark modes |
+
+A blank override field inherits the selected theme. Native color input swatches can appear black when the field is empty; do not fill every field with black.
+
+## Fonts and spacing
+
+JetBrains documents Inter as its interface font and JetBrains Mono as its editor font: [official typography guide](https://plugins.jetbrains.com/docs/intellij/typography.html).
+
+Install [Inter](https://github.com/rsms/inter) and [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) through their official packages. On macOS, install the font files in Font Book for the current user. On Windows, use the font file's Install action; on Linux, use your desktop's font manager or user font directory. Restart Orca if newly installed fonts are missing.
+
+| Orca setting | Suggested starting value |
+|---|---|
+| IDE Font | Inter Variable or Inter, as named by your installed font |
+| Editor Font Family | JetBrains Mono |
+| Terminal Font | JetBrains Mono |
+| Terminal Font Size | 14 px |
+| Font Weight / Bold Font Weight | 400 / 700 |
+| Line Height | 1.2 |
+| Cursor / Cursor Blink | Bar / On |
+| Cursor Opacity | 100% |
+| Font Ligatures | Auto, or your preference |
+| Editor Minimap / Word Wrap | Off / On |
+
+These are suggested Orca values; CSS pixel sizes do not guarantee identical physical sizing to GoLand's desktop settings.
+
+## Chat and navigation
+
+For structured Chat UI, enable Match terminal interface, use Wide width and 100% contrast. Terminal-based agent chat already uses its terminal surface, although the agent can choose its own text colors.
+
+The plugin supplies Mod+Alt+1 for Project, Mod+Alt+9 for Version Control, and Mod+Alt+Shift+F for Find in Project. Mod means Command on macOS and Control on Windows/Linux. Review conflicts and remap under Settings → Shortcuts.
+
+## What travels with the marketplace
+
+The theme files, navigation commands/shortcuts, and setup panel install together. Fonts must exist on each operating system. Host preferences remain separate. `presets/goland-style.json` is a reusable reference checklist; it is not accepted by Orca as a global-settings import.
+
+Orca's built-in security styling remains on plugin installation and consent dialogs. The current theme API also does not expose Go syntax highlighting, global padding, icon themes, or GoLand `.icls` imports.

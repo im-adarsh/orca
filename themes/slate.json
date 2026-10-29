@@ -2,7 +2,7 @@
   "base": "dark",
   "tokens": {
     "--background": "#2A3541",
-    "--editor-surface": "#222C37",
+    "--editor-surface": "#2A3541",
     "--foreground": "#DEE7EF",
     "--card": "#323F4D",
     "--card-foreground": "#DEE7EF",

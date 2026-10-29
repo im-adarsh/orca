@@ -1,47 +1,81 @@
-# Orca Theme Collection
+# Adarsh Orca Marketplace
 
-Six independent color themes for the [Orca](https://github.com/stablyai/orca) app, each with a matching terminal palette. This is a declarative Orca plugin; it runs no code and requests no capabilities.
+A reusable GoLand-style setup for Orca: six complete app/terminal palette pairs, a setup panel, navigation commands, and a laptop settings reference.
 
-## Variants
+![Six matched palettes](previews/themes.png)
 
-![Theme palette previews](previews/themes.svg)
+## Add the marketplace
 
-| Theme | Appearance |
+In **Settings → Plugins → Marketplace sources**, enter:
+
+- **Git URL:** `ssh://git@github.com/im-adarsh/orca.git`
+- **Git ref:** `main`
+
+Click **Add source**, then install and enable **GoLand Style for Orca**. The marketplace pins the plugin release to `v1.2.0`; Orca records its exact commit. The SSH source uses your system Git credentials. This is a personal marketplace published by `im-adarsh`.
+
+For a direct plugin install, use **Install plugin → Git URL** with `ssh://git@github.com/im-adarsh/orca.git#v1.2.0`. Local folder installation is also supported. Orca 1.4.244 or newer is required; renderer behavior was verified on 1.4.244.
+
+## Finish the setup
+
+Open the plugin's **GoLand Setup** panel to preview each palette and see the full settings checklist. The plugin supplies colors, the panel, and navigation shortcuts. Fonts, opacity, sidebar mode, and theme selections are host preferences that need to be set on each laptop.
+
+1. Select an app theme in **Appearance**, then select its matching terminal theme. App and terminal selections are independent in Orca.
+2. Enable separate light and dark terminal themes. Use the **dark slot** for JetBrains Dark, Graphite, or Slate; use the **light slot** for JetBrains Light, Matte, or Paper.
+3. Set **Background Opacity**, **Active Pane Opacity**, and **Inactive Pane Opacity** to **100%**. Set **Window Blur** to **Off** and **Left Sidebar Appearance** to **Default**.
+4. Clear terminal **Color Overrides** in both modes. Blank override fields inherit the selected palette; an empty color picker can show black without overriding the theme.
+5. Install **Inter** and **JetBrains Mono** on each laptop, then select Inter/Inter Variable for the IDE and JetBrains Mono for the editor and terminal.
+6. Optionally enable **Chat → Match terminal interface** so structured chat follows the terminal's font and colors.
+
+After updating from an older version, reselect both your app theme and its terminal theme to refresh the stored palette. See [the full setup guide](docs/goland-setup.md) and [the portable settings reference](presets/goland-style.json). The reference JSON is a checklist, not a native Orca settings import file.
+
+## Theme choices
+
+| Theme | Appearance | Terminal slot |
+|---|---|---|
+| JetBrains Dark | Darcula-style charcoal, blue selections, and visible colored terminal text | Dark |
+| JetBrains Light | Cool light surfaces and blue accents | Light |
+| Matte | Soft stone gray and a restrained sage accent | Light |
+| Graphite | Slate charcoal with warm amber accents | Dark |
+| Paper | Ivory, parchment, and earthy accents | Light |
+| Slate | Cool blue-gray surfaces and steel-blue accents | Dark |
+
+Each theme defines all 37 public app color tokens and all 22 terminal colors. Each app/terminal pair shares the same editor and terminal background. Dark palettes use charcoal surfaces with visible separation; light palettes stay light throughout their major surfaces.
+
+## Navigation shortcuts
+
+The plugin adds three declarative navigation commands. `Mod` uses Command on macOS and Control on Windows/Linux.
+
+| Shortcut | Action |
 |---|---|
-| JetBrains Dark | Original JetBrains Dark palette |
-| JetBrains Light | Original JetBrains Light palette |
-| Matte | Soft stone gray with a restrained sage accent |
-| Graphite | Neutral charcoal with a warm amber accent |
-| Paper | Warm ivory and parchment with an earthy accent |
-| Slate | Cool blue-gray surfaces with a steel-blue accent |
+| `Mod+Alt+1` | Toggle Project / Explorer |
+| `Mod+Alt+9` | Toggle Version Control |
+| `Mod+Alt+Shift+F` | Toggle Find in Project |
 
-Matte, Graphite, Paper, and Slate are original palettes. Each is a separate choice in Orca's theme picker. Matte uses solid, opaque color values; window blur and transparency are host settings configured separately.
+These are GoLand-inspired navigation helpers, not a complete GoLand keymap. Remap conflicts in **Settings → Shortcuts**. The plugin has no worker process and requests no capabilities. The setup panel runs its local preview script in Orca's sandboxed panel frame.
 
-## Install
+## Accuracy and host limits
 
-1. In Orca, open **Settings → Plugins** and turn on the experimental plugin system.
-2. Choose **Install plugin → Local folder** and enter the absolute path to this checkout (the folder containing `orca-plugin.json`).
-3. Review and enable **Orca Theme Collection**.
-4. Select any of the six themes in the appearance theme picker, then choose the same name under **Settings → Terminal**.
+JetBrains Dark draws on the official [Darcula UI palette](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json). JetBrains Light draws on the official [Light UI palette](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_light.theme.json). Some text and accent pairs are adjusted to satisfy Orca's renderer contrast rules. These are GoLand-style adaptations rather than pixel-identical copies. Matte, Graphite, Paper, and Slate are original palettes.
 
-For a Git install, select **Git URL** and use `ssh://git@github.com/im-adarsh/orca.git#<full-commit-id>`. Use a complete 40-character commit ID from GitHub. To update an existing installation, keep the same plugin identity (`im-adarsh.jetbrains-themes`) and install the newer revision through Orca's plugin update flow.
+Orca keeps plugin installation and consent dialogs in built-in security colors. This theme API cannot restyle those dialogs, change global spacing or icons, or import GoLand's `.icls` syntax highlighting. The setup panel cannot write global host preferences. Individual terminal applications may set their own text colors.
 
-Orca 1.4.244 or newer is required because the plugin uses app and terminal theme contributions available in that build.
+## Verification
 
-## GoLand fonts and code colors
+From this checkout, using Node.js 22 or newer:
 
-Follow the [GoLand appearance setup](docs/goland-setup.md) to use **Inter** for the interface and **JetBrains Mono** for the editor and terminal. Fonts are selected in Orca settings separately from the theme plugin.
+```sh
+npm test
+npm run verify:orca -- /Applications/Orca.app
+```
 
-## Accuracy and scope
+The first command requires no dependencies and checks every text pair used by Orca's renderer, focus rings, opaque colors, mode consistency, and app/terminal pairing. The optional second command validates the files against the installed Orca schemas and runs its actual token filtering function; it fails if the inspected host structure changes. See [verification notes](docs/verification.md) for browser checks and their limits.
 
-The **JetBrains Dark** and **JetBrains Light** colors come from JetBrains' own [Dark UI theme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_dark.theme.json), [Light UI theme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_light.theme.json), [Dark editor scheme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_darkScheme.xml), and [Light editor scheme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_lightScheme.xml). The main surfaces, text, accents, selection, and ANSI colors use values from those files.
+## Repository contents
 
-Orca exposes a fixed set of color tokens, so this reproduces the JetBrains palettes within Orca's existing interface. It cannot change Orca's layout, icons, typography, or every control color to make the app pixel identical to a JetBrains IDE. The terminal's 16 ANSI colors map JetBrains' named palette hues to terminal roles; JetBrains' editor scheme is not itself a terminal ANSI theme.
-
-## Files
-
-- `orca-plugin.json` — plugin manifest and theme registrations
-- `themes/*.json` — six full app palettes and their six matching terminal palettes
-- `previews/themes.svg` — comparison sheet generated from the palette values
-
-The theme API is currently experimental in Orca, so its schema may change in later versions.
+- `orca-marketplace.json` — marketplace index
+- `orca-plugin.json` — installable collection; stable identity `im-adarsh.jetbrains-themes`
+- `themes/` — six app and six terminal palettes
+- `setup/index.html` — self-contained setup panel and interactive previews
+- `presets/goland-style.json` — settings checklist for each laptop
+- `scripts/` — repeatable validators
+- `previews/` — comparison images
