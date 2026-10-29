@@ -2,20 +2,78 @@
   "manifestVersion": 1,
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
-  "name": "JetBrains Dark and Light for Orca",
-  "version": "1.0.0",
-  "description": "JetBrains Dark and Light palettes for the Orca interface and terminal.",
+  "name": "Orca Theme Collection",
+  "version": "1.1.0",
+  "description": "JetBrains Dark and Light, plus independent Matte, Graphite, Paper, and Slate app and terminal palettes.",
   "repository": "https://github.com/im-adarsh/orca",
-  "engines": { "orca": ">=1.4.244" },
+  "engines": {
+    "orca": ">=1.4.244"
+  },
   "pluginApi": 1,
   "contributes": {
     "themes": [
-      { "id": "jetbrains-dark", "label": "JetBrains Dark", "path": "themes/jetbrains-dark.json" },
-      { "id": "jetbrains-light", "label": "JetBrains Light", "path": "themes/jetbrains-light.json" }
+      {
+        "id": "jetbrains-dark",
+        "label": "JetBrains Dark",
+        "path": "themes/jetbrains-dark.json"
+      },
+      {
+        "id": "jetbrains-light",
+        "label": "JetBrains Light",
+        "path": "themes/jetbrains-light.json"
+      },
+      {
+        "id": "matte",
+        "label": "Matte",
+        "path": "themes/matte.json"
+      },
+      {
+        "id": "graphite",
+        "label": "Graphite",
+        "path": "themes/graphite.json"
+      },
+      {
+        "id": "paper",
+        "label": "Paper",
+        "path": "themes/paper.json"
+      },
+      {
+        "id": "slate",
+        "label": "Slate",
+        "path": "themes/slate.json"
+      }
     ],
     "terminalThemes": [
-      { "id": "jetbrains-dark-terminal", "label": "JetBrains Dark", "path": "themes/jetbrains-dark-terminal.json" },
-      { "id": "jetbrains-light-terminal", "label": "JetBrains Light", "path": "themes/jetbrains-light-terminal.json" }
+      {
+        "id": "jetbrains-dark-terminal",
+        "label": "JetBrains Dark",
+        "path": "themes/jetbrains-dark-terminal.json"
+      },
+      {
+        "id": "jetbrains-light-terminal",
+        "label": "JetBrains Light",
+        "path": "themes/jetbrains-light-terminal.json"
+      },
+      {
+        "id": "matte-terminal",
+        "label": "Matte",
+        "path": "themes/matte-terminal.json"
+      },
+      {
+        "id": "graphite-terminal",
+        "label": "Graphite",
+        "path": "themes/graphite-terminal.json"
+      },
+      {
+        "id": "paper-terminal",
+        "label": "Paper",
+        "path": "themes/paper-terminal.json"
+      },
+      {
+        "id": "slate-terminal",
+        "label": "Slate",
+        "path": "themes/slate-terminal.json"
+      }
     ]
   },
   "capabilities": []
