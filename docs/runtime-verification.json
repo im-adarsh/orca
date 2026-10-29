@@ -1,0 +1,155 @@
+{
+  "orca": "1.4.244",
+  "install": {
+    "ok": true,
+    "pluginKey": "im-adarsh.jetbrains-themes"
+  },
+  "themes": [
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-dark",
+      "label": "Islands Dark",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-dark-terminal",
+      "observed": {
+        "background": "#26282C",
+        "editor": "#191A1C",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-light",
+      "label": "Islands Light",
+      "mode": "light",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-light-terminal",
+      "observed": {
+        "background": "#E9EAEE",
+        "editor": "#FFFFFF",
+        "classes": "native-shell light"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/islands-darcula",
+      "label": "Islands Darcula",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/islands-darcula-terminal",
+      "observed": {
+        "background": "#3C3F41",
+        "editor": "#2B2B2B",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/jetbrains-dark",
+      "label": "New UI Dark",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/jetbrains-dark-terminal",
+      "observed": {
+        "background": "#2B2D30",
+        "editor": "#1E1F22",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/jetbrains-light",
+      "label": "New UI Light",
+      "mode": "light",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/jetbrains-light-terminal",
+      "observed": {
+        "background": "#F7F8FA",
+        "editor": "#FFFFFF",
+        "classes": "native-shell light"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/classic-dark",
+      "label": "Classic Dark (Darcula)",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/classic-dark-terminal",
+      "observed": {
+        "background": "#3C3F41",
+        "editor": "#2B2B2B",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/classic-light",
+      "label": "Classic Light",
+      "mode": "light",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/classic-light-terminal",
+      "observed": {
+        "background": "#F2F2F2",
+        "editor": "#FFFFFF",
+        "classes": "native-shell light"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/high-contrast",
+      "label": "High Contrast",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/high-contrast-terminal",
+      "observed": {
+        "background": "#000000",
+        "editor": "#000000",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/matte",
+      "label": "Matte",
+      "mode": "light",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/matte-terminal",
+      "observed": {
+        "background": "#D8D5CE",
+        "editor": "#E4E1DA",
+        "classes": "native-shell light"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/graphite",
+      "label": "Graphite",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/graphite-terminal",
+      "observed": {
+        "background": "#34363B",
+        "editor": "#2D3035",
+        "classes": "native-shell dark"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/paper",
+      "label": "Paper",
+      "mode": "light",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/paper-terminal",
+      "observed": {
+        "background": "#F1EBDF",
+        "editor": "#FAF6EE",
+        "classes": "native-shell light"
+      }
+    },
+    {
+      "id": "plugin:im-adarsh.jetbrains-themes/slate",
+      "label": "Slate",
+      "mode": "dark",
+      "retained": 37,
+      "terminal": "plugin:im-adarsh.jetbrains-themes/slate-terminal",
+      "observed": {
+        "background": "#2A3541",
+        "editor": "#2A3541",
+        "classes": "native-shell dark"
+      }
+    }
+  ],
+  "reload": true,
+  "method": "Installed and approved through the real plugin API in an isolated temporary Orca profile, then selected every pair through the renderer settings store. App tokens were compared in computed CSS; terminal choices were checked in persisted settings. No terminal process was launched."
+}

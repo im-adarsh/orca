@@ -3,8 +3,8 @@
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
   "name": "GoLand Style for Orca",
-  "version": "1.2.0",
-  "description": "Six cohesive app and terminal themes with a reusable GoLand-style appearance setup guide.",
+  "version": "1.3.0",
+  "description": "Twelve matched app and terminal palettes: Islands, New UI, Classic, High Contrast, and matte alternatives, with a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
     "orca": ">=1.4.244"
@@ -13,14 +13,44 @@
   "contributes": {
     "themes": [
       {
+        "id": "islands-dark",
+        "label": "Islands Dark",
+        "path": "themes/islands-dark.json"
+      },
+      {
+        "id": "islands-light",
+        "label": "Islands Light",
+        "path": "themes/islands-light.json"
+      },
+      {
+        "id": "islands-darcula",
+        "label": "Islands Darcula",
+        "path": "themes/islands-darcula.json"
+      },
+      {
         "id": "jetbrains-dark",
-        "label": "JetBrains Dark",
+        "label": "New UI Dark",
         "path": "themes/jetbrains-dark.json"
       },
       {
         "id": "jetbrains-light",
-        "label": "JetBrains Light",
+        "label": "New UI Light",
         "path": "themes/jetbrains-light.json"
+      },
+      {
+        "id": "classic-dark",
+        "label": "Classic Dark (Darcula)",
+        "path": "themes/classic-dark.json"
+      },
+      {
+        "id": "classic-light",
+        "label": "Classic Light",
+        "path": "themes/classic-light.json"
+      },
+      {
+        "id": "high-contrast",
+        "label": "High Contrast",
+        "path": "themes/high-contrast.json"
       },
       {
         "id": "matte",
@@ -45,14 +75,44 @@
     ],
     "terminalThemes": [
       {
+        "id": "islands-dark-terminal",
+        "label": "Islands Dark",
+        "path": "themes/islands-dark-terminal.json"
+      },
+      {
+        "id": "islands-light-terminal",
+        "label": "Islands Light",
+        "path": "themes/islands-light-terminal.json"
+      },
+      {
+        "id": "islands-darcula-terminal",
+        "label": "Islands Darcula",
+        "path": "themes/islands-darcula-terminal.json"
+      },
+      {
         "id": "jetbrains-dark-terminal",
-        "label": "JetBrains Dark",
+        "label": "New UI Dark",
         "path": "themes/jetbrains-dark-terminal.json"
       },
       {
         "id": "jetbrains-light-terminal",
-        "label": "JetBrains Light",
+        "label": "New UI Light",
         "path": "themes/jetbrains-light-terminal.json"
+      },
+      {
+        "id": "classic-dark-terminal",
+        "label": "Classic Dark (Darcula)",
+        "path": "themes/classic-dark-terminal.json"
+      },
+      {
+        "id": "classic-light-terminal",
+        "label": "Classic Light",
+        "path": "themes/classic-light-terminal.json"
+      },
+      {
+        "id": "high-contrast-terminal",
+        "label": "High Contrast",
+        "path": "themes/high-contrast-terminal.json"
       },
       {
         "id": "matte-terminal",

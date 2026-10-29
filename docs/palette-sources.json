@@ -1,0 +1,57 @@
+{
+  "retrieved": "2026-10-29",
+  "repository": "JetBrains/intellij-community",
+  "sources": [
+    {
+      "path": "islands/ManyIslandsDark.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/islands/ManyIslandsDark.theme.json",
+      "sha256": "2d06faf66180e912ed03e8e22245937702bd8eea43c827b07c0175a8d83b02e2"
+    },
+    {
+      "path": "islands/ManyIslandsLight.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/islands/ManyIslandsLight.theme.json",
+      "sha256": "f53f1550b0f78d07614d29eb0e5c2523477bead265d8cd24a63a280131ecff30"
+    },
+    {
+      "path": "islands/ManyIslandsDarcula.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/islands/ManyIslandsDarcula.theme.json",
+      "sha256": "70d1255f52e6d4a0671fbc9b9917b841a6563c9492364a02e1244f9a9ea0fed4"
+    },
+    {
+      "path": "islands/HighContrast.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/islands/HighContrast.theme.json",
+      "sha256": "1a364f1b4e3b4ad876e156eda721368827b84f125c53a50721da7a8736eca853"
+    },
+    {
+      "path": "islands/IslandSchemeDark.xml",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/islands/IslandSchemeDark.xml",
+      "sha256": "99aaec276d806d9e8768e4e54e199b81864e5c5cdb4e2ff136442e5b8f5372cf"
+    },
+    {
+      "path": "expUI/expUI_dark.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_dark.theme.json",
+      "sha256": "54ced18704b8847426ebca5552627072c8b01bd3a0ee25f6f2c924b1d2c49a3d"
+    },
+    {
+      "path": "expUI/expUI_light.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_light.theme.json",
+      "sha256": "429151594b8a013938c3c66dd3a5121702182c028ad87ae1e68bc4243cc1c68d"
+    },
+    {
+      "path": "darcula.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json",
+      "sha256": "09eef4ee3fccdc911e6656acd5464d99137522d34e1b4382b08e6706efa3526b"
+    },
+    {
+      "path": "Light.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/Light.theme.json",
+      "sha256": "429151594b8a013938c3c66dd3a5121702182c028ad87ae1e68bc4243cc1c68d"
+    },
+    {
+      "path": "intellijlaf.theme.json",
+      "url": "https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/intellijlaf.theme.json",
+      "sha256": "e88dae01b2234c4b13fe50fbe328f076b6e80489b8eb343c78e529df9e4efa97"
+    }
+  ],
+  "mapping": "Source surface values retained; text and accent pairs adapted only where required by the Orca contrast filter. ANSI colors are terminal adaptations, not a Go syntax scheme."
+}

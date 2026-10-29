@@ -36,14 +36,44 @@
   },
   "themePairs": [
     {
-      "app": "JetBrains Dark",
-      "terminal": "JetBrains Dark",
+      "app": "Islands Dark",
+      "terminal": "Islands Dark",
       "mode": "dark"
     },
     {
-      "app": "JetBrains Light",
-      "terminal": "JetBrains Light",
+      "app": "Islands Light",
+      "terminal": "Islands Light",
       "mode": "light"
+    },
+    {
+      "app": "Islands Darcula",
+      "terminal": "Islands Darcula",
+      "mode": "dark"
+    },
+    {
+      "app": "New UI Dark",
+      "terminal": "New UI Dark",
+      "mode": "dark"
+    },
+    {
+      "app": "New UI Light",
+      "terminal": "New UI Light",
+      "mode": "light"
+    },
+    {
+      "app": "Classic Dark (Darcula)",
+      "terminal": "Classic Dark (Darcula)",
+      "mode": "dark"
+    },
+    {
+      "app": "Classic Light",
+      "terminal": "Classic Light",
+      "mode": "light"
+    },
+    {
+      "app": "High Contrast",
+      "terminal": "High Contrast",
+      "mode": "dark"
     },
     {
       "app": "Matte",

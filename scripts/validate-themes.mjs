@@ -47,6 +47,26 @@ check(manifest.publisher === 'im-adarsh' && manifest.id === 'jetbrains-themes', 
 const apps = manifest.contributes.themes;
 const terminals = manifest.contributes.terminalThemes;
 check(apps.length === terminals.length && apps.length >= 6, 'Every app theme needs a terminal pair');
+// Family anchors prevent another accidental substitution of Darcula for New UI.
+const anchors = {
+  'jetbrains-dark': ['dark', '#2B2D30', '#1E1F22'],
+  'jetbrains-light': ['light', '#F7F8FA', '#FFFFFF'],
+  'classic-dark': ['dark', '#3C3F41', '#2B2B2B'],
+  'classic-light': ['light', '#F2F2F2', '#FFFFFF'],
+  'islands-dark': ['dark', '#26282C', '#191A1C'],
+  'islands-light': ['light', '#E9EAEE', '#FFFFFF'],
+  'islands-darcula': ['dark', '#3C3F41', '#2B2B2B'],
+  'high-contrast': ['dark', '#000000', '#000000']
+};
+for (const [id, [base, background, editor]] of Object.entries(anchors)) {
+  const entry = apps.find(e => e.id === id);
+  check(!!entry, `${id}: required JetBrains family variant`);
+  if (entry) {
+    const app = load(entry.path);
+    check(app.base === base && app.tokens['--background'] === background && app.tokens['--editor-surface'] === editor,
+      `${id}: preserve source family surfaces`);
+  }
+}
 check(new Set([...apps, ...terminals].map(v => v.id)).size === apps.length + terminals.length, 'Theme IDs must be unique');
 for (const entry of apps) {
   const app = load(entry.path), t = app.tokens;
@@ -65,7 +85,7 @@ for (const entry of apps) {
   const surfaces = ['background', 'editor-surface', 'card', 'popover', 'sidebar', 'worktree-sidebar'];
   for (const key of surfaces) {
     const value = t[`--${key}`];
-    check(app.base === 'light' ? luminance(value) > 0.45 : luminance(value) >= luminance('#2B2B2B') && luminance(value) < 0.16,
+    check(app.base === 'light' ? luminance(value) > 0.45 : luminance(value) < 0.16,
       `${entry.label}: ${key} must stay within a cohesive ${app.base} surface range`);
   }
   const sorted = surfaces.map(k => t[`--${k}`]).sort((a, b) => luminance(a) - luminance(b));
@@ -84,6 +104,7 @@ const marketplace = load('orca-marketplace.json');
 check(marketplace.owner === manifest.publisher, 'Marketplace publisher must match plugin');
 check(marketplace.plugins.length === 1 && marketplace.plugins[0].id === `${manifest.publisher}.${manifest.id}`, 'Marketplace must point to this collection');
 check(marketplace.plugins[0].source.ref === `v${manifest.version}`, 'Marketplace release ref must match plugin version');
+check(marketplace.plugins[0].source.url === 'https://github.com/im-adarsh/orca.git', 'Public plugin download must work without SSH credentials');
 const panel = fs.readFileSync(path.join(root, 'setup/index.html'), 'utf8');
 const embedded = panel.match(/<script id="palettes" type="application\/json">([\s\S]*?)<\/script>/);
 check(!!embedded, 'Panel needs embedded palette data');

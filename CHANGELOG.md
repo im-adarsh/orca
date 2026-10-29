@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0
+
+- Add distinct Islands Dark/Light/Darcula, Classic Dark/Light, and High Contrast palettes with matched terminals.
+- Restore modern New UI Dark surface values and give New UI themes explicit labels while preserving installed IDs.
+- Use HTTPS for public marketplace plugin downloads, removing the requirement for a GitHub SSH key on every laptop.
+- Expand the setup panel, source provenance, responsive previews, and renderer checks to twelve pairs.
+- Document installation diagnosis and distinguish palette support from host layout/icon limitations.
+
+
 ## 1.2.0
 
 - Add a pinned Orca marketplace index and GoLand Setup panel with six interactive palette previews.

@@ -2,14 +2,14 @@
 
 ## Install the collection
 
-Add marketplace source `ssh://git@github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The release is pinned to tag `v1.2.0`. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
+Add marketplace source `https://github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The release is pinned to tag `v1.3.0`. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
 
 ## Use matching app and terminal modes
 
 Orca selects app and terminal themes independently. Changing the app theme alone does not switch the saved terminal palette.
 
-- Dark slot: JetBrains Dark, Graphite, or Slate.
-- Light slot: JetBrains Light, Matte, or Paper.
+- Dark slot: Islands Dark, Islands Darcula, New UI Dark, Classic Dark (Darcula), High Contrast, Graphite, or Slate.
+- Light slot: Islands Light, New UI Light, Classic Light, Matte, or Paper.
 
 Enable separate light/dark terminal themes. Select the same theme name for the app and for the active terminal slot. After an update, reselect the terminal theme to refresh its saved colors.
 

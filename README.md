@@ -1,49 +1,55 @@
 # Adarsh Orca Marketplace
 
-A reusable GoLand-style setup for Orca: six complete app/terminal palette pairs, a setup panel, navigation commands, and a laptop settings reference.
+Twelve matched app and terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
 
-![Six matched palettes](previews/themes.png)
+![Light and dark palette comparison](previews/themes.png)
 
-## Add the marketplace
+## Install on any laptop
 
-In **Settings → Plugins → Marketplace sources**, enter:
+Requires **Orca 1.4.244 or newer**. In **Settings → Plugins → Marketplace sources**, enter:
 
-- **Git URL:** `ssh://git@github.com/im-adarsh/orca.git`
+- **Git URL:** `https://github.com/im-adarsh/orca.git`
 - **Git ref:** `main`
 
-Click **Add source**, then install and enable **GoLand Style for Orca**. The marketplace pins the plugin release to `v1.2.0`; Orca records its exact commit. The SSH source uses your system Git credentials. This is a personal marketplace published by `im-adarsh`.
+Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.3.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
 
-For a direct plugin install, use **Install plugin → Git URL** with `ssh://git@github.com/im-adarsh/orca.git#v1.2.0`. Local folder installation is also supported. Orca 1.4.244 or newer is required; renderer behavior was verified on 1.4.244.
+Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.3.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
+
+If Install says “Could not prepare this plugin for review,” follow [the installation troubleshooting guide](docs/install-troubleshooting.md).
+
+## Pick a family
+
+| Family | Dark | Light | Character |
+|---|---|---|---|
+| Islands | Islands Dark; Islands Darcula | Islands Light | Deep neutral surfaces or Darcula, blue selections, distinct tool areas |
+| New UI | New UI Dark | New UI Light | GoLand's modern charcoal editor and cool light counterpart |
+| Classic | Classic Dark (Darcula) | Classic Light | Traditional Darcula charcoal or neutral gray chrome and a white editor |
+| Accessibility | High Contrast | — | Deliberate black surfaces, white text, cyan focus |
+| Matte alternatives | Graphite; Slate | Matte; Paper | Amber charcoal, blue-gray, stone/sage, and ivory |
+
+New UI Dark uses `#2B2D30` chrome and `#1E1F22` editor/terminal. Islands Dark uses `#26282C` chrome and `#191A1C` editor/terminal. Classic Dark keeps `#3C3F41` chrome and `#2B2B2B` editor/terminal. Existing theme IDs are preserved: `jetbrains-dark` and `jetbrains-light` now explicitly display as New UI Dark and New UI Light.
+
+Each pair defines all **37 public app tokens** and **22 terminal colors**. Editor and terminal backgrounds match exactly. Normal dark families remain dark throughout; light families remain light throughout.
 
 ## Finish the setup
 
-Open the plugin's **GoLand Setup** panel to preview each palette and see the full settings checklist. The plugin supplies colors, the panel, and navigation shortcuts. Fonts, opacity, sidebar mode, and theme selections are host preferences that need to be set on each laptop.
+Open the plugin's **GoLand Setup** panel for previews and the portable checklist.
 
-1. Select an app theme in **Appearance**, then select its matching terminal theme. App and terminal selections are independent in Orca.
-2. Enable separate light and dark terminal themes. Use the **dark slot** for JetBrains Dark, Graphite, or Slate; use the **light slot** for JetBrains Light, Matte, or Paper.
-3. Set **Background Opacity**, **Active Pane Opacity**, and **Inactive Pane Opacity** to **100%**. Set **Window Blur** to **Off** and **Left Sidebar Appearance** to **Default**.
-4. Clear terminal **Color Overrides** in both modes. Blank override fields inherit the selected palette; an empty color picker can show black without overriding the theme.
-5. Install **Inter** and **JetBrains Mono** on each laptop, then select Inter/Inter Variable for the IDE and JetBrains Mono for the editor and terminal.
-6. Optionally enable **Chat → Match terminal interface** so structured chat follows the terminal's font and colors.
+1. Select an app theme in Appearance and the **same name** for its terminal theme. Enable separate light/dark terminal themes and use the slot matching the theme's mode.
+2. Set Background Opacity, Active Pane Opacity, and Inactive Pane Opacity to **100%**. Set Window Blur to **Off** and Left Sidebar Appearance to **Default**.
+3. Clear terminal Color Overrides in both modes. Blank fields inherit the palette; an empty picker can display black without overriding the theme.
+4. Install **Inter** and **JetBrains Mono** on each laptop. Select Inter/Inter Variable for the IDE, JetBrains Mono for editor and terminal.
+5. Optionally enable Chat → Match terminal interface.
 
-After updating from an older version, reselect both your app theme and its terminal theme to refresh the stored palette. See [the full setup guide](docs/goland-setup.md) and [the portable settings reference](presets/goland-style.json). The reference JSON is a checklist, not a native Orca settings import file.
+After updating, reselect the app and terminal themes to refresh saved colors. Start a fresh terminal if old TUI scrollback retains explicit background colors. See [the setup guide](docs/goland-setup.md) and [settings reference](presets/goland-style.json). The reference is a checklist; Orca cannot import it as global settings.
 
-## Theme choices
+## What matches JetBrains
 
-| Theme | Appearance | Terminal slot |
-|---|---|---|
-| JetBrains Dark | Darcula-style charcoal, blue selections, and visible colored terminal text | Dark |
-| JetBrains Light | Cool light surfaces and blue accents | Light |
-| Matte | Soft stone gray and a restrained sage accent | Light |
-| Graphite | Slate charcoal with warm amber accents | Dark |
-| Paper | Ivory, parchment, and earthy accents | Light |
-| Slate | Cool blue-gray surfaces and steel-blue accents | Dark |
+The palettes use official JetBrains surface colors from [Islands](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/islands), [New UI](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/expUI), [Darcula](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json), and [Classic Light](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/intellijlaf.theme.json). [Source identities and hashes](docs/palette-sources.json) record the inspected definitions. Some text and accent colors are adapted to Orca's enforced contrast thresholds. ANSI colors are terminal adaptations, not imported Go syntax highlighting.
 
-Each theme defines all 37 public app color tokens and all 22 terminal colors. Each app/terminal pair shares the same editor and terminal background. Dark palettes use charcoal surfaces with visible separation; light palettes stay light throughout their major surfaces.
+**These are palette adaptations.** Orca's public theme API cannot install Islands rounded pane geometry, Classic toolbars, global icon sets, global fonts, or GoLand `.icls` editor schemes. Its security dialogs deliberately use built-in colors. Fonts and host preferences must be selected separately. The [UI compatibility notes](docs/ui-compatibility.md) explain the scope of each family.
 
-## Navigation shortcuts
-
-The plugin adds three declarative navigation commands. `Mod` uses Command on macOS and Control on Windows/Linux.
+## Navigation
 
 | Shortcut | Action |
 |---|---|
@@ -51,31 +57,19 @@ The plugin adds three declarative navigation commands. `Mod` uses Command on mac
 | `Mod+Alt+9` | Toggle Version Control |
 | `Mod+Alt+Shift+F` | Toggle Find in Project |
 
-These are GoLand-inspired navigation helpers, not a complete GoLand keymap. Remap conflicts in **Settings → Shortcuts**. The plugin has no worker process and requests no capabilities. The setup panel runs its local preview script in Orca's sandboxed panel frame.
+`Mod` is Command on macOS and Control on Windows/Linux. These helpers are not a full GoLand keymap; remap in Settings → Shortcuts. The plugin has no worker process and requests no capabilities. The local setup preview runs in Orca's sandboxed panel.
 
-## Accuracy and host limits
+## Verify
 
-JetBrains Dark draws on the official [Darcula UI palette](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json). JetBrains Light draws on the official [Light UI palette](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_light.theme.json). Some text and accent pairs are adjusted to satisfy Orca's renderer contrast rules. These are GoLand-style adaptations rather than pixel-identical copies. Matte, Graphite, Paper, and Slate are original palettes.
-
-Orca keeps plugin installation and consent dialogs in built-in security colors. This theme API cannot restyle those dialogs, change global spacing or icons, or import GoLand's `.icls` syntax highlighting. The setup panel cannot write global host preferences. Individual terminal applications may set their own text colors.
-
-## Verification
-
-From this checkout, using Node.js 22 or newer:
+With Node.js 22 or newer:
 
 ```sh
 npm test
 npm run verify:orca -- /Applications/Orca.app
+npm ci
+npm run test:browser
 ```
 
-The first command requires no dependencies and checks every text pair used by Orca's renderer, focus rings, opaque colors, mode consistency, and app/terminal pairing. The optional second command validates the files against the installed Orca schemas and runs its actual token filtering function; it fails if the inspected host structure changes. See [verification notes](docs/verification.md) for browser checks and their limits.
+The dependency-free validator checks contrast, complete pairs, modes, source family anchors, and portable release URLs. Host verification executes the installed Orca color filter and validates its schemas. Browser tests check every palette, the actual host CSP wrapper, responsive widths, and initial theme matching. See [verification details and limits](docs/verification.md).
 
-## Repository contents
-
-- `orca-marketplace.json` — marketplace index
-- `orca-plugin.json` — installable collection; stable identity `im-adarsh.jetbrains-themes`
-- `themes/` — six app and six terminal palettes
-- `setup/index.html` — self-contained setup panel and interactive previews
-- `presets/goland-style.json` — settings checklist for each laptop
-- `scripts/` — repeatable validators
-- `previews/` — comparison images
+The repository contains the installable manifests, `themes/`, `setup/`, the `presets/` checklist, source/verification notes in `docs/`, validators in `scripts/`, and palette previews in `previews/`.

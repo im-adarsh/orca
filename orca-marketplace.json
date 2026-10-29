@@ -6,10 +6,10 @@
       "id": "im-adarsh.jetbrains-themes",
       "source": {
         "kind": "git",
-        "url": "ssh://git@github.com/im-adarsh/orca.git",
-        "ref": "v1.2.0"
+        "url": "https://github.com/im-adarsh/orca.git",
+        "ref": "v1.3.0"
       },
-      "description": "Six cohesive themes, a GoLand appearance setup guide, reusable settings reference, and navigation shortcuts.",
+      "description": "Twelve matched app and terminal palettes: Islands, New UI, Classic, High Contrast, and matte alternatives, with a portable setup guide.",
       "categories": [
         "themes",
         "appearance",

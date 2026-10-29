@@ -49,7 +49,8 @@ const fs=require('fs'),path=require('path');
  const frame=shell.frameLocator('#host-panel');
  const sourcePalettes=await page.locator('#palettes').evaluate(el=>JSON.parse(el.textContent));
  for(const p of sourcePalettes){
-  const html=host.buildPluginPanelShellHtml(fs.readFileSync(path.join(root,'setup/index.html'),'utf8')).replaceAll(host.PANEL_SHELL_COLOR_SCHEME_PLACEHOLDER,p.base).replaceAll(host.PANEL_SHELL_TOKENS_PLACEHOLDER,Object.entries(p.tokens).map(([k,v])=>k+':'+v).join(';'));
+  const sharedTokens=Object.entries(p.tokens).filter(([k])=>host.PANEL_DESIGN_TOKEN_ALLOWLIST.includes(k));
+  const html=host.buildPluginPanelShellHtml(fs.readFileSync(path.join(root,'setup/index.html'),'utf8')).replaceAll(host.PANEL_SHELL_COLOR_SCHEME_PLACEHOLDER,p.base).replaceAll(host.PANEL_SHELL_TOKENS_PLACEHOLDER,sharedTokens.map(([k,v])=>k+':'+v).join(';'));
   await shell.locator('#host-panel').evaluate((el,html)=>{el.srcdoc=html},html);
   await frame.locator('#palette').waitFor();
   const initial=await frame.locator('#palette').inputValue();
@@ -65,10 +66,10 @@ const fs=require('fs'),path=require('path');
  }
  await frame.locator('#palette').selectOption('jetbrains-dark');
  await shell.screenshot({path:path.join(root,'artifacts/setup-sandbox.png')});
- console.log('Installed Orca CSP and sandbox wrapper: all six theme choices work without overflow.');
+ console.log('Installed Orca CSP and sandbox wrapper: all theme choices work without overflow.');
 if(errors.length)throw Error(errors.join('\n'));
  const sheet=await browser.newPage({viewport:{width:1440,height:1360},deviceScaleFactor:1});
- const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>GoLand Style for Orca</h1><p>Six matched app and terminal palettes · Renderer-verified on Orca 1.4.244</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
+ const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>GoLand Style for Orca</h1><p>Twelve matched app and terminal palettes · Renderer-verified on Orca 1.4.244</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
  await sheet.setContent(html);await sheet.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
  await sheet.locator('body').screenshot({path:path.join(root,'previews/themes.png')});
  console.log('Setup panel verified at desktop, tablet, and narrow widths; no browser script errors.');
