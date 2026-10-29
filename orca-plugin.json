@@ -1,0 +1,22 @@
+{
+  "manifestVersion": 1,
+  "id": "jetbrains-themes",
+  "publisher": "im-adarsh",
+  "name": "JetBrains Dark and Light for Orca",
+  "version": "1.0.0",
+  "description": "JetBrains Dark and Light palettes for the Orca interface and terminal.",
+  "repository": "https://github.com/im-adarsh/orca-themes",
+  "engines": { "orca": ">=1.4.244" },
+  "pluginApi": 1,
+  "contributes": {
+    "themes": [
+      { "id": "jetbrains-dark", "label": "JetBrains Dark", "path": "themes/jetbrains-dark.json" },
+      { "id": "jetbrains-light", "label": "JetBrains Light", "path": "themes/jetbrains-light.json" }
+    ],
+    "terminalThemes": [
+      { "id": "jetbrains-dark-terminal", "label": "JetBrains Dark", "path": "themes/jetbrains-dark-terminal.json" },
+      { "id": "jetbrains-light-terminal", "label": "JetBrains Light", "path": "themes/jetbrains-light-terminal.json" }
+    ]
+  },
+  "capabilities": []
+}
