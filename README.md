@@ -11,6 +11,10 @@ Two color themes for the [Orca](https://github.com/stablyai/orca) app, each with
 
 Orca 1.4.244 or newer is required because the plugin uses app and terminal theme contributions available in that build.
 
+## GoLand fonts and code colors
+
+Follow the [GoLand appearance setup](docs/goland-setup.md) to use **Inter** for the interface and **JetBrains Mono** for the editor and terminal. Fonts are selected in Orca settings separately from the theme plugin.
+
 ## Accuracy and scope
 
 The colors come from JetBrains' own [Dark UI theme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_dark.theme.json), [Light UI theme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_light.theme.json), [Dark editor scheme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_darkScheme.xml), and [Light editor scheme](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/expUI/expUI_lightScheme.xml). The main surfaces, text, accents, selection, and ANSI colors use values from those files.
