@@ -1,0 +1,19 @@
+{
+  "orca": "1.4.244",
+  "version": "1.3.0",
+  "source": {
+    "kind": "marketplace",
+    "reference": "https://github.com/im-adarsh/orca.git",
+    "resolvedCommit": "bd3bdde1a209c6b9ef5b24c283586b9b0fc30fd9",
+    "contentHash": "5e174ce9083941cfa74b071fae3cd04eae34c4369feb879fc62300605a50a68e",
+    "marketplace": {
+      "reference": "https://github.com/im-adarsh/orca.git",
+      "resolvedCommit": "bd3bdde1a209c6b9ef5b24c283586b9b0fc30fd9"
+    }
+  },
+  "pluginKey": "im-adarsh.jetbrains-themes",
+  "status": "idle",
+  "needsReconsent": false,
+  "themePairs": 12,
+  "panelInherited": "slate"
+}

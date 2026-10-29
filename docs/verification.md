@@ -45,3 +45,8 @@ REA passive runtime inspection of the separate test instance produced Evidence `
 ## Installation portability
 
 The published 1.2.0 marketplace fetched the index separately from an SSH plugin source. It reached review successfully on the test Mac, which has working credentials. Version 1.3.0 changes the public plugin URL to HTTPS, avoiding the SSH prerequisite. The other laptop's exact failure remains unconfirmed without its Orca version and underlying console error. See [troubleshooting](install-troubleshooting.md).
+
+
+## Published HTTPS release check
+
+After publishing tag `v1.3.0`, the temporary Orca instance refreshed the HTTPS marketplace, fetched the pinned release, prepared its real review, installed it through `installMarketplacePlugin`, and approved its current consent fingerprint. The host reported version 1.3.0 with marketplace provenance, no pending reconsent, all twelve theme pairs, and the installed sandbox panel correctly inherited the selected Slate palette. [Published installation results](marketplace-install-verification.json) retain the resolved commit and content hash. The dedicated test instance was then closed.
