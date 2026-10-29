@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "orca": "1.4.244",
+  "version": "1.3.1",
+  "source": {
+    "kind": "marketplace",
+    "reference": "https://github.com/im-adarsh/orca.git",
+    "resolvedCommit": "5c9aa1ca5349628bdbea3eda7b61440df48e5830",
+    "contentHash": "55ca366ad4c7ad058aa570f52420aaabcade21fc6d87173df7cba1879141f19c",
+    "marketplace": {
+      "reference": "https://github.com/im-adarsh/orca.git",
+      "resolvedCommit": "5c9aa1ca5349628bdbea3eda7b61440df48e5830"
+    }
+  },
+  "themePairs": 12,
+  "allMainSurfacesMatch": true,
+  "needsReconsent": false,
+  "profile": "isolated temporary profile"
+}

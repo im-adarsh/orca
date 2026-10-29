@@ -63,3 +63,6 @@ A separate Orca 1.4.244 test profile installed and approved the clean 1.3.1 pack
 The browser preview check also compares all seven representative surfaces for every palette and uses the actual panel token allowlist. All twelve startup selections and narrow sandbox previews passed. Token and host-schema checks pass for all twelve pairs.
 
 The personal profile was inspected read-only. It still used tinted sidebar styling and 30% inactive-pane opacity; those host overrides can change the rendered result. The inspected tint helper overrides sidebar CSS variables, while inactive opacity affects the entire terminal container. Use Default sidebar appearance and 100% active/inactive/background opacity. The marketplace cannot write these global settings. Applying them to the personal app was unavailable because macOS Accessibility permission for Orca Computer Use was not granted. Security dialogs, semantic badges, and terminal programs' explicit colors remain host/program controlled.
+
+
+After publication, the temporary profile refreshed the real marketplace and fetched, reviewed, installed, and approved `v1.3.1` over HTTPS. All twelve registered palettes retained 37 tokens and equal main surface values. [Published 1.3.1 installation evidence](surface-consistency-published-install.json) records the resolved commit and content hash.
