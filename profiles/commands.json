@@ -1,0 +1,11 @@
+[
+ {"id":"git-status","group":"Git","name":"Working tree status","command":"git status --short --branch"},
+ {"id":"git-diff","group":"Git","name":"Check whitespace errors","command":"git diff --check"},
+ {"id":"go-test","group":"Go","name":"Run tests","command":"go test ./..."},
+ {"id":"go-race","group":"Go","name":"Test with race detector","command":"go test -race ./..."},
+ {"id":"go-vet","group":"Go","name":"Run vet","command":"go vet ./..."},
+ {"id":"go-format","group":"Go","name":"List formatting differences","command":"gofmt -l ."},
+ {"id":"node-test","group":"Node.js","name":"Run project tests","command":"npm test"},
+ {"id":"node-lint","group":"Node.js","name":"Run project lint script","command":"npm run lint"},
+ {"id":"python-test","group":"Python","name":"Run pytest","command":"python3 -m pytest"}
+]

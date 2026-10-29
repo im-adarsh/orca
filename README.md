@@ -1,6 +1,6 @@
 # Adarsh Orca Marketplace
 
-Twelve matched app and terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
+A developer marketplace with JetBrains-style file icons, developer command panels, reusable agent instruction profiles, a pinned Excalidraw editor entry, and twelve matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
 
 ![Light and dark palette comparison](previews/themes.png)
 
@@ -11,11 +11,17 @@ Requires **Orca 1.4.244 or newer**. In **Settings → Plugins → Marketplace so
 - **Git URL:** `https://github.com/im-adarsh/orca.git`
 - **Git ref:** `main`
 
-Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.3.1`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
+Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.4.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
 
-Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.3.1`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
+Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.4.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
 
 If Install says “Could not prepare this plugin for review,” follow [the installation troubleshooting guide](docs/install-troubleshooting.md).
+
+## Developer additions
+
+Version **1.4.0** adds **Developer Commands** and **Agent Profiles** panels to the current collection. Profiles are portable instructions with a launcher, not native profile imports. The update requests workspace metadata and terminal text permissions; pasting always requires an explicit target and does not submit.
+
+The newer catalog includes **JetBrains File Icons** (four variants) and official **Excalidraw**, both gated to **Orca 1.4.245+**. The latest stable host checked was 1.4.244, so those native packages are prepared but cannot yet be installed there. See [developer setup, compatibility, and verification](docs/developer-kit.md).
 
 ## Pick a family
 
@@ -49,7 +55,7 @@ After updating, reselect the app and terminal themes to refresh saved colors. St
 
 The palettes adapt official JetBrains editor/console colors from [Islands](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/islands), [New UI](https://github.com/JetBrains/intellij-community/tree/master/platform/platform-resources/src/themes/expUI), [Darcula](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/darcula.theme.json), and [Classic Light](https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/themes/intellijlaf.theme.json). [Source identities and hashes](docs/palette-sources.json) record the inspected definitions. App surfaces are deliberately unified for consistency rather than copying JetBrains chrome/background differences. Some text and accent colors are adapted to Orca's enforced contrast thresholds. ANSI colors are terminal adaptations, not imported Go syntax highlighting.
 
-**These are palette adaptations.** Orca's public theme API cannot install Islands rounded pane geometry, Classic toolbars, global icon sets, global fonts, or GoLand `.icls` editor schemes. Its security dialogs deliberately use built-in colors. Fonts and host preferences must be selected separately. The [UI compatibility notes](docs/ui-compatibility.md) explain the scope of each family.
+**These are palette adaptations.** Orca's public theme API cannot install Islands rounded pane geometry, Classic toolbars, global toolbar icon replacement, global fonts, or GoLand `.icls` editor schemes. Its security dialogs deliberately use built-in colors. Fonts and host preferences must be selected separately. The [UI compatibility notes](docs/ui-compatibility.md) explain the scope of each family.
 
 ## Navigation
 
@@ -59,7 +65,7 @@ The palettes adapt official JetBrains editor/console colors from [Islands](https
 | `Mod+Alt+9` | Toggle Version Control |
 | `Mod+Alt+Shift+F` | Toggle Find in Project |
 
-`Mod` is Command on macOS and Control on Windows/Linux. These helpers are not a full GoLand keymap; remap in Settings → Shortcuts. The plugin has no worker process and requests no capabilities. The local setup preview runs in Orca's sandboxed panel.
+`Mod` is Command on macOS and Control on Windows/Linux. These helpers are not a full GoLand keymap; remap in Settings → Shortcuts. The plugin has no worker process. Developer panels request focused-workspace metadata and permission to paste into a specifically chosen terminal. The setup preview and developer panels run in Orca's sandboxed frames.
 
 ## Verify
 

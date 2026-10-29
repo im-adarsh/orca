@@ -7,9 +7,9 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.3.1"
+        "ref": "v1.4.0"
       },
-      "description": "Twelve matched app and terminal palettes: Islands, New UI, Classic, High Contrast, and matte alternatives, with a portable setup guide.",
+      "description": "Twelve consistent palettes, developer command panels, and reusable agent instruction profiles.",
       "categories": [
         "themes",
         "appearance",

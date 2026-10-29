@@ -1,0 +1,38 @@
+{
+  "checked": "2026-10-30",
+  "installedOrca": "1.4.244",
+  "latestStable": "1.4.244",
+  "nativeIconsMinimum": "1.4.245",
+  "nativeExcalidrawMinimum": "1.4.245",
+  "excalidrawNativeInstalled": false,
+  "reason": "The installed and latest stable host precede the required icon/custom-editor APIs. No compatible desktop release was present in the five most recent official releases checked.",
+  "officialReleaseApi": "https://api.github.com/repos/stablyai/orca/releases/latest",
+  "recentReleases": [
+    {
+      "tag": "v1.4.244",
+      "prerelease": false,
+      "url": "https://github.com/stablyai/orca/releases/tag/v1.4.244"
+    },
+    {
+      "tag": "mobile-android-v0.0.60",
+      "prerelease": true,
+      "url": "https://github.com/stablyai/orca/releases/tag/mobile-android-v0.0.60"
+    },
+    {
+      "tag": "v1.4.243",
+      "prerelease": false,
+      "url": "https://github.com/stablyai/orca/releases/tag/v1.4.243"
+    },
+    {
+      "tag": "v1.4.242",
+      "prerelease": false,
+      "url": "https://github.com/stablyai/orca/releases/tag/v1.4.242"
+    },
+    {
+      "tag": "v1.4.241",
+      "prerelease": false,
+      "url": "https://github.com/stablyai/orca/releases/tag/v1.4.241"
+    }
+  ],
+  "officialPluginCatalogCommit": "575135ebe16539bca33c88b81bc0b5a9a0c6367a"
+}

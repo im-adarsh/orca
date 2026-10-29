@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "41bfe43ebb9213e0aebb84455faa1cc3585a5e5a",
+  "schemas": [
+    {
+      "name": "orca-plugin.v2.schema.json",
+      "sha256": "04d162a01a053381119c86210ebd2848d0007c7d6e847e7bffcc4289618f76b3",
+      "url": "https://raw.githubusercontent.com/stablyai/orca/41bfe43ebb9213e0aebb84455faa1cc3585a5e5a/docs/schemas/plugins/orca-plugin.v2.schema.json"
+    },
+    {
+      "name": "orca-catalog.v2.schema.json",
+      "sha256": "de17477131673f2fe41a8001731a21969634adcb8307544248813895daee3494",
+      "url": "https://raw.githubusercontent.com/stablyai/orca/41bfe43ebb9213e0aebb84455faa1cc3585a5e5a/docs/schemas/plugins/orca-catalog.v2.schema.json"
+    }
+  ]
+}

@@ -10,7 +10,8 @@ This marketplace installs supported Orca app/terminal palettes and navigation he
 | High Contrast palette | Complete public Orca color token set and matched terminal |
 | Islands rounded islands, 6 px gutters, active pane outlines | Requires an Orca host layout extension or source change |
 | Classic three tool-window stripes and toolbar layout | Requires an Orca host layout extension or source change |
-| JetBrains global icon set | No public icon-theme contribution in the inspected Orca API |
+| JetBrains file/folder icons | Separate four-variant package, requires 1.4.245+; not installed on 1.4.244 |
+| Global toolbar icon replacement | Not provided by the inspected file-icon API |
 | Inter and JetBrains Mono | Install/select separately on every laptop |
 | GoLand syntax scheme | No `.icls` import through the theme plugin API |
 | Global host preference syncing | Checklist supplied; plugin settings are private, not global settings |

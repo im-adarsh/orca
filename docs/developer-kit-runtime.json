@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-30",
+  "orca": "1.4.244",
+  "version": "1.4.0",
+  "profile": "isolated temporary profile",
+  "panels": [
+    {
+      "title": "Developer Commands",
+      "hostContextResponse": "No active workspace",
+      "pasteDisabled": true
+    },
+    {
+      "title": "Agent Profiles",
+      "hostContextResponse": "No active workspace",
+      "pasteDisabled": true
+    }
+  ],
+  "capabilities": [
+    {
+      "kind": "workspace:read",
+      "description": "Read the name, branch, and terminal list of your focused worktree"
+    },
+    {
+      "kind": "terminal:send",
+      "description": "Type text into a terminal you can see (always a specific terminal)"
+    }
+  ],
+  "themePairs": 12,
+  "needsReconsent": false,
+  "limits": "No agent was launched or terminal text written. Synthetic bridge interaction tests separately covered explicit/stale targets and paste payloads."
+}

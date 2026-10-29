@@ -1,0 +1,39 @@
+{
+  "manifestVersion": 2,
+  "id": "jetbrains-icons",
+  "publisher": "im-adarsh",
+  "name": "JetBrains File Icons",
+  "version": "1.0.0",
+  "execution": "data",
+  "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/im-adarsh/orca",
+  "engines": {
+    "orca": ">=1.4.245"
+  },
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "new-ui-dark",
+        "title": "JetBrains New UI Dark",
+        "path": "themes/new-ui-dark.json"
+      },
+      {
+        "id": "new-ui-light",
+        "title": "JetBrains New UI Light",
+        "path": "themes/new-ui-light.json"
+      },
+      {
+        "id": "classic-dark",
+        "title": "JetBrains Classic Dark",
+        "path": "themes/classic-dark.json"
+      },
+      {
+        "id": "classic-light",
+        "title": "JetBrains Classic Light",
+        "path": "themes/classic-light.json"
+      }
+    ]
+  },
+  "capabilities": []
+}

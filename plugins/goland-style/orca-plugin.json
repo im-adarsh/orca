@@ -1,0 +1,202 @@
+{
+  "manifestVersion": 2,
+  "id": "jetbrains-themes",
+  "publisher": "im-adarsh",
+  "name": "GoLand Style for Orca",
+  "version": "2.0.0",
+  "description": "Twelve consistent GoLand-style palettes, developer commands, and portable agent instruction profiles.",
+  "repository": "https://github.com/im-adarsh/orca",
+  "engines": {
+    "orca": ">=1.4.245"
+  },
+  "pluginApi": 1,
+  "contributes": {
+    "themes": [
+      {
+        "id": "islands-dark",
+        "path": "themes/islands-dark.json",
+        "title": "Islands Dark"
+      },
+      {
+        "id": "islands-light",
+        "path": "themes/islands-light.json",
+        "title": "Islands Light"
+      },
+      {
+        "id": "islands-darcula",
+        "path": "themes/islands-darcula.json",
+        "title": "Islands Darcula"
+      },
+      {
+        "id": "jetbrains-dark",
+        "path": "themes/jetbrains-dark.json",
+        "title": "New UI Dark"
+      },
+      {
+        "id": "jetbrains-light",
+        "path": "themes/jetbrains-light.json",
+        "title": "New UI Light"
+      },
+      {
+        "id": "classic-dark",
+        "path": "themes/classic-dark.json",
+        "title": "Classic Dark (Darcula)"
+      },
+      {
+        "id": "classic-light",
+        "path": "themes/classic-light.json",
+        "title": "Classic Light"
+      },
+      {
+        "id": "high-contrast",
+        "path": "themes/high-contrast.json",
+        "title": "High Contrast"
+      },
+      {
+        "id": "matte",
+        "path": "themes/matte.json",
+        "title": "Matte"
+      },
+      {
+        "id": "graphite",
+        "path": "themes/graphite.json",
+        "title": "Graphite"
+      },
+      {
+        "id": "paper",
+        "path": "themes/paper.json",
+        "title": "Paper"
+      },
+      {
+        "id": "slate",
+        "path": "themes/slate.json",
+        "title": "Slate"
+      }
+    ],
+    "terminalThemes": [
+      {
+        "id": "islands-dark-terminal",
+        "path": "themes/islands-dark-terminal.json",
+        "title": "Islands Dark"
+      },
+      {
+        "id": "islands-light-terminal",
+        "path": "themes/islands-light-terminal.json",
+        "title": "Islands Light"
+      },
+      {
+        "id": "islands-darcula-terminal",
+        "path": "themes/islands-darcula-terminal.json",
+        "title": "Islands Darcula"
+      },
+      {
+        "id": "jetbrains-dark-terminal",
+        "path": "themes/jetbrains-dark-terminal.json",
+        "title": "New UI Dark"
+      },
+      {
+        "id": "jetbrains-light-terminal",
+        "path": "themes/jetbrains-light-terminal.json",
+        "title": "New UI Light"
+      },
+      {
+        "id": "classic-dark-terminal",
+        "path": "themes/classic-dark-terminal.json",
+        "title": "Classic Dark (Darcula)"
+      },
+      {
+        "id": "classic-light-terminal",
+        "path": "themes/classic-light-terminal.json",
+        "title": "Classic Light"
+      },
+      {
+        "id": "high-contrast-terminal",
+        "path": "themes/high-contrast-terminal.json",
+        "title": "High Contrast"
+      },
+      {
+        "id": "matte-terminal",
+        "path": "themes/matte-terminal.json",
+        "title": "Matte"
+      },
+      {
+        "id": "graphite-terminal",
+        "path": "themes/graphite-terminal.json",
+        "title": "Graphite"
+      },
+      {
+        "id": "paper-terminal",
+        "path": "themes/paper-terminal.json",
+        "title": "Paper"
+      },
+      {
+        "id": "slate-terminal",
+        "path": "themes/slate-terminal.json",
+        "title": "Slate"
+      }
+    ],
+    "panels": [
+      {
+        "id": "goland-setup",
+        "title": "GoLand Setup",
+        "icon": "layers",
+        "entry": "setup/index.html"
+      },
+      {
+        "id": "developer-commands",
+        "title": "Developer Commands",
+        "icon": "terminal",
+        "entry": "panels/commands.html"
+      },
+      {
+        "id": "agent-profiles",
+        "title": "Agent Profiles",
+        "icon": "bot",
+        "entry": "panels/profiles.html"
+      }
+    ],
+    "commands": [
+      {
+        "id": "project-window",
+        "title": "GoLand Style: Project Window",
+        "action": "sidebar.explorer.toggle"
+      },
+      {
+        "id": "version-control",
+        "title": "GoLand Style: Version Control",
+        "action": "sidebar.sourceControl.toggle"
+      },
+      {
+        "id": "find-in-project",
+        "title": "GoLand Style: Find in Project",
+        "action": "sidebar.search.toggle"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "project-window",
+        "key": "Mod+Alt+1",
+        "when": "global"
+      },
+      {
+        "command": "version-control",
+        "key": "Mod+Alt+9",
+        "when": "global"
+      },
+      {
+        "command": "find-in-project",
+        "key": "Mod+Alt+Shift+F",
+        "when": "global"
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "kind": "workspace:read"
+    },
+    {
+      "kind": "terminal:send"
+    }
+  ],
+  "execution": "sandboxed-ui"
+}

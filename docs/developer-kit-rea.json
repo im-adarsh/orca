@@ -1,0 +1,63 @@
+{
+  "scope": "Inert bounded shipped Orca1.4.244 contracts. No app or plugin code executed. This does not establish APIs in later hosts.",
+  "extracts": [
+    {
+      "extract": "contribution-contract.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-content-pack-contributions.js",
+      "original_sha256": "bf25c54c1c97f76bc320591c3b77dc7e1a406d29835fe91fe1f72290d229812c",
+      "start_byte": 0,
+      "end_byte_exclusive": 3117,
+      "extract_sha256": "bbd32e09a18154bc3fa02628fd2f4ff68d793c2bcbff2f64e215319a06f0203a"
+    },
+    {
+      "extract": "execution-contract.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-execution-profile.js",
+      "original_sha256": "d93389d20c4e7f4eaa90beb7752eafbecf6270656b85333e6b1435a800f87323",
+      "start_byte": 0,
+      "end_byte_exclusive": 2341,
+      "extract_sha256": "c1ce556f357c969874421be7567780fdd4e3a7b02837717f63ff0690d9478001"
+    },
+    {
+      "extract": "declared-artifacts.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/main/chunks/orcad-migration-source-retention-YqU6zjTf.js",
+      "original_sha256": "5ff13a2caae6261f65751cc8e902484c13dd68e3c5d38192806f7463f2c6db2a",
+      "start_byte": 2153493,
+      "end_byte_exclusive": 2154133,
+      "extract_sha256": "be6fea8868b32868d8a15080c901fa32b3a075c035aaac27756c4fcc64d4407c"
+    },
+    {
+      "extract": "artifact-path-check.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/main/chunks/orcad-migration-source-retention-YqU6zjTf.js",
+      "original_sha256": "5ff13a2caae6261f65751cc8e902484c13dd68e3c5d38192806f7463f2c6db2a",
+      "start_byte": 2154494,
+      "end_byte_exclusive": 2155412,
+      "extract_sha256": "7ab553d6c0571a06e24cf2c6d0d8221aba66015a9b2cf0201176ef9a808d7b79"
+    },
+    {
+      "extract": "runtime-plugin-rpc.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/main/chunks/orcad-migration-source-retention-YqU6zjTf.js",
+      "original_sha256": "5ff13a2caae6261f65751cc8e902484c13dd68e3c5d38192806f7463f2c6db2a",
+      "start_byte": 2186286,
+      "end_byte_exclusive": 2187387,
+      "extract_sha256": "5240effbfb6a41e91298fe5ddcee4a98e3eafeaee818dd2b6d4048dc466ca2d4"
+    },
+    {
+      "extract": "content-pack-registry.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar!out/main/index.js",
+      "asar_sha256": "4a0fbb30d06814e0670b244a05cad604ca2603fd69614cb0c3f3d7df93986bc2",
+      "original_member_sha256": "c6709c986b952f8463cf80640fd126d09df7b52fdf974591438f9022b5699d2d",
+      "start_byte": 5309080,
+      "end_byte_exclusive": 5310359
+    },
+    {
+      "extract": "preload-plugin-api.js",
+      "source": "/Applications/Orca.app/Contents/Resources/app.asar!out/preload/index.js",
+      "asar_sha256": "4a0fbb30d06814e0670b244a05cad604ca2603fd69614cb0c3f3d7df93986bc2",
+      "original_member_sha256": "04f28fc7f23b940d73a2f7e7eca65f21c3336969136d3055a1ea22f55b844717",
+      "start_byte": 254241,
+      "end_byte_exclusive": 256399
+    }
+  ],
+  "evidenceId": "ev_88e8123a4432a58f9390d65ca8542020060bf68898c6ae29c73b485c328f7143",
+  "limits": "Static bounded excerpts of Orca 1.4.244; imports excluded. No native profile import found in inspected activation/preload/CLI paths. No runtime execution by REA."
+}

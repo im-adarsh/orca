@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.0
+
+- Add Developer Commands and Agent Profiles panels with explicit terminal selection and paste without submission.
+- Add Implementer, Reviewer, and Debugger instruction presets plus a shell-free Orca CLI launcher.
+- Add a separate four-variant JetBrains file icon package using licensed upstream assets and documented original fallbacks.
+- Prepare the newer catalog with immutable package hashes and the official Excalidraw editor; icon/editor installation requires the not-yet-stable Orca 1.4.245 API.
+- Preserve the twelve consistent palettes and legacy marketplace compatibility.
+
 ## 1.3.1
 
 - Unify major app, settings, popover, sidebar, editor and terminal surfaces for every palette using its existing editor/terminal base. Islands Dark now uses the preferred inner-panel #191A1C throughout.
