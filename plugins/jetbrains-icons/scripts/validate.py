@@ -35,6 +35,9 @@ for entry in manifest['contributes']['iconThemes']:
  p=root/entry['path'];assert p.stat().st_size<=16384
  theme=json.loads(p.read_text());assert set(theme)=={'schemaVersion','icons','fileNames','fileExtensions'}
  assert theme['schemaVersion']==1
+ family='new-ui' if entry['id'].startswith('new-ui') else 'classic'
+ for extension in ('jsp','jspx'):
+  assert theme['fileExtensions'][extension].startswith(f'assets/{family}/{extension}'),(entry['id'],extension)
  assert set(theme['icons'])=={'file','folder','folder-open'}
  keys=list(theme['icons'])+list(theme['fileNames'])+list(theme['fileExtensions']);assert len(keys)<=512
  assert len(theme['fileNames'])>=35 and len(theme['fileExtensions'])>=70

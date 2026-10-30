@@ -30,8 +30,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
       await page.setViewportSize({width,height:1000});
       if (await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)) throw Error('Horizontal overflow at '+width);
     }
+    const screenshot = path.join(root, 'screenshots', 'jsp-coverage.png');
+    fs.mkdirSync(path.dirname(screenshot), {recursive:true});
+    const capture = await browser.newPage({viewport:{width:1440,height:1000}});
+    await capture.goto('file://' + path.join(root, 'preview.html'));
+    await capture.locator('img').evaluateAll(xs=>Promise.all(xs.map(x=>x.decode())));
+    await capture.screenshot({path:screenshot, fullPage:true});
+    await capture.close();
     const result={method:'Every bundled SVG loaded from its exact bytes as a data URL in isolated headless Chrome; decoded dimensions and nonempty alpha readback checked. Contact sheet uses bundled relative paths. Static schema/mapping checks separate. No native Orca1.4.245 installation performed.',svgs:observations.length,allDecode16x16:true,allPaintPixels:true,contactSheetImages:await page.locator('img').count(),responsiveWidths:[360,768,1440],scriptErrors:errors};
     fs.writeFileSync(path.join(root,'validation-results.json'),JSON.stringify(result,null,2)+'\n');
-    console.log('PASS: '+observations.length+' SVGs decode16×16 and paint pixels; 132 contact images; responsive widths360/768/1440.');
+    console.log('PASS: '+observations.length+' SVGs decode16×16 and paint pixels; '+result.contactSheetImages+' contact images; responsive widths360/768/1440.');
   } finally { await browser.close(); }
 })().catch(e=>{console.error(e);process.exitCode=1});

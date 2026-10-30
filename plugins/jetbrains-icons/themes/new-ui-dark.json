@@ -230,6 +230,8 @@
     "wsdl": "assets/new-ui/wsdl_dark.svg",
     "http": "assets/new-ui/http.svg",
     "rest-http": "assets/new-ui/http.svg",
+    "jsp": "assets/new-ui/jsp_dark.svg",
+    "jspx": "assets/new-ui/jspx_dark.svg",
     "regex": "assets/new-ui/regexp_dark.svg",
     "regexp": "assets/new-ui/regexp_dark.svg",
     "go": "assets/original/new-ui-dark/go.svg",

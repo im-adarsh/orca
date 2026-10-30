@@ -230,6 +230,8 @@
     "wsdl": "assets/classic/wsdlFile.svg",
     "http": "assets/classic/http.svg",
     "rest-http": "assets/classic/http.svg",
+    "jsp": "assets/classic/jsp.svg",
+    "jspx": "assets/classic/jspx.svg",
     "regex": "assets/classic/regexp.svg",
     "regexp": "assets/classic/regexp.svg",
     "go": "assets/original/classic-dark/go.svg",

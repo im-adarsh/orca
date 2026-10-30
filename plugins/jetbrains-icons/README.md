@@ -4,16 +4,17 @@ Four file-icon themes built from the Apache-licensed IntelliJ Community icon sou
 
 | Theme | Use with | Unique SVGs |
 |---|---|---:|
-| JetBrains New UI Dark | Islands Dark, New UI Dark, Graphite, Slate | 50 |
-| JetBrains New UI Light | Islands Light, New UI Light, Matte, Paper | 50 |
-| JetBrains Classic Dark | Classic Dark or Islands Darcula | 29 |
-| JetBrains Classic Light | Classic Light | 29 |
+| JetBrains New UI Dark | Islands Dark, New UI Dark, Graphite, Slate | 52 |
+| JetBrains New UI Light | Islands Light, New UI Light, Matte, Paper | 52 |
+| JetBrains Classic Dark | Classic Dark or Islands Darcula | 31 |
+| JetBrains Classic Light | Classic Light | 31 |
 
-Each theme supplies **265 mappings**: 173 extensions, 89 exact filenames, and default file, folder and expanded-folder icons. Coverage includes Go, JavaScript/TypeScript, Java, C/C++, C#, Python, Rust, Kotlin, Dart, Swift, shell, SQL, JSON, YAML, XML, TOML, config files, archives, images and common build tools. Some categories intentionally share a neutral fallback; mapping coverage does not mean every language has a distinct logo.
+Each theme supplies **267 mappings**: 175 extensions, 89 exact filenames, and default file, folder and expanded-folder icons. Coverage includes Go, JavaScript/TypeScript, Java, C/C++, C#, Python, Rust, Kotlin, Dart, Swift, shell, SQL, JSP/JSPX, JSON, YAML, XML, TOML, config files, archives, images and common build tools. Some categories intentionally share a neutral fallback; mapping coverage does not mean every language has a distinct logo.
 
 Select the theme in Orca's file-icon theme picker after installing and approving the plugin. **Orca 1.4.245 or newer is required.** Orca 1.4.244 does not implement the `iconThemes` contribution. This package changes the file icons exposed by that contribution; it does not replace global toolbar, status, provider, activity-bar or application icons. Icon selection is independent of the app color theme. Choose a light/dark variant that matches the workspace; Orca does not automatically pair these four themes with app palettes.
 
 Open [preview.html](preview.html) for a local contact sheet. It loads only bundled SVGs and has no remote assets or scripts.
+The [JSP/JSPX contact sheet screenshot](screenshots/jsp-coverage.png) shows the added pinned artwork in all four variants.
 
 ## Artwork and licensing
 
