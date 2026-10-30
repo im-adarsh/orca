@@ -1,6 +1,12 @@
 # Marketplace implementation notes
 
-## Current increment: pinned icon catalog
+## Current increment: unpublished panel manifest compatibility
+
+The MRs prototype now uses legacy manifest format 1 and `engines.orca >=1.4.244`; format 1 derives its panel execution profile, while the production theme and icon manifests remain format 2. The compatibility check parses the actual MRs manifest with both the installed Orca 1.4.244 parser and the newer source snapshot, including its single panel and safe `code` icon. The pinned modern schema check covers only the two production format 2 packages. The prototype is still absent from both catalogs.
+
+Verification: `npm run verify:manifest-compatibility -- /Applications/Orca.app /private/tmp/orca-native-mr-host` passed both real parsers. `npm run verify:modern -- /private/tmp/orca-native-mr-host/docs/schemas/plugins` passed the pinned production manifests and catalog checks. No new panel screenshot was captured in this increment. Interactive sample filtering, actual app rendering, live MRs, durable presets, and native review-session opening remain outstanding; the latter three are blocked by the observed panel CSP and host API.
+
+## Earlier increment: pinned icon catalog
 
 Regenerated `orca-catalog.json` from the complete committed icon package at `06cba47256dc2ed7e762186816299b0693b987fb`. JetBrains Icons `1.0.1` now pins tree hash `a0aac9ea69c2f261a396fed78326b5729d131178c1701904358730e9f3e2b311`; its existing `1.0.0` commit and hash remain unchanged. The production catalog still contains only the theme and icon packages; the MRs prototype remains unpublished.
 
