@@ -9,7 +9,7 @@ const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'orca-manifest-compat-'));
 try {
   const stockParser = require(path.join(installed, 'Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-manifest.js'));
   require(path.join(newer, 'node_modules/esbuild')).buildSync({stdin: {
-    contents: "export {parsePluginManifest} from './src/shared/plugins/manifest/plugin-manifest';",
+    contents: "export {parsePluginManifest} from './src/shared/plugins/manifest/plugin-manifest'; export {validateMarketplaceProvenance} from './src/main/plugins/catalog/plugin-marketplace-provenance';",
     resolveDir: path.resolve(newer), loader: 'ts'
   }, bundle: true, platform: 'node', format: 'cjs', outfile: path.join(temp, 'parser.cjs')});
   const newerParser = require(path.join(temp, 'parser.cjs'));
@@ -24,6 +24,11 @@ try {
   const result = newerParser.parsePluginManifest(modern);
   assert(result.ok, 'Newer Orca rejects generated modern package: ' + result.error);
   console.log('Newer Orca: generated modern manifest accepted');
+  newerParser.validateMarketplaceProvenance(
+    {source: {url: 'https://github.com/im-adarsh/orca.git'}},
+    {marketplace: JSON.parse(fs.readFileSync(path.join(root, 'orca-catalog.json')))}
+  );
+  console.log('Newer Orca: catalog publisher provenance accepted');
 } finally {
   fs.rmSync(temp, {recursive: true, force: true});
 }

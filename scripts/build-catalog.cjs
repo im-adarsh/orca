@@ -30,7 +30,6 @@ const entries = packages.map(([relative, categories]) => {
     description: manifest.description, categories,
     releases: [release, ...older.filter(item => item.version !== manifest.version)]};
 });
-entries.push(JSON.parse(fs.readFileSync(path.join(root, 'marketplace/upstream-excalidraw.json'))));
 fs.writeFileSync(catalogPath, JSON.stringify({
   $schema: 'https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-catalog.v2.schema.json',
   catalogVersion: 2, name: 'Adarsh Orca Marketplace', owner: 'im-adarsh', plugins: entries

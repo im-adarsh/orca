@@ -1,5 +1,10 @@
 # Changelog
 
+## Catalog fix — 2026-10-30
+
+- Remove the reserved official Excalidraw entry that caused newer Orca to reject the entire personal catalog at Add source.
+- Check catalog publisher provenance with Orca’s runtime validator, alongside manifest compatibility.
+
 ## 1.5.2 — 2026-10-30
 
 - Remove custom Orca host patches, app build/testing tools, and the host-dependent MRs package and catalog listing. This repository publishes marketplace packages only.

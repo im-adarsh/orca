@@ -9,10 +9,9 @@ Developer Commands and Agent Profiles have been removed from the source and gene
 - `orca-plugin.json` and `orca-marketplace.json` retain the 1.4.244-compatible theme collection.
 - `plugins/goland-style/` is generated from the same theme/setup source for the newer manifest field names and icon identifiers. Do not edit generated files directly.
 - `plugins/jetbrains-icons/` is a separate data-only package, with four icon variants.
-- `marketplace/upstream-excalidraw.json` records the exact official editor release.
 - `orca-catalog.json` pins the committed release packages. Historical release hashes remain unchanged.
 
-JetBrains File Icons and native Excalidraw require Orca 1.4.245+. The installed host checked was 1.4.244; see [compatibility observations](developer-compatibility.json). Existing developer-kit JSON evidence records historical tests of the removed panels and is retained for provenance.
+JetBrains File Icons require Orca 1.4.245+. Excalidraw belongs to Orca’s official catalog; listing its reserved identity in a personal catalog causes Orca to reject the source. The installed host checked was 1.4.244; see [compatibility observations](developer-compatibility.json). Existing developer-kit JSON evidence records historical tests of the removed panels and is retained for provenance.
 
 ## Validation and packaging
 

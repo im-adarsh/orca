@@ -1,6 +1,6 @@
 # Adarsh Orca Marketplace
 
-A marketplace with JetBrains-style file icons, a pinned Excalidraw editor entry, and twelve matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
+A marketplace with JetBrains-style file icons, and twelve matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
 
 ![Light and dark palette comparison](previews/themes.png)
 
@@ -21,7 +21,7 @@ If Install says “Could not prepare this plugin for review,” follow [the inst
 
 The current source removes **Developer Commands** and **Agent Profiles**, including their launcher, presets, panel sources, and dedicated tooling. The theme collection now contributes only **GoLand Setup** and requests no workspace or terminal permissions. Release **v1.5.2** keeps the manifest compatibility fix and removes the custom app work. Refresh your marketplace source and update the theme package to remove them from an older installation.
 
-The newer catalog includes **JetBrains File Icons** (four variants) and official **Excalidraw**, both gated to **Orca 1.4.245+**. The latest stable host checked was 1.4.244, so those packages are prepared but cannot yet be installed there. See [developer setup, compatibility, and verification](docs/developer-kit.md).
+The newer catalog includes **JetBrains File Icons** (four variants), gated to **Orca 1.4.245+**. Install **Excalidraw** from Orca’s official catalog; personal catalogs cannot list official plugin identities. The latest stable host checked was 1.4.244, so those packages are prepared but cannot yet be installed there. See [developer setup, compatibility, and verification](docs/developer-kit.md).
 
 ## Pick a family
 
