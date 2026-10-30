@@ -1,8 +1,8 @@
 # MRs right-sidebar prototype
 
-This sample-only marketplace panel mounts MRs in the right sidebar. Five varied local requests are grouped by repository. Status, author, assignee, reviewer, repository, and provider filters use removable chips. Named presets work only during the current panel session.
+This sample-only marketplace panel mounts MRs in the right sidebar. Five varied local requests are grouped by repository. Status, author, assignee, reviewer, repository, and provider filters use removable chips. Named views work only during the current panel session. Search, filter/view popovers, collapsible groups and sample detail/back navigation keep requests visible near the top. The provider-query editor preserves complete GitHub query text and GitLab parameters, including arrays, exclusions and Unicode. These queries are unchecked and explicitly not executed in sample mode; this is not a claim of live support for every provider filter.
 
-The prototype uses legacy manifest format 1 with `engines.orca >=1.4.244` so stock 1.4.244 and newer Orca can parse it. Format 1 derives the panel execution profile from its contribution. The generated `../mrs-panel-modern` package uses format 2 for Orca 1.4.245+. Its panel HTML is identical. The legacy package is also published as the root of tag `mrs-panel-v0.1.0` for older marketplace clients.
+The prototype uses legacy manifest format 1 with `engines.orca >=1.4.244` so stock 1.4.244 and newer Orca can parse it. Format 1 derives the panel execution profile from its contribution. The generated `../mrs-panel-modern` package uses format 2 for Orca 1.4.245+. Its panel HTML is identical. The legacy package is also published as the root of tag `mrs-panel-v0.1.1` for older marketplace clients.
 
 The observed panel CSP has `connect-src 'none'`, and the panel host API has no credential or storage access. Live GitHub/GitLab requests, persistent saved filters, and opening a native review session remain blocked by that public API boundary. It is listed explicitly as a prototype, not as a live MRs integration.
 

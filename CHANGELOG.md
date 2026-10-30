@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.4 — 2026-10-30
+
+- Redesign the MRs right-sidebar prototype with compact search/filter/view controls, collapsible repositories and sample request details.
+- Preserve native GitHub query text and GitLab parameter syntax in session views; queries remain explicitly unexecuted in sample mode.
+- Fix narrow popovers, keyboard focus, provider labels, Unicode handling and credential-parameter rejection. No host or desktop changes.
+
 ## 1.5.3 — 2026-10-30
 
 - Publish MRs Panel Prototype as a right-sidebar tab with sample repository groups, filter chips and session-only named presets. Live fetching, durable presets and native review sessions remain unavailable.

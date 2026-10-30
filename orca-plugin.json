@@ -3,7 +3,7 @@
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
   "name": "GoLand Style for Orca",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {

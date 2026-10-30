@@ -1,0 +1,38 @@
+{
+  "paradev": {
+    "evidence": "ev_7ca14217fdfb3faada4e9b61477f9b8be4a6abd804a7211e8d3a6f202da6f53d",
+    "parent": "ev_6322701fd6160ac8532ec71d5299b074035b48270ee9ea9ff79a8945575b0c64"
+  },
+  "orca": {
+    "evidence": "ev_12ea6dadc3ab9823738c4022ef0088b9b27218c1351a21db0cf9620bfc062f62",
+    "parent": "ev_d47ed9fadd504c7ff77076b7d9557e40e79730e8dff9a87a790bd0dcaaab7d9b"
+  },
+  "reference": "https://docs.paradev.com/diff-viewer",
+  "paradevRelease": "desktop-v2.0.2",
+  "paradevArtifactSha256": "779b128295ccabbf4402b2031dd544c0ddcf3d77b1029a60509c9d17420ff94d",
+  "scope": "Read-only static inspection of selected shipped UI modules and official screenshots; no Paradev installation or execution. Design inspiration, no vendor code copied.",
+  "review": "UI/UX Pro Max review and Ponytail implementation with independent correctness review",
+  "stockOrca": {
+    "hostVersion": "1.4.244",
+    "installed": true,
+    "panelVisible": true,
+    "interactions": {
+      "statusFilter": true,
+      "sessionPreset": true,
+      "queryRoundTrip": true,
+      "unicodeQuery": true,
+      "unexecutedState": true,
+      "localViewRestore": true,
+      "detailBack": true
+    },
+    "firstRequestTop": 153.1953125,
+    "profile": "disposable, real profile untouched",
+    "mode": "sample data; session views and native query editing only; provider queries not executed",
+    "screenshot": "screenshots/stock-orca-right-sidebar.png"
+  },
+  "remainingLimits": [
+    "No live GitHub/GitLab provider execution",
+    "No durable saved views",
+    "No native review-session creation"
+  ]
+}

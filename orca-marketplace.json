@@ -7,7 +7,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.3"
+        "ref": "v1.5.4"
       },
       "description": "Twelve consistent palettes, matching terminal themes, and a portable setup guide.",
       "categories": [
@@ -21,7 +21,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "mrs-panel-v0.1.0"
+        "ref": "mrs-panel-v0.1.1"
       },
       "description": "MRs right-sidebar prototype: sample data, repository grouping, filter chips and session-only presets. Live provider connections and review sessions are unavailable.",
       "categories": [

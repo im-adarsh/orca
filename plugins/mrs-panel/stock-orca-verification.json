@@ -4,10 +4,15 @@
   "panelVisible": true,
   "interactions": {
     "statusFilter": true,
-    "combinedFilter": true,
-    "sessionPreset": true
+    "sessionPreset": true,
+    "queryRoundTrip": true,
+    "unicodeQuery": true,
+    "unexecutedState": true,
+    "localViewRestore": true,
+    "detailBack": true
   },
+  "firstRequestTop": 153.1953125,
   "profile": "disposable, real profile untouched",
-  "mode": "sample data; session-only presets",
+  "mode": "sample data; session views and native query editing only; provider queries not executed",
   "screenshot": "screenshots/stock-orca-right-sidebar.png"
 }

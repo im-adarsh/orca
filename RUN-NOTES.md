@@ -68,3 +68,7 @@ This supersedes earlier notes that stock-app verification was pending. Full live
 ## Publication authorized
 
 The user subsequently requested merge and publication. The reviewed branch was merged into main. Release v1.5.3 publishes the icon update and a clearly labeled sample-only MRs prototype through both marketplace formats; the live API limitations remain unchanged. Earlier unpublished-status notes describe the pre-release review state.
+
+## v1.5.4 independent acceptance
+
+UI/UX Pro Max and Ponytail review, scoped Paradev/Orca REA evidence, and stock-app checks accepted the compact sidebar correction. Actual stock Orca 1.4.244 verified filtering, session views, exact cross-provider query restoration, Unicode input, explicit unexecuted state, local-view restoration and detail/back. First request top was 153px. Screenshots and sanitized verification are updated. The existing merge/publish instruction authorizes this UI correction release. Provider-query editing does not remove the live API, persistent storage or review-session blockers.
