@@ -1,5 +1,13 @@
 # Marketplace implementation notes
 
+## Current increment: right-sidebar MRs prototype
+
+Added an unpublished `plugins/mrs-panel` package with one `contributes.panels` entry. Its static panel uses Orca's exported `--orca-*` design tokens, shows repository-grouped examples, and labels the content as sample mode with the live API limitation in the panel itself. It has no misleading review or filter controls. The package is not in the catalog and has not been installed in stock Orca; a real in-app screenshot is still required.
+
+Verification: the new pinned modern manifest schema check passed for the MRs package. `node plugins/mrs-panel/scripts/verify-panel.cjs` passed with the installed Orca CSP and opaque-origin sandbox at 240, 320, and 480 px, including no remote requests or horizontal overflow. Existing `npm test`, `npm run verify:orca -- /Applications/Orca.app`, `npm run test:browser`, and `npm run verify:manifest-compatibility -- /Applications/Orca.app /private/tmp/orca-native-mr-host` passed. `npm run verify:modern -- /private/tmp/orca-native-mr-host/docs/schemas/plugins` validated all three manifests, then reported the pre-existing `im-adarsh.jetbrains-icons` catalog hash drift from the preceding unpublished icon changes.
+
+Remaining API blocker: the observed panel CSP uses `connect-src 'none'`; panel methods do not expose secrets/storage or a worker-call bridge. Authenticated GitHub/GitLab requests, persistent saved filters, and native review-session creation cannot be claimed complete. The next panel increment can implement local sample filtering without claiming live data; an in-app stock Orca render and screenshot should verify the actual tab position.
+
 ## Current increment: JetBrains JSP/JSPX icons
 
 The existing four JetBrains file-icon themes now use dedicated JSP and JSPX artwork from the pinned IntelliJ Community commit `278ea91039deaad8105adf8827f84897de9d8b8f`. The six new SVGs are unmodified Apache-2.0 files with source URLs, Git blob IDs, and SHA-256 hashes in `plugins/jetbrains-icons/provenance.json`. Package version is `1.0.1`; the existing `1.0.0` catalog release remains unchanged.

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MRs · sample mode</title>
+  <style>
+    :root { color-scheme: light dark; font: 12px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 0; background: var(--orca-background, #1e1f22); color: var(--orca-foreground, #dfe1e5); }
+    main { width: 100%; min-width: 0; padding: 14px 12px 24px; }
+    header { display: flex; align-items: baseline; gap: 8px; padding: 0 2px 14px; }
+    h1 { font-size: 15px; line-height: 1.2; margin: 0; font-weight: 650; }
+    .badge { margin-left: auto; border: 1px solid var(--orca-border, #555); border-radius: 4px; padding: 2px 5px; font-size: 10px; white-space: nowrap; }
+    .notice { border: 1px solid var(--orca-border, #555); border-radius: 6px; padding: 10px; background: var(--orca-card, #2b2d30); }
+    .notice strong { display: block; margin-bottom: 3px; }
+    p { margin: 0; overflow-wrap: anywhere; }
+    .section { margin-top: 20px; }
+    h2 { margin: 0 2px 8px; font-size: 11px; font-weight: 650; color: var(--orca-muted-foreground, #a7a9ad); letter-spacing: .02em; }
+    .repo { border: 1px solid var(--orca-border, #555); border-radius: 6px; overflow: hidden; }
+    .repo + .repo { margin-top: 8px; }
+    .repo-title { padding: 8px 10px; font-weight: 650; background: var(--orca-card, #2b2d30); overflow-wrap: anywhere; }
+    .mr { border-top: 1px solid var(--orca-border, #555); padding: 9px 10px; min-width: 0; }
+    .mr-title { font-weight: 550; overflow-wrap: anywhere; }
+    .meta { color: var(--orca-muted-foreground, #a7a9ad); margin-top: 3px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>MRs</h1><span class="badge">SAMPLE MODE</span></header>
+    <div class="notice" role="status">
+      <strong>Live merge requests are unavailable</strong>
+      <p>Orca's panel sandbox currently cannot make provider network requests or access stored credentials. These examples are local previews. Filtering, saved filters, and opening a review session are not available yet.</p>
+    </div>
+    <section class="section" aria-labelledby="sample-heading">
+      <h2 id="sample-heading">EXAMPLE REPOSITORIES</h2>
+      <div class="repo">
+        <div class="repo-title">acme / storefront</div>
+        <div class="mr"><div class="mr-title">Add checkout validation</div><div class="meta">#42 · GitHub · Open · author: Mira</div></div>
+        <div class="mr"><div class="mr-title">Update payment copy</div><div class="meta">#39 · GitHub · Draft · reviewer: Noah</div></div>
+      </div>
+      <div class="repo">
+        <div class="repo-title">acme / backend</div>
+        <div class="mr"><div class="mr-title">Handle retry responses</div><div class="meta">!18 · GitLab · Open · assignee: Lee</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
