@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.2 — 2026-10-30
+
+- Remove custom Orca host patches, app build/testing tools, and the host-dependent MRs package and catalog listing. This repository publishes marketplace packages only.
+- Keep Developer Commands and Agent Profiles removed, and retain the manifest compatibility fix.
+
 ## 1.5.1 — 2026-10-30
 
 - Fix the portable root theme package: declare manifest format 1 for its legacy field names so both Orca 1.4.244 and the newer parser can load it.

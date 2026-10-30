@@ -10,8 +10,7 @@ const catalogPath = path.join(root, 'orca-catalog.json');
 const previous = fs.existsSync(catalogPath) ? JSON.parse(fs.readFileSync(catalogPath)).plugins : [];
 const packages = [
   ['plugins/goland-style', ['themes', 'appearance']],
-  ['plugins/jetbrains-icons', ['icons', 'appearance']],
-  ['plugins/merge-request-inbox', ['developer-tools']]
+  ['plugins/jetbrains-icons', ['icons', 'appearance']]
 ];
 const entries = packages.map(([relative, categories]) => {
   if (execFileSync('git', ['status', '--porcelain', '--', relative], {cwd: root, encoding: 'utf8'}).trim() ||

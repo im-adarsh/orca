@@ -9,7 +9,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.1",
+        "ref": "v1.5.2",
         "path": "plugins/goland-style"
       },
       "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
@@ -41,7 +41,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.1",
+        "ref": "v1.5.2",
         "path": "plugins/jetbrains-icons"
       },
       "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
@@ -57,29 +57,6 @@
           "execution": "data",
           "minimumOrca": "1.4.245",
           "name": "JetBrains File Icons"
-        }
-      ]
-    },
-    {
-      "id": "im-adarsh.merge-request-inbox",
-      "source": {
-        "kind": "git",
-        "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.1",
-        "path": "plugins/merge-request-inbox"
-      },
-      "description": "Requires the native MRs host patch. Merge requests grouped by repository across GitHub, GitLab and self-hosted GitLab, with local review workspaces.",
-      "categories": [
-        "developer-tools"
-      ],
-      "releases": [
-        {
-          "version": "0.1.0",
-          "commit": "77f38a5fca5193ec829e238de7e08aae5fb2e76d",
-          "contentHash": "8d85db64366ba3fa90f001ba1765d1c20dea22335658454ffa73701ebbca3c3a",
-          "execution": "trusted-worker",
-          "minimumOrca": "1.4.245",
-          "name": "MRs"
         }
       ]
     },

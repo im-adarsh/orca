@@ -10,13 +10,9 @@ Developer Commands and Agent Profiles have been removed from the source and gene
 - `plugins/goland-style/` is generated from the same theme/setup source for the newer manifest field names and icon identifiers. Do not edit generated files directly.
 - `plugins/jetbrains-icons/` is a separate data-only package, with four icon variants.
 - `marketplace/upstream-excalidraw.json` records the exact official editor release.
-- `orca-catalog.json` pins the committed release packages, including the experimental MRs plugin. Historical release hashes remain unchanged.
+- `orca-catalog.json` pins the committed release packages. Historical release hashes remain unchanged.
 
 JetBrains File Icons and native Excalidraw require Orca 1.4.245+. The installed host checked was 1.4.244; see [compatibility observations](developer-compatibility.json). Existing developer-kit JSON evidence records historical tests of the removed panels and is retained for provenance.
-
-## Native merge request inbox
-
-The separate **MRs** plugin adds one native entry below Tasks/Automations, groups requests by repository and opens local review through the existing Tasks workspace composer. All deliverables belong to `im-adarsh/orca`. See [build, installation and usage](native-mrs.md) and the [approved design](superpowers/specs/2026-10-30-native-merge-request-inbox-design.md). A patched host is required; the MRs catalog description identifies this requirement.
 
 ## Validation and packaging
 
