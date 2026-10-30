@@ -39,3 +39,10 @@ Verification: `python3 plugins/jetbrains-icons/scripts/validate.py`, `npm test`,
 The pinned modern schema check accepted both package manifests; at that point its catalog check reported `Catalog drift: im-adarsh.jetbrains-icons`. The later pinned icon catalog increment above resolved that drift. No catalog release or Git commit was made during the earlier icon increment.
 
 MRs panel: no implementation claim in this increment. Prior scoped REA evidence is in `/private/tmp/orca-tab-doublecheck-rea-evidence.json` and `/private/tmp/orca-marketplace-tab-findings.md`. The supported right-sidebar panel cannot currently fetch authenticated GitHub/GitLab MRs or persist saved filters under the observed panel CSP and worker-only storage/secrets boundary. A future sample-mode panel must label those limits explicitly; it must not be published as a live MRs integration.
+
+
+## Independent final review and stock-app verification
+
+Accepted for the supported prototype/icon scope after c4d3065. The parent independently ran theme validation, pinned modern schema/package hashes, old/new manifest and catalog provenance checks, and icon asset/provenance validation. A disposable stock Orca 1.4.244 profile installed/approved MRs, opened the actual right-sidebar tab, and verified status filtering (2/5), combined provider filtering (1/5), and session preset reapplication (2/5). `plugins/mrs-panel/stock-orca-verification.json` records the results; `plugins/mrs-panel/screenshots/stock-orca-right-sidebar.png` is the actual app screenshot. The installed application and real user profile were not changed.
+
+This supersedes earlier notes that stock-app verification was pending. Full live provider fetching, durable saved filters, and native review-session creation remain blocked by the examined public panel API. MRs stays out of production catalogs. The icons and supported prototype are reviewable on this branch; nothing from this branch has been published or merged.
