@@ -41,6 +41,10 @@ assert.match(html,/SAMPLE MODE/);
    assert.equal(controls[1],palette.scheme);
    assert.equal(controls[0],palette.name.includes('light')?'rgb(255, 255, 255)':palette.name==='new dark'?'rgb(43, 45, 48)':'rgb(48, 49, 54)');
    assert.equal(await frame.locator('body').evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,palette.name+' '+width+' overflow');
+   await frame.locator('#filter-menu summary').click();
+   const menuBounds=await frame.locator('#filter-menu .menu-body').evaluate(el=>({left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,width:innerWidth}));
+   assert(menuBounds.left>=0&&menuBounds.right<=menuBounds.width,palette.name+' '+width+' filter menu clipped');
+   await frame.locator('#filter-menu summary').click();
   }
   const frame=await mount(palettes[0],320);
   const add=async(key,val)=>{await frame.locator('#filter-menu summary').click();await frame.getByLabel('Filter by').selectOption(key);await frame.getByLabel('Value').selectOption(val);await frame.getByRole('button',{name:'Add filter'}).click();await frame.locator('#filter-menu summary').click()};
@@ -69,9 +73,40 @@ assert.match(html,/SAMPLE MODE/);
   assert.equal(await frame.locator('#list-view').isVisible(),true);
   await frame.getByLabel('Search sample requests').fill('checkout');assert.equal(await frame.locator('.mr').count(),1);
   await frame.getByLabel('Search sample requests').fill('');
+  await frame.locator('#filter-menu summary').click();
+  const github='is:pr "https://example.test/a?b=c" -label:stale (review:required OR draft:true) updated:2024-01-01..2024-12-31 future:kept';
+  await frame.getByLabel('Query text (unchecked)').fill(github);
+  await frame.getByRole('button',{name:'Apply query'}).click();
+  assert.equal(await frame.locator('.mr').count(),0);
+  assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
+  assert.equal(await frame.locator('#provider-query').inputValue(),github);
+  for(const invalid of ['https://api.github.com/search/issues?q=token%3Dsecret','/search/issues?q=x']){
+   await frame.getByLabel('Query text (unchecked)').fill(invalid);
+   await frame.getByRole('button',{name:'Apply query'}).click();
+   assert.match(await frame.locator('#query-error').innerText(),/endpoint/);
+   assert.equal(await frame.locator('#query-error').innerText().then(text=>text.includes('secret')),false);
+   assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
+  }
+  await frame.getByLabel('Provider query · sample mode').selectOption('GitLab');
+  const gitlab='state=opened&labels[]=one&labels[]=two&not[author_username]=bot&reviewer_id=7&reviewer_id=8&future_filter=x%2By';
+  await frame.getByLabel('Query text (unchecked)').fill(gitlab);
+  await frame.getByRole('button',{name:'Apply query'}).click();
+  assert.equal(await frame.locator('#provider-query').inputValue(),gitlab);
+  assert.equal(await frame.locator('#query-error').innerText(),'');
+  for(const invalid of ['private_token=secret','%70rivate_token=secret','state=opened&password=secret','state=opened&broken','https://gitlab.example/api/v4/merge_requests?state=opened']){
+   await frame.getByLabel('Query text (unchecked)').fill(invalid);
+   await frame.getByRole('button',{name:'Apply query'}).click();
+   assert.notEqual(await frame.locator('#query-error').innerText(),'');
+   assert.equal(await frame.locator('#query-error').innerText().then(text=>text.includes('secret')),false);
+   assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
+  }
+  await frame.getByRole('button',{name:'Clear query'}).click();
+  assert.equal(await frame.locator('.mr').count(),5);
+  await frame.locator('#filter-menu summary').click();
   assert.deepEqual(errors,[]);
-  await mount(palettes[1],360);
+  const screenshotFrame=await mount(palettes[1],360);
+  await screenshotFrame.locator('#filter-menu summary').click();
   await page.screenshot({path:path.join(root,'screenshots','mrs-sidebar-sample.png'),fullPage:true});
-  console.log('MRs panel passed compact layout, filtering, views, keyboard, detail, themes, sandbox, and responsive widths.');
+  console.log('MRs panel passed compact layout, filtering, provider query safety, sample state, views, keyboard, detail, themes, sandbox, and responsive widths.');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

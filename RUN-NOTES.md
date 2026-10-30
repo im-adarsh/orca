@@ -1,5 +1,11 @@
 # Marketplace implementation notes
 
+## Provider query editor increment
+
+The compact Filters popover now includes a labelled GitHub/GitLab provider query editor. It retains the exact entered GitHub search text or GitLab MR list parameter text, including unknown filters and duplicate or array parameters. A committed query explicitly shows “Not executed in sample mode — requires live provider data” instead of sample matches. Clear restores ordinary local filtering. Full endpoint input, malformed GitLab parameter strings, and GitLab credential/control parameters are rejected with generic messages; rejected input leaves the committed query unchanged. The panel sandbox test covers these cases and regenerates the [rendered screenshot](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png).
+
+Session views still snapshot only common chips and search; provider query round-trip is the next increment. The panel still cannot fetch live provider data, persist views durably, or open a native review session through the observed host API.
+
 ## Compact MRs sidebar increment (0.1.1 legacy / 0.2.1 modern)
 
 The expanded filter and preset forms are now compact Filters and Views popovers beside request search. Removable chips retain OR within one field and AND across fields. The request list has collapsible repository headings, status icons with text, and keyboard-selectable rows that open a sample detail view with back navigation. Session views preserve common filters and search. The first row renders above 210 px at 360 px width; the [rendered screenshot](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png) shows the new list.
