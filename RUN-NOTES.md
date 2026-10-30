@@ -2,6 +2,8 @@
 
 ## Current increment: interactive sample MRs sidebar
 
+Final UI review correction: inputs and selects now use the normalized `--surface` token, and native `color-scheme` follows Orca's `html.light`/`html.dark` class. The panel check verifies computed control backgrounds and color scheme for both token APIs with browser preference opposite the host theme; the updated screenshot shows the dark panel controls. `node plugins/mrs-panel/scripts/verify-panel.cjs` and `npm run verify:manifest-compatibility -- /Applications/Orca.app /private/tmp/orca-native-mr-host` passed.
+
 The unpublished right-sidebar panel now filters five varied sample requests by status, author, assignee, reviewer, repository, and provider with removable chips. Results group by repository, show a result count and empty state, and support named presets in memory for the current panel session. The panel explicitly says SESSION ONLY. The useful filter UI appears above a compact sandbox limitation notice. There are no inert connect or review controls.
 
 The panel uses nested fallbacks for the newer Orca tokens and stock 1.4.244 tokens. The panel verification script passed in the installed stock CSP and opaque iframe wrapper: add/remove filters, OR within a field and AND across fields, repository grouping, presets, empty state, Enter/Escape/Tab, accessible labels, body/card/text/focus computed colors in light and dark for both token schemes, remote-request guard, and no overflow at 240/320/480 px. The test saved a [screenshot of the real rendered sample UI](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png). This is a host-wrapper screenshot; the parent still needs to capture the separate stock-app installation screenshot.

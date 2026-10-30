@@ -28,6 +28,7 @@ assert.match(html,/SAMPLE MODE/);assert.match(html,/SESSION ONLY/);
    const frame=page.frameLocator('iframe');await frame.locator('#result-count').getByText('5 of 5').waitFor();return frame;
   }
   for(const palette of palettes)for(const width of [240,320,480]){
+   await page.emulateMedia({colorScheme:palette.scheme==='light'?'dark':'light'});
    const frame=await mount(palette,width);
    assert.equal(await frame.locator('.repo').count(),3,palette.name);
    assert.equal(await frame.locator('.mr').count(),5,palette.name);
@@ -35,6 +36,8 @@ assert.match(html,/SAMPLE MODE/);assert.match(html,/SESSION ONLY/);
    await page.keyboard.press('Tab');
    const colors=await frame.locator('body').evaluate(el=>{const c=s=>getComputedStyle(s);return[c(el).backgroundColor,c(document.querySelector('.repo-title')).backgroundColor,c(el).color,c(document.querySelector('#add-filter')).outlineColor]});
    assert.deepEqual(colors,palette.expected,palette.name);
+   const controls=await frame.locator('body').evaluate(()=>{const c=s=>getComputedStyle(s);return [c(document.querySelector('input')).backgroundColor,c(document.querySelector('select')).backgroundColor,c(document.documentElement).colorScheme]});
+   assert.deepEqual(controls,[palette.expected[1],palette.expected[1],palette.scheme],palette.name+' controls');
    const overflow=await frame.locator('body').evaluate(()=>document.documentElement.scrollWidth>innerWidth);
    assert(!overflow,palette.name+' overflows '+width);
   }
