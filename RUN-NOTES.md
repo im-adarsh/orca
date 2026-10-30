@@ -1,5 +1,13 @@
 # Marketplace implementation notes
 
+## Current increment: interactive sample MRs sidebar
+
+The unpublished right-sidebar panel now filters five varied sample requests by status, author, assignee, reviewer, repository, and provider with removable chips. Results group by repository, show a result count and empty state, and support named presets in memory for the current panel session. The panel explicitly says SESSION ONLY. The useful filter UI appears above a compact sandbox limitation notice. There are no inert connect or review controls.
+
+The panel uses nested fallbacks for the newer Orca tokens and stock 1.4.244 tokens. The panel verification script passed in the installed stock CSP and opaque iframe wrapper: add/remove filters, OR within a field and AND across fields, repository grouping, presets, empty state, Enter/Escape/Tab, accessible labels, body/card/text/focus computed colors in light and dark for both token schemes, remote-request guard, and no overflow at 240/320/480 px. The test saved a [screenshot of the real rendered sample UI](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png). This is a host-wrapper screenshot; the parent still needs to capture the separate stock-app installation screenshot.
+
+Live provider fetching, durable presets, and native review-session actions remain blocked by the observed panel CSP and host API. The MRs package remains unpublished and absent from the production catalog.
+
 ## Current increment: unpublished panel manifest compatibility
 
 The MRs prototype now uses legacy manifest format 1 and `engines.orca >=1.4.244`; format 1 derives its panel execution profile, while the production theme and icon manifests remain format 2. The compatibility check parses the actual MRs manifest with both the installed Orca 1.4.244 parser and the newer source snapshot, including its single panel and safe `code` icon. The pinned modern schema check covers only the two production format 2 packages. The prototype is still absent from both catalogs.
