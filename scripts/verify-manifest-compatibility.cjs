@@ -25,7 +25,7 @@ try {
   assert(result.ok, 'Newer Orca rejects generated modern package: ' + result.error);
   console.log('Newer Orca: generated modern manifest accepted');
   const mrs = JSON.parse(fs.readFileSync(path.join(root, 'plugins/mrs-panel/orca-plugin.json')));
-  assert.equal(mrs.manifestVersion, 1, 'Unpublished MRs panel must use the stock-compatible manifest format');
+  assert.equal(mrs.manifestVersion, 1, 'Legacy MRs prototype must use the stock-compatible manifest format');
   assert.equal(mrs.engines.orca, '>=1.4.244', 'MRs panel must permit the installed stock Orca release');
   assert.equal(mrs.execution, undefined, 'Format 1 derives panel execution from its contributions');
   assert(stockParser.satisfiesOrcaEngineRange('1.4.244', mrs.engines.orca), 'Stock Orca does not meet MRs engine gate');
@@ -34,8 +34,15 @@ try {
     assert(parsed.ok, `${name} rejects MRs panel: ${parsed.error}`);
     assert.equal(parsed.manifest.contributes.panels.length, 1, `${name} lost the MRs panel contribution`);
     assert.equal(parsed.manifest.contributes.panels[0].icon, 'code', `${name} changed the panel icon`);
-    console.log(`${name}: unpublished MRs panel manifest accepted`);
+    console.log(`${name}: legacy MRs prototype manifest accepted`);
   }
+  const publishedMrs = JSON.parse(fs.readFileSync(path.join(root, 'plugins/mrs-panel-modern/orca-plugin.json')));
+  assert.equal(publishedMrs.manifestVersion, 2);
+  assert.equal(publishedMrs.execution, 'sandboxed-ui');
+  const publishedResult = newerParser.parsePluginManifest(publishedMrs);
+  assert(publishedResult.ok, 'Newer Orca rejects modern MRs prototype: ' + publishedResult.error);
+  assert.equal(fs.readFileSync(path.join(root, 'plugins/mrs-panel-modern/panel/index.html'), 'utf8'), fs.readFileSync(path.join(root, 'plugins/mrs-panel/panel/index.html'), 'utf8'), 'Published panel HTML drifted from the tested source');
+  console.log('Newer Orca: modern MRs prototype accepted; panel HTML matches tested source');
   newerParser.validateMarketplaceProvenance(
     {source: {url: 'https://github.com/im-adarsh/orca.git'}},
     {marketplace: JSON.parse(fs.readFileSync(path.join(root, 'orca-catalog.json')))}

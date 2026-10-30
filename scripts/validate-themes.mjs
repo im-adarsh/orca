@@ -103,9 +103,10 @@ for (const entry of apps) {
 }
 const marketplace = load('orca-marketplace.json');
 check(marketplace.owner === manifest.publisher, 'Marketplace publisher must match plugin');
-check(marketplace.plugins.length === 1 && marketplace.plugins[0].id === `${manifest.publisher}.${manifest.id}`, 'Marketplace must point to this collection');
-check(marketplace.plugins[0].source.ref === `v${manifest.version}`, 'Marketplace release ref must match plugin version');
-check(marketplace.plugins[0].source.url === 'https://github.com/im-adarsh/orca.git', 'Public plugin download must work without SSH credentials');
+const themeListing = marketplace.plugins.find(entry => entry.id === `${manifest.publisher}.${manifest.id}`);
+check(Boolean(themeListing), 'Marketplace must point to this collection');
+check(themeListing?.source.ref === `v${manifest.version}`, 'Marketplace release ref must match plugin version');
+check(themeListing?.source.url === 'https://github.com/im-adarsh/orca.git', 'Public plugin download must work without SSH credentials');
 const panel = fs.readFileSync(path.join(root, 'setup/index.html'), 'utf8');
 const embedded = panel.match(/<script id="palettes" type="application\/json">([\s\S]*?)<\/script>/);
 check(!!embedded, 'Panel needs embedded palette data');

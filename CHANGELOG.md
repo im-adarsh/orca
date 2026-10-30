@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.3 — 2026-10-30
+
+- Publish MRs Panel Prototype as a right-sidebar tab with sample repository groups, filter chips and session-only named presets. Live fetching, durable presets and native review sessions remain unavailable.
+- Add pinned IntelliJ JSP/JSPX icons to all four JetBrains icon variants (package 1.0.1).
+- Support legacy and modern marketplace clients without Orca host or desktop changes.
+
 ## Catalog fix — 2026-10-30
 
 - Remove the reserved official Excalidraw entry that caused newer Orca to reject the entire personal catalog at Add source.

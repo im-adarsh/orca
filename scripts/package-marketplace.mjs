@@ -16,3 +16,13 @@ for(const family of ['themes','terminalThemes'])for(const t of manifest.contribu
 fs.writeFileSync(path.join(out,'orca-plugin.json'),JSON.stringify(manifest,null,2)+'\n');
 for(const entry of [...manifest.contributes.themes,...manifest.contributes.terminalThemes,...manifest.contributes.panels]){const relative=entry.path||entry.entry;const dst=path.join(out,relative);fs.mkdirSync(path.dirname(dst),{recursive:true});fs.copyFileSync(path.join(root,relative),dst);if(relative==='setup/index.html')fs.writeFileSync(dst,fs.readFileSync(dst,'utf8').replace('Marketplace · '+JSON.parse(fs.readFileSync(path.join(root,'orca-plugin.json'),'utf8')).version,'Marketplace · '+manifest.version))}
 console.log('Packaged modern catalog collection under plugins/goland-style; legacy root remains 1.4.244 compatible.');
+
+// Publish the same sample panel through both manifest generations.
+const mrsRoot=path.join(root,'plugins/mrs-panel'),mrsOut=path.join(root,'plugins/mrs-panel-modern');
+const mrs=JSON.parse(fs.readFileSync(path.join(mrsRoot,'orca-plugin.json'),'utf8'));
+mrs.manifestVersion=2;mrs.execution='sandboxed-ui';mrs.engines.orca='>=1.4.245';mrs.version='0.2.0';
+fs.rmSync(mrsOut,{recursive:true,force:true});fs.mkdirSync(path.join(mrsOut,'panel'),{recursive:true});
+fs.writeFileSync(path.join(mrsOut,'orca-plugin.json'),JSON.stringify(mrs,null,2)+'\n');
+fs.copyFileSync(path.join(mrsRoot,'panel/index.html'),path.join(mrsOut,'panel/index.html'));
+fs.writeFileSync(path.join(mrsOut,'README.md'),'# MRs Panel Prototype\n\nGenerated from ../mrs-panel for Orca 1.4.245+. Sample data and session-only filters; live providers, persistent filters and native review sessions are unavailable. Edit the source panel and run npm run package:marketplace.\n');
+console.log('Packaged modern MRs prototype; HTML matches the stock-compatible source.');

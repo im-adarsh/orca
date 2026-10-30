@@ -24,3 +24,7 @@ npm run package:marketplace
 ```
 
 Before publishing a changed package, bump its version, commit the package files, generate the catalog with `node scripts/build-catalog.cjs <full-package-commit>`, validate it, and commit the catalog separately. Set the intended release ref in the publishing process before creating the release. Local source changes do not alter installed or published immutable versions.
+
+## MRs prototype release
+
+The marketplace publishes a clearly labeled sample-only MRs right-sidebar panel. `plugins/mrs-panel` is the stock-compatible source; `plugins/mrs-panel-modern` is generated for the modern catalog. Its live provider and review-session limitations are described in [the package README](../plugins/mrs-panel/README.md). The legacy catalog installs the package-root tag `mrs-panel-v0.1.0`.

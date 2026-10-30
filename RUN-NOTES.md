@@ -46,3 +46,7 @@ MRs panel: no implementation claim in this increment. Prior scoped REA evidence 
 Accepted for the supported prototype/icon scope after c4d3065. The parent independently ran theme validation, pinned modern schema/package hashes, old/new manifest and catalog provenance checks, and icon asset/provenance validation. A disposable stock Orca 1.4.244 profile installed/approved MRs, opened the actual right-sidebar tab, and verified status filtering (2/5), combined provider filtering (1/5), and session preset reapplication (2/5). `plugins/mrs-panel/stock-orca-verification.json` records the results; `plugins/mrs-panel/screenshots/stock-orca-right-sidebar.png` is the actual app screenshot. The installed application and real user profile were not changed.
 
 This supersedes earlier notes that stock-app verification was pending. Full live provider fetching, durable saved filters, and native review-session creation remain blocked by the examined public panel API. MRs stays out of production catalogs. The icons and supported prototype are reviewable on this branch; nothing from this branch has been published or merged.
+
+## Publication authorized
+
+The user subsequently requested merge and publication. The reviewed branch was merged into main. Release v1.5.3 publishes the icon update and a clearly labeled sample-only MRs prototype through both marketplace formats; the live API limitations remain unchanged. Earlier unpublished-status notes describe the pre-release review state.
