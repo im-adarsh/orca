@@ -20,7 +20,7 @@ console.log('Packaged modern catalog collection under plugins/goland-style; lega
 // Publish the same sample panel through both manifest generations.
 const mrsRoot=path.join(root,'plugins/mrs-panel'),mrsOut=path.join(root,'plugins/mrs-panel-modern');
 const mrs=JSON.parse(fs.readFileSync(path.join(mrsRoot,'orca-plugin.json'),'utf8'));
-mrs.manifestVersion=2;mrs.execution='sandboxed-ui';mrs.engines.orca='>=1.4.245';mrs.version='0.2.0';
+mrs.manifestVersion=2;mrs.execution='sandboxed-ui';mrs.engines.orca='>=1.4.245';mrs.version='0.2.1';
 fs.rmSync(mrsOut,{recursive:true,force:true});fs.mkdirSync(path.join(mrsOut,'panel'),{recursive:true});
 fs.writeFileSync(path.join(mrsOut,'orca-plugin.json'),JSON.stringify(mrs,null,2)+'\n');
 fs.copyFileSync(path.join(mrsRoot,'panel/index.html'),path.join(mrsOut,'panel/index.html'));

@@ -1,5 +1,13 @@
 # Marketplace implementation notes
 
+## Compact MRs sidebar increment (0.1.1 legacy / 0.2.1 modern)
+
+The expanded filter and preset forms are now compact Filters and Views popovers beside request search. Removable chips retain OR within one field and AND across fields. The request list has collapsible repository headings, status icons with text, and keyboard-selectable rows that open a sample detail view with back navigation. Session views preserve common filters and search. The first row renders above 210 px at 360 px width; the [rendered screenshot](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png) shows the new list.
+
+The panel check passed under the shipped CSP and opaque iframe at 240/320/360/480 px, across old and new light/dark theme tokens, including layout, chips, views, collapse, popover Escape/focus, detail/back, and no remote requests. `npm test`, old/new manifest parser compatibility, exact modern HTML identity, and `git diff --check` passed. Modern schema validation passed, while `verify:modern` reports expected MRs catalog drift because the published release pin remains immutable; pin the new committed package after review.
+
+Native GitHub and GitLab query editing and unsupported-execution messaging remain for the next increment. The public sandbox still blocks live provider requests and durable views.
+
 ## Current increment: interactive sample MRs sidebar
 
 Final UI review correction: inputs and selects now use the normalized `--surface` token, and native `color-scheme` follows Orca's `html.light`/`html.dark` class. The panel check verifies computed control backgrounds and color scheme for both token APIs with browser preference opposite the host theme; the updated screenshot shows the dark panel controls. `node plugins/mrs-panel/scripts/verify-panel.cjs` and `npm run verify:manifest-compatibility -- /Applications/Orca.app /private/tmp/orca-native-mr-host` passed.

@@ -3,7 +3,7 @@
   "id": "mrs-panel",
   "publisher": "im-adarsh",
   "name": "MRs Panel Prototype",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Right-sidebar merge request panel prototype with clearly labelled sample content.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": { "orca": ">=1.4.244" },
