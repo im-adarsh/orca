@@ -1,0 +1,53 @@
+{
+  "checked": "2026-10-30",
+  "hostVersion": "1.4.244",
+  "evidenceId": "ev_46fea8c86f5b52a5719e8235fb51d31b8d604be3c1eab581476c73ce8499b5c2",
+  "evidenceBundle": "/private/tmp/orca-mr-plugin-rea-confirmed.json",
+  "scope": "Static REA analysis of six selected shipped plugin contract files. Six parsed completely; 28 inventoried files excluded; application and semantic graphs partial. No host code executed by REA.",
+  "files": [
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-manifest.js",
+      "sha256": "7264e37dc3a891366fb1d47f8a21315c087002e510bfb096c276e5dcd8fce738"
+    },
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-extension-registry.js",
+      "sha256": "c271365d9b0d9963f1c5b228571a8d63aeb33ab763040ef99b71798d11e9b7b3"
+    },
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-host-api.js",
+      "sha256": "a0c573f0c3208aa4d59968ba98d35de14e4d830980b8c8ea24c94b998d86bdd4"
+    },
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-panel-bridge.js",
+      "sha256": "60e9f9d18334fb2415da2d35ae3e9776ee0eba346214f0e2703c4f1d5a9a0312"
+    },
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-panel-shell.js",
+      "sha256": "c3aaa3344e3bab7937fb3b2c2eab453290c2609395a00161f906d6525d78034c"
+    },
+    {
+      "path": "/Applications/Orca.app/Contents/Resources/app.asar.unpacked/out/shared/plugins/plugin-capabilities.js",
+      "sha256": "07b844935e4ac8b957280d1881a5004eaaab2937b75a17bff8944007fbfde730"
+    }
+  ],
+  "observations": [
+    {
+      "source": "plugin-manifest.js",
+      "finding": "Panel contribution has id/title/icon/entry; its icon is documented as right-sidebar activity bar. No left-navigation placement field is exposed in this schema."
+    },
+    {
+      "source": "plugin-panel-shell.js",
+      "finding": "Panel CSP sets connect-src none; anchor navigation, form submissions and window.open are blocked by the wrapper."
+    },
+    {
+      "source": "plugin-host-api.js",
+      "finding": "Only workspace.readContext, terminal.sendText and notifications.show are panel-callable. Storage, secrets and settings methods are worker-only; no panel-to-worker method is exposed."
+    },
+    {
+      "source": "plugin-extension-registry.js",
+      "finding": "The inspected extension registry declares a command extension point."
+    }
+  ],
+  "upstreamIssue": "https://github.com/stablyai/orca/issues/25129",
+  "implementationStatus": "Not implemented. Browser-tab implementation or host-source extension requires a scope choice."
+}
