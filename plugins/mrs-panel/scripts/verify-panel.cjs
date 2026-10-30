@@ -41,10 +41,13 @@ assert.match(html,/SAMPLE MODE/);
    assert.equal(controls[1],palette.scheme);
    assert.equal(controls[0],palette.name.includes('light')?'rgb(255, 255, 255)':palette.name==='new dark'?'rgb(43, 45, 48)':'rgb(48, 49, 54)');
    assert.equal(await frame.locator('body').evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,palette.name+' '+width+' overflow');
-   await frame.locator('#filter-menu summary').click();
-   const menuBounds=await frame.locator('#filter-menu .menu-body').evaluate(el=>({left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,width:innerWidth}));
-   assert(menuBounds.left>=0&&menuBounds.right<=menuBounds.width,palette.name+' '+width+' filter menu clipped');
-   await frame.locator('#filter-menu summary').click();
+   for(const id of ['filter-menu','view-menu']){
+    await frame.locator('#'+id+' summary').click();
+    await frame.locator('#'+id+' .menu-body').evaluate(()=>new Promise(resolve=>requestAnimationFrame(resolve)));
+    const menuBounds=await frame.locator('#'+id+' .menu-body').evaluate(el=>({left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,width:innerWidth}));
+    assert(menuBounds.left>=0&&menuBounds.right<=menuBounds.width,palette.name+' '+width+' '+id+' clipped');
+    await frame.locator('#'+id+' summary').click();
+   }
   }
   const frame=await mount(palettes[0],320);
   const add=async(key,val)=>{await frame.locator('#filter-menu summary').click();await frame.getByLabel('Filter by').selectOption(key);await frame.getByLabel('Value').selectOption(val);await frame.getByRole('button',{name:'Add filter'}).click();await frame.locator('#filter-menu summary').click()};
@@ -52,6 +55,7 @@ assert.match(html,/SAMPLE MODE/);
   await add('status','Draft');assert.equal(await frame.locator('.mr').count(),3);
   await add('provider','GitLab');assert.equal(await frame.locator('.mr').count(),1);
   await frame.getByRole('button',{name:'Remove Provider: GitLab filter'}).click();assert.equal(await frame.locator('.mr').count(),3);
+  assert.equal(await frame.locator('#filter-menu summary').evaluate(el=>document.activeElement===el),true);
   await frame.locator('#view-menu summary').click();
   await frame.getByLabel('View name').fill('Review queue');await frame.getByRole('button',{name:'Save view'}).click();
   await frame.locator('#view-menu summary').click();
@@ -71,6 +75,8 @@ assert.match(html,/SAMPLE MODE/);
   assert.equal(await frame.locator('#detail-view').isVisible(),true);
   await frame.getByRole('button',{name:'← Requests'}).click();
   assert.equal(await frame.locator('#list-view').isVisible(),true);
+  assert.match(await frame.locator('.mr .meta').first().innerText(),/GitHub/);
+  assert.match(await frame.locator('.mr .meta').nth(2).innerText(),/GitLab/);
   await frame.getByLabel('Search sample requests').fill('checkout');assert.equal(await frame.locator('.mr').count(),1);
   await frame.getByLabel('Search sample requests').fill('');
   await frame.locator('#filter-menu summary').click();
@@ -80,6 +86,11 @@ assert.match(html,/SAMPLE MODE/);
   assert.equal(await frame.locator('.mr').count(),0);
   assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
   assert.equal(await frame.locator('#provider-query').inputValue(),github);
+  await frame.locator('#view-menu summary').click();
+  await frame.locator('#filter-menu').evaluate(()=>new Promise(resolve=>requestAnimationFrame(resolve)));
+  assert.equal(await frame.locator('#filter-menu').getAttribute('open'),null);
+  await frame.getByLabel('View name').fill('GH advanced');await frame.getByRole('button',{name:'Save view'}).click();
+  await frame.locator('#view-menu summary').click();await frame.locator('#filter-menu summary').click();
   for(const invalid of ['https://api.github.com/search/issues?q=token%3Dsecret','/search/issues?q=x']){
    await frame.getByLabel('Query text (unchecked)').fill(invalid);
    await frame.getByRole('button',{name:'Apply query'}).click();
@@ -93,15 +104,50 @@ assert.match(html,/SAMPLE MODE/);
   await frame.getByRole('button',{name:'Apply query'}).click();
   assert.equal(await frame.locator('#provider-query').inputValue(),gitlab);
   assert.equal(await frame.locator('#query-error').innerText(),'');
-  for(const invalid of ['private_token=secret','%70rivate_token=secret','state=opened&password=secret','state=opened&broken','https://gitlab.example/api/v4/merge_requests?state=opened']){
+  await frame.locator('#view-menu summary').click();await frame.getByLabel('View name').fill('GL arrays');await frame.getByRole('button',{name:'Save view'}).click();
+  await frame.getByLabel('Saved views · session only').selectOption('GH advanced');await frame.getByRole('button',{name:'Apply view'}).click();
+  assert.equal(await frame.locator('#query-provider').inputValue(),'GitHub');
+  assert.equal(await frame.locator('#provider-query').inputValue(),github);
+  assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
+  assert.equal(await frame.locator('#query-error').innerText(),'');
+  await frame.getByLabel('Saved views · session only').selectOption('GL arrays');await frame.getByRole('button',{name:'Apply view'}).click();
+  assert.equal(await frame.locator('#query-provider').inputValue(),'GitLab');
+  assert.equal(await frame.locator('#provider-query').inputValue(),gitlab);
+  await frame.locator('#view-menu summary').click();await frame.locator('#filter-menu summary').click();
+  for(const valid of ['labels[]=日本&search=café','labels[]=%E6%97%A5%E6%9C%AC&search=caf%C3%A9']){
+   await frame.getByLabel('Query text (unchecked)').fill(valid);await frame.getByRole('button',{name:'Apply query'}).click();
+   assert.equal(await frame.locator('#query-error').innerText(),'');assert.equal(await frame.locator('#provider-query').inputValue(),valid);
+  }
+  for(const invalid of ['private_token=secret','%70rivate_token=secret','job_token=secret','%6Aob_token=secret','state=opened&password=secret','state=opened&broken','state=opened&search=%ZZ','state=opened&search=%0A','state=opened&search=bad\u0001text','\n','https://gitlab.example/api/v4/merge_requests?state=opened']){
    await frame.getByLabel('Query text (unchecked)').fill(invalid);
    await frame.getByRole('button',{name:'Apply query'}).click();
    assert.notEqual(await frame.locator('#query-error').innerText(),'');
    assert.equal(await frame.locator('#query-error').innerText().then(text=>text.includes('secret')),false);
    assert.equal(await frame.locator('#results').innerText(),'Not executed in sample mode — requires live provider data.');
+   assert.match(await frame.locator('#chips').innerText(),/GitLab query/);
   }
+  await frame.locator('#view-menu summary').click();await frame.getByLabel('Saved views · session only').selectOption('GH advanced');await frame.getByRole('button',{name:'Apply view'}).click();
+  assert.equal(await frame.locator('#provider-query').getAttribute('aria-invalid'),null);
+  assert.equal(await frame.locator('#query-error').innerText(),'');
+  assert.equal(await frame.locator('#provider-query').inputValue(),github);
+  await frame.locator('#view-menu summary').click();await frame.locator('#filter-menu summary').click();
   await frame.getByRole('button',{name:'Clear query'}).click();
   assert.equal(await frame.locator('.mr').count(),5);
+  await frame.locator('#filter-menu summary').click();await frame.locator('#view-menu summary').click();
+  await frame.getByLabel('View name').fill('Empty query');await frame.getByRole('button',{name:'Save view'}).click();
+  await frame.locator('#view-menu summary').click();await frame.locator('#filter-menu summary').click();
+  await frame.getByLabel('Query text (unchecked)').fill(gitlab);await frame.getByRole('button',{name:'Apply query'}).click();
+  assert.equal(await frame.locator('.mr').count(),0);
+  await frame.locator('#view-menu summary').click();await frame.getByLabel('Saved views · session only').selectOption('Empty query');await frame.getByRole('button',{name:'Apply view'}).click();
+  assert.equal(await frame.locator('#provider-query').inputValue(),'');assert.equal(await frame.locator('.mr').count(),5);
+  assert.equal(await frame.locator('#query-error').innerText(),'');
+  await frame.locator('#view-menu summary').focus();await frame.locator('#view-menu summary').press('Escape');
+  assert.equal(await frame.locator('#view-menu').getAttribute('open'),null);
+  assert.equal(await frame.locator('#view-menu summary').evaluate(el=>document.activeElement===el),true);
+  await frame.getByRole('button',{name:'Add checkout validation details'}).click();
+  await frame.locator('#apply-preset').evaluate(el=>el.click());
+  assert.equal(await frame.locator('#detail-view').isVisible(),false);
+  assert.equal(await frame.locator('#list-view').isVisible(),true);
   await frame.locator('#filter-menu summary').click();
   assert.deepEqual(errors,[]);
   const screenshotFrame=await mount(palettes[1],360);

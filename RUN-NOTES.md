@@ -1,5 +1,9 @@
 # Marketplace implementation notes
 
+## Compact MRs interaction correction
+
+Session views now copy and restore applied provider queries exactly, including empty queries; applying a view clears stale validation and restores the correct sample state. GitLab accepts raw or encoded Unicode values while rejecting malformed parameters, control characters, and decoded credential keys including `job_token`. Both open menus stay within narrow sidebars and exclude each other; chip removal returns focus to Filters, and rows show their provider. The sandbox assertions reproduced the defects before the fixes and now cover the corrected behavior at 240/320/360/480 px. The generated modern panel matches the legacy HTML. Live requests and durable views remain unsupported by the observed host sandbox.
+
 ## Provider query editor increment
 
 The compact Filters popover now includes a labelled GitHub/GitLab provider query editor. It retains the exact entered GitHub search text or GitLab MR list parameter text, including unknown filters and duplicate or array parameters. A committed query explicitly shows “Not executed in sample mode — requires live provider data” instead of sample matches. Clear restores ordinary local filtering. Full endpoint input, malformed GitLab parameter strings, and GitLab credential/control parameters are rejected with generic messages; rejected input leaves the committed query unchanged. The panel sandbox test covers these cases and regenerates the [rendered screenshot](plugins/mrs-panel/screenshots/mrs-sidebar-sample.png).
