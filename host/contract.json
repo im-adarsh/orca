@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/stablyai/orca.git",
+  "deliveryRepository": "https://github.com/im-adarsh/orca.git",
+  "baseCommit": "400266a9ce259337ec46836c2a8e18a449d49f4a",
+  "hostVersion": "1.4.245-mrs.1",
+  "patchSha256": "e26a6aed4f7750c8296c5925c67d0c53102fb32284503ff316356ebbd58b41ac",
+  "features": [
+    "navigation-panels",
+    "worker.invokeOwn",
+    "reviews.openLocal",
+    "links.openExternal"
+  ],
+  "pluginPath": "plugins/merge-request-inbox"
+}

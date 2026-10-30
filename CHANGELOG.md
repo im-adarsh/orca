@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.5.0 — 2026-10-30
+
+- Add the separate MRs plugin for GitHub/GitLab/self-hosted GitLab, with repository groups, saved filters, encrypted account tokens and a native local-review handoff.
+- Use a GitLab-style token filter bar with named saved filters and no redundant personal-queue tabs.
+- Include a reproducible, hash-checked host patch for one MRs navigation entry below Tasks/Automations and an authenticated own-worker bridge.
+
+- Native MRs is experimental and requires the custom host build; full-host regression verification is not green. Provider fixtures, the 884-test plugin suite and hidden native smoke test pass.
+
+- Remove Developer Commands and Agent Profiles from both source and generated packages, including their launcher, presets, panel generator and dedicated tests.
+- Remove workspace metadata and terminal text permissions from the GoLand theme collection.
+- Keep GoLand Setup, palettes, navigation shortcuts, file icons and the pinned Excalidraw entry.
+
 ## 1.4.0
 
 - Add Developer Commands and Agent Profiles panels with explicit terminal selection and paste without submission.

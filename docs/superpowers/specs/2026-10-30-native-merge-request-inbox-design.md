@@ -1,6 +1,6 @@
 # Native merge request inbox
 
-Status: proposed design; implementation approval pending.
+Status: approved; implementing. Latest user corrections: one entry named MRs below Tasks and Automations; group requests by repository; add Review locally using Orca’s Tasks workspace composer and its terminal/chat agent picker. Use installed Ponytail 5.3.2 and REA.
 
 ## Intent and agreed scope
 
@@ -56,17 +56,19 @@ Pin each connection's API origin and path. Build endpoints with URL encoding, re
 
 ## Inbox behavior
 
-Title: Merge Requests. Use the inherited Orca color/typography/spacing tokens and dense accessible rows; avoid the oversized form layout in the removed panels.
+Title and native entry: MRs. No separate MR Inbox or duplicate MRs entry. Group rows by repository, host and account. Use the inherited Orca color/typography/spacing tokens and dense accessible rows; avoid the oversized form layout in the removed panels.
 
 - Connection/provider selector, repository/project selector or input, text search, status (open, closed, merged, all), draft (any, draft, ready), author, assignee, reviewer and labels.
 - User filters mean provider usernames/login identifiers, not Git's free-form `user.name`. Use a person-role selector or explicitly labeled username fields so the semantics are visible.
 - Default to open requests. Provide shortcuts for authored by me, assigned to me and review requested from me, resolved separately against each selected connection.
 - Save named views containing only filters and connection ids. Restore filters on reopen and provide reset/delete actions. Saved views do not execute actions on a request.
+- Latest approved refinement: use a GitLab-style single token filter bar with removable/editable chips and field/value suggestions, replacing the form grid. Keep named saved filter sets.
+- Remove the top personal-queue shortcut tabs; author/assignee/reviewer chips and saved filters manage those queues.
 - Show provider/host, repository, request number, title, author, open/merged/closed and draft states, labels and updated time. Preserve the exact host/project identity in row keys and URLs.
 - Paginated loading and explicit Refresh. Cancel or discard stale responses when filters/connections change. Show partial provider failures alongside successful results and never present incomplete results as a complete total.
 - Provide a safe action to open the provider's request URL using a narrowly validated host method if the current frame API cannot open external URLs. Restrict to HTTP(S) URLs from a configured provider; keep the panel navigation restrictions.
 
-The first release pulls and browses requests. Merge, approve, comment, close, checkout and agent-launch actions are outside scope; these would require separate behavior and permissions.
+The first release pulls and browses requests and adds Review locally. This action opens Orca’s existing workspace composer with the exact MR linked, a review prompt and the native agent/surface picker. A matching local checkout is required; otherwise show the native add/clone guidance. Creation/startup still follows the composer’s normal user action. Merge, approve, comment and close are outside scope.
 
 ## Provider contract
 

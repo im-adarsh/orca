@@ -7,9 +7,9 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.4.0"
+        "ref": "v1.5.0"
       },
-      "description": "Twelve consistent palettes, developer command panels, and reusable agent instruction profiles.",
+      "description": "Twelve consistent palettes, matching terminal themes, and a portable setup guide.",
       "categories": [
         "themes",
         "appearance",

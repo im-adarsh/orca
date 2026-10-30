@@ -1,20 +1,22 @@
 {
   "name": "orca-theme-collection",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node scripts/validate-themes.mjs && node scripts/build-panels.mjs --check && node scripts/test-developer-kit.mjs",
+    "test": "node scripts/validate-themes.mjs && node scripts/build-mrs-panel.mjs --check && node --test plugins/merge-request-inbox/tests/*.test.mjs",
+    "build:mrs": "node scripts/build-mrs-panel.mjs",
+    "test:mrs": "node --test plugins/merge-request-inbox/tests/*.test.mjs",
+    "test:mrs:browser": "node scripts/verify-mrs-browser.cjs",
+    "test:mrs:host": "node scripts/test-mrs-host.mjs",
     "verify:orca": "node scripts/verify-orca.mjs",
     "test:browser": "node scripts/verify-browser.cjs",
-    "build:panels": "node scripts/build-panels.mjs",
-    "test:developer": "node scripts/test-developer-kit.mjs",
     "package:marketplace": "node scripts/package-marketplace.mjs",
-    "test:developer-browser": "node scripts/verify-developer-browser.cjs",
-    "verify:modern": "node scripts/verify-modern.cjs"
+    "verify:modern": "node scripts/verify-modern.cjs",
+    "test:mrs:runtime": "node scripts/verify-mrs-runtime.cjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",

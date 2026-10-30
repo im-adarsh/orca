@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 2,
+  "id": "merge-request-inbox",
+  "publisher": "im-adarsh",
+  "name": "MRs",
+  "version": "0.1.0",
+  "description": "Requires the native MRs host patch. Merge requests grouped by repository across GitHub, GitLab and self-hosted GitLab, with local review workspaces.",
+  "repository": "https://github.com/im-adarsh/orca",
+  "license": "MIT",
+  "engines": {
+    "orca": ">=1.4.245"
+  },
+  "pluginApi": 1,
+  "execution": "trusted-worker",
+  "main": "worker.mjs",
+  "contributes": {
+    "panels": [
+      {
+        "id": "mrs",
+        "title": "MRs",
+        "icon": "code",
+        "placement": "navigation",
+        "entry": "panel.html"
+      }
+    ],
+    "commands": [
+      {
+        "id": "inbox",
+        "title": "MRs: Inbox operations"
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "kind": "storage:own"
+    },
+    {
+      "kind": "secrets:own"
+    },
+    {
+      "kind": "worker:invoke-own"
+    },
+    {
+      "kind": "reviews:open-local"
+    },
+    {
+      "kind": "links:open-external"
+    }
+  ]
+}

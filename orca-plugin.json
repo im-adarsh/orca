@@ -3,8 +3,8 @@
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
   "name": "GoLand Style for Orca",
-  "version": "1.4.0",
-  "description": "Twelve consistent GoLand-style palettes, developer commands, and portable agent instruction profiles.",
+  "version": "1.5.0",
+  "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
     "orca": ">=1.4.244"
@@ -141,18 +141,6 @@
         "title": "GoLand Setup",
         "icon": "Palette",
         "entry": "setup/index.html"
-      },
-      {
-        "id": "developer-commands",
-        "title": "Developer Commands",
-        "icon": "Terminal",
-        "entry": "panels/commands.html"
-      },
-      {
-        "id": "agent-profiles",
-        "title": "Agent Profiles",
-        "icon": "Bot",
-        "entry": "panels/profiles.html"
       }
     ],
     "commands": [
@@ -193,13 +181,6 @@
       }
     ]
   },
-  "capabilities": [
-    {
-      "kind": "workspace:read"
-    },
-    {
-      "kind": "terminal:send"
-    }
-  ],
+  "capabilities": [],
   "execution": "sandboxed-ui"
 }

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-30",
+  "tool": "REA installed rea-agents CLI",
+  "operation": "analyze_javascript_application",
+  "build": "electron-vite --mode e2e",
+  "baseCommit": "400266a9ce259337ec46836c2a8e18a449d49f4a",
+  "patchSha256": "e26a6aed4f7750c8296c5925c67d0c53102fb32284503ff316356ebbd58b41ac",
+  "evidenceId": "ev_c74b6992c29dff39c4f3d4203dfadbcf12451d23cf01e1b54090d30a029e81bf",
+  "summaryEvidenceId": "ev_c9a7691b8a509e6a84ebeb6d6be7e79dd50a9d25da581566ae930bf63901c626",
+  "artifactSha256": "9d5debbaaa1f39a11a2b1502aa156a0a800a69bf3a6fa6919fa767cf97f360fb",
+  "selectedFiles": [
+    {
+      "path": "main/chunks/plugin-host-protocol-CtEUjhiX.js",
+      "sha256": "7cfb54725522b9471afdf9e65e7d8d3ed574a605216d92bdee26bcbbf7f97158"
+    },
+    {
+      "path": "renderer/assets/PluginNavigationPage-B0wxd5LQ.js",
+      "sha256": "e5566badd7e1c93276a646324be61a720a2db427e3459a31d47a6fae54180227"
+    },
+    {
+      "path": "renderer/assets/PluginPanel-DWVf-Ext.js",
+      "sha256": "a670cf54bc1a6be02691f0baf9ae12519e6193b4c7ad3e4bc65277a94ccf8d48"
+    }
+  ],
+  "scope": "Static analysis of the three selected built files only. Other built files were inventoried; their relationships were not analyzed. This does not establish runtime execution or live provider compatibility.",
+  "limitations": [
+    "Boundary extraction covers unshadowed JSON/global coercions plus parse and validation method candidates.",
+    "Caller-selected source analysis leaves 1463 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+    "Child-process extraction covers asynchronous node:child_process creation, literal argv/env/stdio options, exit/error listeners, and kill signals.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Configuration extraction covers process.env, process.argv, node:fs reads, and direct logical defaults.",
+    "Event extraction covers EventEmitter-style literal registrations, removals, and dispatch candidates; dynamic names remain unknown.",
+    "Function fingerprints are static candidates; equal digests can remain ambiguous and do not prove behavioral equivalence.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Local data flow does not claim control-flow-sensitive reaching definitions or arbitrary dynamic property resolution.",
+    "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+    "Request extraction covers fetch, WebSocket, node:http/node:https construction, direct option fields, and exact local response consumers.",
+    "Resource extraction covers built-in filesystem/network acquisition and exact local close/destroy/end handles.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "The semantic graph contains static syntax observations and conservative relationship candidates; it does not claim runtime execution.",
+    "Timer extraction covers global or node:timers scheduling and exact local-handle cancellation.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+  ],
+  "separateRuntimeCheck": "scripts/verify-mrs-runtime.cjs: real local plugin installation, consent, native navigation, worker state and disabled-page fallback in a hidden isolated desktop passed."
+}

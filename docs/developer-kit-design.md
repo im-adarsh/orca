@@ -1,5 +1,7 @@
 # Developer kit design
 
+Historical design for v1.4.0. Developer Commands and Agent Profiles have since been removed from the current source. See [the current package guide](developer-kit.md).
+
 The marketplace keeps the existing 1.4.244-compatible root theme collection. It adds developer commands and agent-profile panels that follow the same consistent theme tokens. Profiles are reusable instruction files with a CLI launcher; they are not advertised as native imported agent configurations, because REA found that contribution inert in 1.4.244.
 
 The general starter set is an implementation profile, a review profile, and a debugging profile. A panel lets the user select a visible terminal and paste the chosen instructions without submitting them. The command panel provides transparent test/lint/status commands, with explicit target selection and no automatic execution. Both request only workspace context and terminal text capabilities.

@@ -1,6 +1,6 @@
 # Adarsh Orca Marketplace
 
-A developer marketplace with JetBrains-style file icons, developer command panels, reusable agent instruction profiles, a pinned Excalidraw editor entry, and twelve matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
+A marketplace with JetBrains-style file icons, a pinned Excalidraw editor entry, and twelve matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, High Contrast, and four matte alternatives. Both light and dark modes are included.
 
 ![Light and dark palette comparison](previews/themes.png)
 
@@ -11,15 +11,17 @@ Requires **Orca 1.4.244 or newer**. In **Settings → Plugins → Marketplace so
 - **Git URL:** `https://github.com/im-adarsh/orca.git`
 - **Git ref:** `main`
 
-Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.4.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
+Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.5.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
 
-Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.4.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
+Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.5.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
 
 If Install says “Could not prepare this plugin for review,” follow [the installation troubleshooting guide](docs/install-troubleshooting.md).
 
 ## Developer additions
 
-Version **1.4.0** adds **Developer Commands** and **Agent Profiles** panels to the current collection. Profiles are portable instructions with a launcher, not native profile imports. The update requests workspace metadata and terminal text permissions; pasting always requires an explicit target and does not submit.
+The current source removes **Developer Commands** and **Agent Profiles**, including their launcher, presets, panel sources, and dedicated tooling. The theme collection now contributes only **GoLand Setup** and requests no workspace or terminal permissions. Release **v1.5.0** removes those panels from both the legacy and modern theme packages. Refresh your marketplace source and update the theme package to remove them from an older installation.
+
+**MRs** is a separate native plugin for GitHub, GitLab and self-hosted GitLab. It groups requests by repository and supports saved filters and **Review locally** through Orca's Tasks workspace composer, including the native terminal/chat agent picker. It requires the reproducible host patch included here. See [build, installation and usage](docs/native-mrs.md); stock Orca and previously published releases do not include it.
 
 The newer catalog includes **JetBrains File Icons** (four variants) and official **Excalidraw**, both gated to **Orca 1.4.245+**. The latest stable host checked was 1.4.244, so those native packages are prepared but cannot yet be installed there. See [developer setup, compatibility, and verification](docs/developer-kit.md).
 
@@ -65,7 +67,7 @@ The palettes adapt official JetBrains editor/console colors from [Islands](https
 | `Mod+Alt+9` | Toggle Version Control |
 | `Mod+Alt+Shift+F` | Toggle Find in Project |
 
-`Mod` is Command on macOS and Control on Windows/Linux. These helpers are not a full GoLand keymap; remap in Settings → Shortcuts. The plugin has no worker process. Developer panels request focused-workspace metadata and permission to paste into a specifically chosen terminal. The setup preview and developer panels run in Orca's sandboxed frames.
+`Mod` is Command on macOS and Control on Windows/Linux. These helpers are not a full GoLand keymap; remap in Settings → Shortcuts. The theme plugin has no worker process and requests no host capabilities. GoLand Setup runs in Orca's sandboxed frame.
 
 ## Verify
 

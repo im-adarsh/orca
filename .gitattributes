@@ -1,0 +1,2 @@
+# Unified patch context contains literal single-space blank lines.
+host/*.patch -whitespace
