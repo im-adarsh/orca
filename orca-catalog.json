@@ -9,7 +9,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.3",
+        "ref": "v1.5.4",
         "path": "plugins/goland-style"
       },
       "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
@@ -41,7 +41,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.3",
+        "ref": "v1.5.4",
         "path": "plugins/jetbrains-icons"
       },
       "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
@@ -73,7 +73,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.3",
+        "ref": "v1.5.4",
         "path": "plugins/mrs-panel-modern"
       },
       "description": "Right-sidebar merge request panel prototype with clearly labelled sample content.",
@@ -82,6 +82,14 @@
         "prototype"
       ],
       "releases": [
+        {
+          "version": "0.2.1",
+          "commit": "04709c433dc764067c6bed82b4815b3c0954619b",
+          "contentHash": "2ab1a7332853caf795ace38c78a85eb63946ddc4cc208377a3979633171e301a",
+          "execution": "sandboxed-ui",
+          "minimumOrca": "1.4.245",
+          "name": "MRs Panel Prototype"
+        },
         {
           "version": "0.2.0",
           "commit": "41d3fbec23a17c6c1499a2a1b682d159faf5e46c",
