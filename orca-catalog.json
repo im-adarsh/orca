@@ -51,6 +51,14 @@
       ],
       "releases": [
         {
+          "version": "1.0.1",
+          "commit": "06cba47256dc2ed7e762186816299b0693b987fb",
+          "contentHash": "a0aac9ea69c2f261a396fed78326b5729d131178c1701904358730e9f3e2b311",
+          "execution": "data",
+          "minimumOrca": "1.4.245",
+          "name": "JetBrains File Icons"
+        },
+        {
           "version": "1.0.0",
           "commit": "6321edaaa2d0bca256894443b7c3058b3ce7f927",
           "contentHash": "88cc7a06609577977ea00002b9e24bcfa6a08cec28d6878481f6e56cafc619d9",
