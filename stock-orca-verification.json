@@ -1,0 +1,13 @@
+{
+  "hostVersion": "1.4.244",
+  "installed": true,
+  "panelVisible": true,
+  "interactions": {
+    "statusFilter": true,
+    "combinedFilter": true,
+    "sessionPreset": true
+  },
+  "profile": "disposable, real profile untouched",
+  "mode": "sample data; session-only presets",
+  "screenshot": "screenshots/stock-orca-right-sidebar.png"
+}
