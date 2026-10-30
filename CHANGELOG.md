@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.1 — 2026-10-30
+
+- Fix the portable root theme package: declare manifest format 1 for its legacy field names so both Orca 1.4.244 and the newer parser can load it.
+- Keep the generated modern package explicitly at format 2, with its existing immutable version and hash.
+- Add a regression check against both host parsers and update the legacy marketplace ref to the compatibility hotfix.
+
 ## 1.5.0 — 2026-10-30
 
 - Add the separate MRs plugin for GitHub/GitLab/self-hosted GitLab, with repository groups, saved filters, encrypted account tokens and a native local-review handoff.

@@ -6,6 +6,7 @@ const root=fileURLToPath(new URL('../',import.meta.url)),out=path.join(root,'plu
 fs.rmSync(out,{recursive:true,force:true});
 fs.mkdirSync(out,{recursive:true});
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'orca-plugin.json'),'utf8'));
+manifest.manifestVersion=2;
 manifest.engines.orca='>=1.4.245';
 // Reserve a higher version so an upgraded host can migrate from the legacy build.
 manifest.version='2.1.0';

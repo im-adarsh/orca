@@ -1,7 +1,7 @@
 {
   "name": "orca-theme-collection",
   "private": true,
-  "version": "1.5.0",
+  "version": "1.5.1",
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -16,7 +16,8 @@
     "test:browser": "node scripts/verify-browser.cjs",
     "package:marketplace": "node scripts/package-marketplace.mjs",
     "verify:modern": "node scripts/verify-modern.cjs",
-    "test:mrs:runtime": "node scripts/verify-mrs-runtime.cjs"
+    "test:mrs:runtime": "node scripts/verify-mrs-runtime.cjs",
+    "verify:manifest-compatibility": "node scripts/verify-manifest-compatibility.cjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",
