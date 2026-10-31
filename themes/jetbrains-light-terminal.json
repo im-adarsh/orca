@@ -4,9 +4,9 @@
   "terminal": {
     "background": "#FFFFFF",
     "foreground": "#27282E",
-    "cursor": "#383A42",
+    "cursor": "#3369D6",
     "cursorAccent": "#FFFFFF",
-    "selectionBackground": "#D4E2FF",
+    "selectionBackground": "#C4D0E8",
     "selectionForeground": "#27282E",
     "black": "#27282E",
     "red": "#CC3645",
@@ -14,15 +14,15 @@
     "yellow": "#A46704",
     "blue": "#3369D6",
     "magenta": "#7444D4",
-    "cyan": "#058B90",
+    "cyan": "#058388",
     "white": "#DFE1E5",
     "brightBlack": "#6C707E",
-    "brightRed": "#DB3B4B",
-    "brightGreen": "#208A3C",
-    "brightYellow": "#C27D04",
-    "brightBlue": "#3574F0",
+    "brightRed": "#D83A4A",
+    "brightGreen": "#20883B",
+    "brightYellow": "#A56A03",
+    "brightBlue": "#3370E8",
     "brightMagenta": "#834DF0",
-    "brightCyan": "#039BA1",
+    "brightCyan": "#038489",
     "brightWhite": "#FFFFFF"
   }
 }

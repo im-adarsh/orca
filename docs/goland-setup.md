@@ -2,20 +2,20 @@
 
 ## Install the collection
 
-Add marketplace source `https://github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The release is pinned to tag `v1.3.1`. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
+Add marketplace source `https://github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The published release is pinned to tag `v1.7.0`, with the im names below. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
 
 ## Use matching app and terminal modes
 
 Orca selects app and terminal themes independently. Changing the app theme alone does not switch the saved terminal palette.
 
-- Dark slot: Islands Dark, Islands Darcula, New UI Dark, Classic Dark (Darcula), High Contrast, Graphite, or Slate.
-- Light slot: Islands Light, New UI Light, Classic Light, Matte, or Paper.
+- Dark slot: im-islands-dark, im-studio-dark, im-classic-dark, im-high-contrast, im-graphite, im-slate, or im-ember.
+- Light slot: im-islands-light, im-studio-light, im-classic-light, im-matte, im-paper, or im-daylight.
 
 Enable separate light/dark terminal themes. Select the same theme name for the app and for the active terminal slot. After an update, reselect the terminal theme to refresh its saved colors.
 
-## Keep the same surface throughout
+## Keep related surface shades
 
-Every theme shares its editor/terminal base across app chrome, settings panels, popovers, and sidebars. Controls and selections retain tonal contrast. Host sidebar tint or pane opacity can still alter the rendered result.
+Every theme matches editor and terminal surfaces, adds related sidebar and raised-panel shades, and uses a main accent for selection and focus. Host sidebar tint or pane opacity can still alter the rendered result.
 
 ## Remove blending and old overrides
 
@@ -63,4 +63,8 @@ The plugin supplies Mod+Alt+1 for Project, Mod+Alt+9 for Version Control, and Mo
 
 The theme files, navigation commands/shortcuts, and setup panel install together. Fonts must exist on each operating system. Host preferences remain separate. `presets/goland-style.json` is a reusable reference checklist; it is not accepted by Orca as a global-settings import.
 
-Orca's built-in security styling remains on plugin installation and consent dialogs. The inspected 1.4.244 theme API does not expose Go syntax highlighting, global padding, file icon themes, or GoLand `.icls` imports. The separate icon package needs the newer 1.4.245 API; see [developer setup](developer-kit.md).
+Orca's built-in security styling remains on plugin installation and consent dialogs. The installed 1.4.245 theme API does not expose Go syntax highlighting, global padding, global toolbar icons, or GoLand `.icls` imports. Separate file-icon packages use its supported 1.4.245 API; see [developer setup](developer-kit.md).
+
+## Expanded collection (1.7.0)
+
+The collection now includes 39 matched pairs. Use the setup panel’s grouped search to find a family or mode, then select matching names in Orca. See [the complete popular-theme list](popular-themes.md). App and terminal colors are adapted; native pane geometry and editor syntax schemes remain outside this contribution.

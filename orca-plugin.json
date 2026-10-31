@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
-  "name": "GoLand Style for Orca",
-  "version": "1.5.4",
-  "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
+  "name": "im Theme Collection",
+  "version": "1.7.0",
+  "description": "39 layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
     "orca": ">=1.4.244"
@@ -14,131 +14,401 @@
     "themes": [
       {
         "id": "islands-dark",
-        "label": "Islands Dark",
+        "label": "im-islands-dark",
         "path": "themes/islands-dark.json"
       },
       {
         "id": "islands-light",
-        "label": "Islands Light",
+        "label": "im-islands-light",
         "path": "themes/islands-light.json"
       },
       {
-        "id": "islands-darcula",
-        "label": "Islands Darcula",
-        "path": "themes/islands-darcula.json"
-      },
-      {
         "id": "jetbrains-dark",
-        "label": "New UI Dark",
+        "label": "im-studio-dark",
         "path": "themes/jetbrains-dark.json"
       },
       {
         "id": "jetbrains-light",
-        "label": "New UI Light",
+        "label": "im-studio-light",
         "path": "themes/jetbrains-light.json"
       },
       {
         "id": "classic-dark",
-        "label": "Classic Dark (Darcula)",
+        "label": "im-classic-dark",
         "path": "themes/classic-dark.json"
       },
       {
         "id": "classic-light",
-        "label": "Classic Light",
+        "label": "im-classic-light",
         "path": "themes/classic-light.json"
       },
       {
         "id": "high-contrast",
-        "label": "High Contrast",
+        "label": "im-high-contrast",
         "path": "themes/high-contrast.json"
       },
       {
         "id": "matte",
-        "label": "Matte",
+        "label": "im-matte",
         "path": "themes/matte.json"
       },
       {
         "id": "graphite",
-        "label": "Graphite",
+        "label": "im-graphite",
         "path": "themes/graphite.json"
       },
       {
         "id": "paper",
-        "label": "Paper",
+        "label": "im-paper",
         "path": "themes/paper.json"
       },
       {
         "id": "slate",
-        "label": "Slate",
+        "label": "im-slate",
         "path": "themes/slate.json"
+      },
+      {
+        "id": "im-ember",
+        "label": "im-ember",
+        "path": "themes/im-ember.json"
+      },
+      {
+        "id": "im-daylight",
+        "label": "im-daylight",
+        "path": "themes/im-daylight.json"
+      },
+      {
+        "id": "im-dracula",
+        "label": "im-dracula",
+        "path": "themes/im-dracula.json"
+      },
+      {
+        "id": "im-one-dark-pro",
+        "label": "im-one-dark-pro",
+        "path": "themes/im-one-dark-pro.json"
+      },
+      {
+        "id": "im-one-light",
+        "label": "im-one-light",
+        "path": "themes/im-one-light.json"
+      },
+      {
+        "id": "im-catppuccin-mocha",
+        "label": "im-catppuccin-mocha",
+        "path": "themes/im-catppuccin-mocha.json"
+      },
+      {
+        "id": "im-catppuccin-latte",
+        "label": "im-catppuccin-latte",
+        "path": "themes/im-catppuccin-latte.json"
+      },
+      {
+        "id": "im-tokyo-night",
+        "label": "im-tokyo-night",
+        "path": "themes/im-tokyo-night.json"
+      },
+      {
+        "id": "im-nord",
+        "label": "im-nord",
+        "path": "themes/im-nord.json"
+      },
+      {
+        "id": "im-github-dark",
+        "label": "im-github-dark",
+        "path": "themes/im-github-dark.json"
+      },
+      {
+        "id": "im-github-light",
+        "label": "im-github-light",
+        "path": "themes/im-github-light.json"
+      },
+      {
+        "id": "im-gruvbox-dark",
+        "label": "im-gruvbox-dark",
+        "path": "themes/im-gruvbox-dark.json"
+      },
+      {
+        "id": "im-gruvbox-light",
+        "label": "im-gruvbox-light",
+        "path": "themes/im-gruvbox-light.json"
+      },
+      {
+        "id": "im-solarized-dark",
+        "label": "im-solarized-dark",
+        "path": "themes/im-solarized-dark.json"
+      },
+      {
+        "id": "im-solarized-light",
+        "label": "im-solarized-light",
+        "path": "themes/im-solarized-light.json"
+      },
+      {
+        "id": "im-rose-pine",
+        "label": "im-rose-pine",
+        "path": "themes/im-rose-pine.json"
+      },
+      {
+        "id": "im-rose-pine-dawn",
+        "label": "im-rose-pine-dawn",
+        "path": "themes/im-rose-pine-dawn.json"
+      },
+      {
+        "id": "im-night-owl",
+        "label": "im-night-owl",
+        "path": "themes/im-night-owl.json"
+      },
+      {
+        "id": "im-night-owl-light",
+        "label": "im-night-owl-light",
+        "path": "themes/im-night-owl-light.json"
+      },
+      {
+        "id": "im-ayu-dark",
+        "label": "im-ayu-dark",
+        "path": "themes/im-ayu-dark.json"
+      },
+      {
+        "id": "im-ayu-light",
+        "label": "im-ayu-light",
+        "path": "themes/im-ayu-light.json"
+      },
+      {
+        "id": "im-monokai",
+        "label": "im-monokai",
+        "path": "themes/im-monokai.json"
+      },
+      {
+        "id": "im-kanagawa-wave",
+        "label": "im-kanagawa-wave",
+        "path": "themes/im-kanagawa-wave.json"
+      },
+      {
+        "id": "im-kanagawa-lotus",
+        "label": "im-kanagawa-lotus",
+        "path": "themes/im-kanagawa-lotus.json"
+      },
+      {
+        "id": "im-material-theme-palenight",
+        "label": "im-material-theme-palenight",
+        "path": "themes/im-material-theme-palenight.json"
+      },
+      {
+        "id": "im-synthwave-84",
+        "label": "im-synthwave-84",
+        "path": "themes/im-synthwave-84.json"
+      },
+      {
+        "id": "im-dark-plus",
+        "label": "im-dark-plus",
+        "path": "themes/im-dark-plus.json"
+      },
+      {
+        "id": "im-light-plus",
+        "label": "im-light-plus",
+        "path": "themes/im-light-plus.json"
       }
     ],
     "terminalThemes": [
       {
         "id": "islands-dark-terminal",
-        "label": "Islands Dark",
+        "label": "im-islands-dark",
         "path": "themes/islands-dark-terminal.json"
       },
       {
         "id": "islands-light-terminal",
-        "label": "Islands Light",
+        "label": "im-islands-light",
         "path": "themes/islands-light-terminal.json"
       },
       {
-        "id": "islands-darcula-terminal",
-        "label": "Islands Darcula",
-        "path": "themes/islands-darcula-terminal.json"
-      },
-      {
         "id": "jetbrains-dark-terminal",
-        "label": "New UI Dark",
+        "label": "im-studio-dark",
         "path": "themes/jetbrains-dark-terminal.json"
       },
       {
         "id": "jetbrains-light-terminal",
-        "label": "New UI Light",
+        "label": "im-studio-light",
         "path": "themes/jetbrains-light-terminal.json"
       },
       {
         "id": "classic-dark-terminal",
-        "label": "Classic Dark (Darcula)",
+        "label": "im-classic-dark",
         "path": "themes/classic-dark-terminal.json"
       },
       {
         "id": "classic-light-terminal",
-        "label": "Classic Light",
+        "label": "im-classic-light",
         "path": "themes/classic-light-terminal.json"
       },
       {
         "id": "high-contrast-terminal",
-        "label": "High Contrast",
+        "label": "im-high-contrast",
         "path": "themes/high-contrast-terminal.json"
       },
       {
         "id": "matte-terminal",
-        "label": "Matte",
+        "label": "im-matte",
         "path": "themes/matte-terminal.json"
       },
       {
         "id": "graphite-terminal",
-        "label": "Graphite",
+        "label": "im-graphite",
         "path": "themes/graphite-terminal.json"
       },
       {
         "id": "paper-terminal",
-        "label": "Paper",
+        "label": "im-paper",
         "path": "themes/paper-terminal.json"
       },
       {
         "id": "slate-terminal",
-        "label": "Slate",
+        "label": "im-slate",
         "path": "themes/slate-terminal.json"
+      },
+      {
+        "id": "im-ember-terminal",
+        "label": "im-ember",
+        "path": "themes/im-ember-terminal.json"
+      },
+      {
+        "id": "im-daylight-terminal",
+        "label": "im-daylight",
+        "path": "themes/im-daylight-terminal.json"
+      },
+      {
+        "id": "im-dracula-terminal",
+        "label": "im-dracula",
+        "path": "themes/im-dracula-terminal.json"
+      },
+      {
+        "id": "im-one-dark-pro-terminal",
+        "label": "im-one-dark-pro",
+        "path": "themes/im-one-dark-pro-terminal.json"
+      },
+      {
+        "id": "im-one-light-terminal",
+        "label": "im-one-light",
+        "path": "themes/im-one-light-terminal.json"
+      },
+      {
+        "id": "im-catppuccin-mocha-terminal",
+        "label": "im-catppuccin-mocha",
+        "path": "themes/im-catppuccin-mocha-terminal.json"
+      },
+      {
+        "id": "im-catppuccin-latte-terminal",
+        "label": "im-catppuccin-latte",
+        "path": "themes/im-catppuccin-latte-terminal.json"
+      },
+      {
+        "id": "im-tokyo-night-terminal",
+        "label": "im-tokyo-night",
+        "path": "themes/im-tokyo-night-terminal.json"
+      },
+      {
+        "id": "im-nord-terminal",
+        "label": "im-nord",
+        "path": "themes/im-nord-terminal.json"
+      },
+      {
+        "id": "im-github-dark-terminal",
+        "label": "im-github-dark",
+        "path": "themes/im-github-dark-terminal.json"
+      },
+      {
+        "id": "im-github-light-terminal",
+        "label": "im-github-light",
+        "path": "themes/im-github-light-terminal.json"
+      },
+      {
+        "id": "im-gruvbox-dark-terminal",
+        "label": "im-gruvbox-dark",
+        "path": "themes/im-gruvbox-dark-terminal.json"
+      },
+      {
+        "id": "im-gruvbox-light-terminal",
+        "label": "im-gruvbox-light",
+        "path": "themes/im-gruvbox-light-terminal.json"
+      },
+      {
+        "id": "im-solarized-dark-terminal",
+        "label": "im-solarized-dark",
+        "path": "themes/im-solarized-dark-terminal.json"
+      },
+      {
+        "id": "im-solarized-light-terminal",
+        "label": "im-solarized-light",
+        "path": "themes/im-solarized-light-terminal.json"
+      },
+      {
+        "id": "im-rose-pine-terminal",
+        "label": "im-rose-pine",
+        "path": "themes/im-rose-pine-terminal.json"
+      },
+      {
+        "id": "im-rose-pine-dawn-terminal",
+        "label": "im-rose-pine-dawn",
+        "path": "themes/im-rose-pine-dawn-terminal.json"
+      },
+      {
+        "id": "im-night-owl-terminal",
+        "label": "im-night-owl",
+        "path": "themes/im-night-owl-terminal.json"
+      },
+      {
+        "id": "im-night-owl-light-terminal",
+        "label": "im-night-owl-light",
+        "path": "themes/im-night-owl-light-terminal.json"
+      },
+      {
+        "id": "im-ayu-dark-terminal",
+        "label": "im-ayu-dark",
+        "path": "themes/im-ayu-dark-terminal.json"
+      },
+      {
+        "id": "im-ayu-light-terminal",
+        "label": "im-ayu-light",
+        "path": "themes/im-ayu-light-terminal.json"
+      },
+      {
+        "id": "im-monokai-terminal",
+        "label": "im-monokai",
+        "path": "themes/im-monokai-terminal.json"
+      },
+      {
+        "id": "im-kanagawa-wave-terminal",
+        "label": "im-kanagawa-wave",
+        "path": "themes/im-kanagawa-wave-terminal.json"
+      },
+      {
+        "id": "im-kanagawa-lotus-terminal",
+        "label": "im-kanagawa-lotus",
+        "path": "themes/im-kanagawa-lotus-terminal.json"
+      },
+      {
+        "id": "im-material-theme-palenight-terminal",
+        "label": "im-material-theme-palenight",
+        "path": "themes/im-material-theme-palenight-terminal.json"
+      },
+      {
+        "id": "im-synthwave-84-terminal",
+        "label": "im-synthwave-84",
+        "path": "themes/im-synthwave-84-terminal.json"
+      },
+      {
+        "id": "im-dark-plus-terminal",
+        "label": "im-dark-plus",
+        "path": "themes/im-dark-plus-terminal.json"
+      },
+      {
+        "id": "im-light-plus-terminal",
+        "label": "im-light-plus",
+        "path": "themes/im-light-plus-terminal.json"
       }
     ],
     "panels": [
       {
         "id": "goland-setup",
-        "title": "GoLand Setup",
+        "title": "im Theme Setup",
         "icon": "Palette",
         "entry": "setup/index.html"
       }
@@ -146,19 +416,19 @@
     "commands": [
       {
         "id": "project-window",
-        "title": "GoLand Style: Project Window",
+        "title": "im Workspace: Project Window",
         "context": "global",
         "action": "sidebar.explorer.toggle"
       },
       {
         "id": "version-control",
-        "title": "GoLand Style: Version Control",
+        "title": "im Workspace: Version Control",
         "context": "global",
         "action": "sidebar.sourceControl.toggle"
       },
       {
         "id": "find-in-project",
-        "title": "GoLand Style: Find in Project",
+        "title": "im Workspace: Find in Project",
         "context": "global",
         "action": "sidebar.search.toggle"
       }

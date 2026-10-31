@@ -1,0 +1,19 @@
+{
+  "removedTheme": "islands-darcula",
+  "replacement": "classic-dark",
+  "reason": "Same base, foreground, primary and all sixteen ANSI colors; secondary and selection differences consolidated.",
+  "assetAliases": {
+    "assets/classic/Csharp_dark.svg": "assets/classic/Csharp.svg",
+    "assets/new-ui/http.svg": "assets/classic/http.svg",
+    "assets/new-ui/javaClass.svg": "assets/new-ui/binaryData.svg",
+    "assets/new-ui/javaClass_dark.svg": "assets/new-ui/binaryData_dark.svg",
+    "assets/new-ui/properties.svg": "assets/new-ui/editorConfig.svg",
+    "assets/new-ui/properties_dark.svg": "assets/new-ui/editorConfig_dark.svg",
+    "assets/new-ui/sourceMap.svg": "assets/new-ui/json.svg",
+    "assets/new-ui/sourceMap_dark.svg": "assets/new-ui/json_dark.svg",
+    "assets/original/new-ui-dark/go.svg": "assets/original/classic-dark/go.svg",
+    "assets/original/new-ui-light/go.svg": "assets/original/classic-light/go.svg"
+  },
+  "preserved": "Legacy/modern bundles target different host contracts; light/dark palettes and icon mappings are distinct.",
+  "remainingExactThemeDuplicates": 0
+}

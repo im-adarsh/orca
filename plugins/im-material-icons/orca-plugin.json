@@ -1,0 +1,29 @@
+{
+  "manifestVersion": 2,
+  "id": "im-material-icons",
+  "publisher": "im-adarsh",
+  "name": "im Material File Icons",
+  "version": "1.0.0",
+  "execution": "data",
+  "description": "Material file icons with shared assets and distinct light/dark mappings.",
+  "license": "MIT",
+  "repository": "https://github.com/im-adarsh/orca",
+  "engines": {
+    "orca": ">=1.4.245"
+  },
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "im-material-dark",
+        "title": "im-material-dark",
+        "path": "themes/dark.json"
+      },
+      {
+        "id": "im-material-light",
+        "title": "im-material-light",
+        "path": "themes/light.json"
+      }
+    ]
+  },
+  "capabilities": []
+}

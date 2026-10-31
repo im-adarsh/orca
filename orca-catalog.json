@@ -9,15 +9,23 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.4",
+        "ref": "v1.7.0",
         "path": "plugins/goland-style"
       },
-      "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
+      "description": "39 layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.",
       "categories": [
         "themes",
         "appearance"
       ],
       "releases": [
+        {
+          "version": "2.3.0",
+          "commit": "c237b5ef1e44643ce13a21928031b00594aebad0",
+          "contentHash": "3999425ad95b910dc7efe4190201a26a9d079e34bd2f9495eda6346a5a52151c",
+          "execution": "sandboxed-ui",
+          "minimumOrca": "1.4.245",
+          "name": "im Theme Collection"
+        },
         {
           "version": "2.1.0",
           "commit": "77f38a5fca5193ec829e238de7e08aae5fb2e76d",
@@ -41,7 +49,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.4",
+        "ref": "v1.7.0",
         "path": "plugins/jetbrains-icons"
       },
       "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
@@ -50,6 +58,14 @@
         "appearance"
       ],
       "releases": [
+        {
+          "version": "1.1.0",
+          "commit": "c237b5ef1e44643ce13a21928031b00594aebad0",
+          "contentHash": "29abcecce1f4ff1ec1429a3a3649bd95a890044c4283688df30dd590de0f9cb1",
+          "execution": "data",
+          "minimumOrca": "1.4.245",
+          "name": "im Studio File Icons"
+        },
         {
           "version": "1.0.1",
           "commit": "06cba47256dc2ed7e762186816299b0693b987fb",
@@ -69,11 +85,35 @@
       ]
     },
     {
+      "id": "im-adarsh.im-material-icons",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/im-adarsh/orca.git",
+        "ref": "v1.7.0",
+        "path": "plugins/im-material-icons"
+      },
+      "description": "Material file icons with shared assets and distinct light/dark mappings.",
+      "categories": [
+        "icons",
+        "appearance"
+      ],
+      "releases": [
+        {
+          "version": "1.0.0",
+          "commit": "c237b5ef1e44643ce13a21928031b00594aebad0",
+          "contentHash": "c0d1d4138591673385aeb0b89e92ad41888fbb917bf7c15ca2fe123e607f907d",
+          "execution": "data",
+          "minimumOrca": "1.4.245",
+          "name": "im Material File Icons"
+        }
+      ]
+    },
+    {
       "id": "im-adarsh.mrs-panel",
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.5.4",
+        "ref": "v1.7.0",
         "path": "plugins/mrs-panel-modern"
       },
       "description": "Right-sidebar merge request panel prototype with clearly labelled sample content.",

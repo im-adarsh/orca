@@ -1,0 +1,221 @@
+{
+  "themes": [
+    {
+      "id": "im-dracula",
+      "accent": "#BD93F9",
+      "sidebar": "#21222C",
+      "card": "#343746",
+      "popover": "#44475A",
+      "selection": "#44475A"
+    },
+    {
+      "id": "im-one-dark-pro",
+      "accent": "#61AFEF",
+      "sidebar": "#21252B",
+      "card": "#2C313A",
+      "popover": "#3E4451",
+      "selection": "#3E4451"
+    },
+    {
+      "id": "im-one-light",
+      "accent": "#4078F2",
+      "sidebar": "#F0F0F0",
+      "card": "#FFFFFF",
+      "popover": "#E5E5E6",
+      "selection": "#E5E5E6"
+    },
+    {
+      "id": "im-catppuccin-mocha",
+      "accent": "#CBA6F7",
+      "sidebar": "#181825",
+      "card": "#313244",
+      "popover": "#45475A",
+      "selection": "#45475A"
+    },
+    {
+      "id": "im-catppuccin-latte",
+      "accent": "#8839EF",
+      "sidebar": "#E6E9EF",
+      "card": "#FFFFFF",
+      "popover": "#CCD0DA",
+      "selection": "#CCD0DA"
+    },
+    {
+      "id": "im-tokyo-night",
+      "accent": "#7AA2F7",
+      "sidebar": "#16161E",
+      "card": "#292E42",
+      "popover": "#3B4261",
+      "selection": "#3B4261"
+    },
+    {
+      "id": "im-nord",
+      "accent": "#88C0D0",
+      "sidebar": "#242933",
+      "card": "#3B4252",
+      "popover": "#434C5E",
+      "selection": "#434C5E"
+    },
+    {
+      "id": "im-github-dark",
+      "accent": "#58A6FF",
+      "sidebar": "#010409",
+      "card": "#161B22",
+      "popover": "#21262D",
+      "selection": "#21262D"
+    },
+    {
+      "id": "im-github-light",
+      "accent": "#0969DA",
+      "sidebar": "#F6F8FA",
+      "card": "#FFFFFF",
+      "popover": "#D0D7DE",
+      "selection": "#D0D7DE"
+    },
+    {
+      "id": "im-gruvbox-dark",
+      "accent": "#FABD2F",
+      "sidebar": "#1D2021",
+      "card": "#3C3836",
+      "popover": "#504945",
+      "selection": "#504945"
+    },
+    {
+      "id": "im-gruvbox-light",
+      "accent": "#AF3A03",
+      "sidebar": "#F2E5BC",
+      "card": "#F9F5D7",
+      "popover": "#EBDBB2",
+      "selection": "#EBDBB2"
+    },
+    {
+      "id": "im-solarized-dark",
+      "accent": "#2AA198",
+      "sidebar": "#00212B",
+      "card": "#073642",
+      "popover": "#0B4756",
+      "selection": "#073642"
+    },
+    {
+      "id": "im-solarized-light",
+      "accent": "#268BD2",
+      "sidebar": "#EEE8D5",
+      "card": "#FCF4DC",
+      "popover": "#FFFFFF",
+      "selection": "#EEE8D5"
+    },
+    {
+      "id": "im-rose-pine",
+      "accent": "#EBBCBA",
+      "sidebar": "#1F1D2E",
+      "card": "#26233A",
+      "popover": "#312F44",
+      "selection": "#312F44"
+    },
+    {
+      "id": "im-rose-pine-dawn",
+      "accent": "#B4637A",
+      "sidebar": "#F2E9E1",
+      "card": "#FFFAF3",
+      "popover": "#DFDAD9",
+      "selection": "#DFDAD9"
+    },
+    {
+      "id": "im-night-owl",
+      "accent": "#82AAFF",
+      "sidebar": "#01111D",
+      "card": "#011D37",
+      "popover": "#1D3B53",
+      "selection": "#1D3B53"
+    },
+    {
+      "id": "im-night-owl-light",
+      "accent": "#4876D6",
+      "sidebar": "#F0F0F0",
+      "card": "#FFFFFF",
+      "popover": "#D9D9D9",
+      "selection": "#E0E7FD"
+    },
+    {
+      "id": "im-ayu-dark",
+      "accent": "#E6B450",
+      "sidebar": "#0B0E14",
+      "card": "#171B24",
+      "popover": "#232834",
+      "selection": "#232834"
+    },
+    {
+      "id": "im-ayu-light",
+      "accent": "#F29718",
+      "sidebar": "#F3F4F5",
+      "card": "#FFFFFF",
+      "popover": "#E6E8EA",
+      "selection": "#E6E8EA"
+    },
+    {
+      "id": "im-monokai",
+      "accent": "#A6E22E",
+      "sidebar": "#1E1F1C",
+      "card": "#383830",
+      "popover": "#49483E",
+      "selection": "#49483E"
+    },
+    {
+      "id": "im-kanagawa-wave",
+      "accent": "#7E9CD8",
+      "sidebar": "#16161D",
+      "card": "#2A2A37",
+      "popover": "#363646",
+      "selection": "#223249"
+    },
+    {
+      "id": "im-kanagawa-lotus",
+      "accent": "#4D699B",
+      "sidebar": "#E5DDB0",
+      "card": "#F8F4D6",
+      "popover": "#D5CEA3",
+      "selection": "#C9CBCF"
+    },
+    {
+      "id": "im-material-theme-palenight",
+      "accent": "#C792EA",
+      "sidebar": "#202330",
+      "card": "#343B51",
+      "popover": "#444A63",
+      "selection": "#444A63"
+    },
+    {
+      "id": "im-synthwave-84",
+      "accent": "#FF7EDB",
+      "sidebar": "#1F1A2D",
+      "card": "#302A45",
+      "popover": "#3E3557",
+      "selection": "#3E3557"
+    },
+    {
+      "id": "im-dark-plus",
+      "accent": "#007ACC",
+      "sidebar": "#252526",
+      "card": "#333333",
+      "popover": "#3E3E42",
+      "selection": "#264F78"
+    },
+    {
+      "id": "im-light-plus",
+      "accent": "#0066B8",
+      "sidebar": "#F3F3F3",
+      "card": "#FFFFFF",
+      "popover": "#E5E5E5",
+      "selection": "#ADD6FF"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "im-solarized-light",
+      "field": "popover",
+      "original": "#DMD6C5",
+      "value": "#FFFFFF",
+      "reason": "Reject malformed generated hex; use a valid bright raised surface consistent with the light palette."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "GoLand Style",
+  "name": "im Theme Collection",
   "format": "Reference checklist; this is not an Orca settings import file.",
   "appearance": {
     "ideFont": "Inter Variable (or Inter, depending on the installed font name)",
@@ -36,64 +36,199 @@
   },
   "themePairs": [
     {
-      "app": "Islands Dark",
-      "terminal": "Islands Dark",
+      "app": "im-islands-dark",
+      "terminal": "im-islands-dark",
       "mode": "dark"
     },
     {
-      "app": "Islands Light",
-      "terminal": "Islands Light",
+      "app": "im-islands-light",
+      "terminal": "im-islands-light",
       "mode": "light"
     },
     {
-      "app": "Islands Darcula",
-      "terminal": "Islands Darcula",
+      "app": "im-studio-dark",
+      "terminal": "im-studio-dark",
       "mode": "dark"
     },
     {
-      "app": "New UI Dark",
-      "terminal": "New UI Dark",
-      "mode": "dark"
-    },
-    {
-      "app": "New UI Light",
-      "terminal": "New UI Light",
+      "app": "im-studio-light",
+      "terminal": "im-studio-light",
       "mode": "light"
     },
     {
-      "app": "Classic Dark (Darcula)",
-      "terminal": "Classic Dark (Darcula)",
+      "app": "im-classic-dark",
+      "terminal": "im-classic-dark",
       "mode": "dark"
     },
     {
-      "app": "Classic Light",
-      "terminal": "Classic Light",
+      "app": "im-classic-light",
+      "terminal": "im-classic-light",
       "mode": "light"
     },
     {
-      "app": "High Contrast",
-      "terminal": "High Contrast",
+      "app": "im-high-contrast",
+      "terminal": "im-high-contrast",
       "mode": "dark"
     },
     {
-      "app": "Matte",
-      "terminal": "Matte",
+      "app": "im-matte",
+      "terminal": "im-matte",
       "mode": "light"
     },
     {
-      "app": "Graphite",
-      "terminal": "Graphite",
+      "app": "im-graphite",
+      "terminal": "im-graphite",
       "mode": "dark"
     },
     {
-      "app": "Paper",
-      "terminal": "Paper",
+      "app": "im-paper",
+      "terminal": "im-paper",
       "mode": "light"
     },
     {
-      "app": "Slate",
-      "terminal": "Slate",
+      "app": "im-slate",
+      "terminal": "im-slate",
       "mode": "dark"
+    },
+    {
+      "app": "im-ember",
+      "terminal": "im-ember",
+      "mode": "dark"
+    },
+    {
+      "app": "im-daylight",
+      "terminal": "im-daylight",
+      "mode": "light"
+    },
+    {
+      "app": "im-dracula",
+      "terminal": "im-dracula",
+      "mode": "dark"
+    },
+    {
+      "app": "im-one-dark-pro",
+      "terminal": "im-one-dark-pro",
+      "mode": "dark"
+    },
+    {
+      "app": "im-one-light",
+      "terminal": "im-one-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-catppuccin-mocha",
+      "terminal": "im-catppuccin-mocha",
+      "mode": "dark"
+    },
+    {
+      "app": "im-catppuccin-latte",
+      "terminal": "im-catppuccin-latte",
+      "mode": "light"
+    },
+    {
+      "app": "im-tokyo-night",
+      "terminal": "im-tokyo-night",
+      "mode": "dark"
+    },
+    {
+      "app": "im-nord",
+      "terminal": "im-nord",
+      "mode": "dark"
+    },
+    {
+      "app": "im-github-dark",
+      "terminal": "im-github-dark",
+      "mode": "dark"
+    },
+    {
+      "app": "im-github-light",
+      "terminal": "im-github-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-gruvbox-dark",
+      "terminal": "im-gruvbox-dark",
+      "mode": "dark"
+    },
+    {
+      "app": "im-gruvbox-light",
+      "terminal": "im-gruvbox-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-solarized-dark",
+      "terminal": "im-solarized-dark",
+      "mode": "dark"
+    },
+    {
+      "app": "im-solarized-light",
+      "terminal": "im-solarized-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-rose-pine",
+      "terminal": "im-rose-pine",
+      "mode": "dark"
+    },
+    {
+      "app": "im-rose-pine-dawn",
+      "terminal": "im-rose-pine-dawn",
+      "mode": "light"
+    },
+    {
+      "app": "im-night-owl",
+      "terminal": "im-night-owl",
+      "mode": "dark"
+    },
+    {
+      "app": "im-night-owl-light",
+      "terminal": "im-night-owl-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-ayu-dark",
+      "terminal": "im-ayu-dark",
+      "mode": "dark"
+    },
+    {
+      "app": "im-ayu-light",
+      "terminal": "im-ayu-light",
+      "mode": "light"
+    },
+    {
+      "app": "im-monokai",
+      "terminal": "im-monokai",
+      "mode": "dark"
+    },
+    {
+      "app": "im-kanagawa-wave",
+      "terminal": "im-kanagawa-wave",
+      "mode": "dark"
+    },
+    {
+      "app": "im-kanagawa-lotus",
+      "terminal": "im-kanagawa-lotus",
+      "mode": "light"
+    },
+    {
+      "app": "im-material-theme-palenight",
+      "terminal": "im-material-theme-palenight",
+      "mode": "dark"
+    },
+    {
+      "app": "im-synthwave-84",
+      "terminal": "im-synthwave-84",
+      "mode": "dark"
+    },
+    {
+      "app": "im-dark-plus",
+      "terminal": "im-dark-plus",
+      "mode": "dark"
+    },
+    {
+      "app": "im-light-plus",
+      "terminal": "im-light-plus",
+      "mode": "light"
     }
   ],
   "shortcuts": {

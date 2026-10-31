@@ -2,8 +2,8 @@
   "manifestVersion": 2,
   "id": "jetbrains-icons",
   "publisher": "im-adarsh",
-  "name": "JetBrains File Icons",
-  "version": "1.0.1",
+  "name": "im Studio File Icons",
+  "version": "1.1.0",
   "execution": "data",
   "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
   "license": "Apache-2.0",
@@ -15,22 +15,22 @@
     "iconThemes": [
       {
         "id": "new-ui-dark",
-        "title": "JetBrains New UI Dark",
+        "title": "im-new-ui-dark",
         "path": "themes/new-ui-dark.json"
       },
       {
         "id": "new-ui-light",
-        "title": "JetBrains New UI Light",
+        "title": "im-new-ui-light",
         "path": "themes/new-ui-light.json"
       },
       {
         "id": "classic-dark",
-        "title": "JetBrains Classic Dark",
+        "title": "im-classic-dark",
         "path": "themes/classic-dark.json"
       },
       {
         "id": "classic-light",
-        "title": "JetBrains Classic Light",
+        "title": "im-classic-light",
         "path": "themes/classic-light.json"
       }
     ]
