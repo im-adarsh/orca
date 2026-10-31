@@ -55,7 +55,6 @@ const anchors = {
   'classic-light': ['light', '#FFFFFF', '#FFFFFF'],
   'islands-dark': ['dark', '#191A1C', '#191A1C'],
   'islands-light': ['light', '#FFFFFF', '#FFFFFF'],
-  'islands-darcula': ['dark', '#2B2B2B', '#2B2B2B'],
   'high-contrast': ['dark', '#000000', '#000000']
 };
 for (const [id, [base, background, editor]] of Object.entries(anchors)) {
@@ -85,11 +84,13 @@ for (const entry of apps) {
   const surfaces = ['background', 'editor-surface', 'card', 'popover', 'sidebar', 'worktree-sidebar'];
   for (const key of surfaces) {
     const value = t[`--${key}`];
-    check(value === t['--editor-surface'], `${entry.label}: ${key} must match the inner/editor/terminal surface`);
+    check(contrast(value, t['--foreground']) >= 4.5, `${entry.label}: ${key} text contrast`);
+    check(contrast(value, t['--muted-foreground']) >= 4.5, `${entry.label}: ${key} muted text contrast`);
     check(app.base === 'light' ? luminance(value) > 0.45 : luminance(value) < 0.16,
       `${entry.label}: ${key} must stay within a cohesive ${app.base} surface range`);
   }
   const sorted = surfaces.map(k => t[`--${k}`]).sort((a, b) => luminance(a) - luminance(b));
+  check(new Set(sorted).size >= 2, `${entry.label}: needs layered surfaces`);
   check(contrast(sorted[0], sorted.at(-1)) <= 1.8, `${entry.label}: excessive difference between app surfaces`);
   const c = terminal.terminal;
   check(c.background === t['--editor-surface'], `${entry.label}: terminal and editor must share a surface`);
@@ -105,7 +106,14 @@ const marketplace = load('orca-marketplace.json');
 check(marketplace.owner === manifest.publisher, 'Marketplace publisher must match plugin');
 const themeListing = marketplace.plugins.find(entry => entry.id === `${manifest.publisher}.${manifest.id}`);
 check(Boolean(themeListing), 'Marketplace must point to this collection');
-check(themeListing?.source.ref === `v${manifest.version}`, 'Marketplace release ref must match plugin version');
+const publishedVersion = themeListing?.source.ref?.match(/^v(\d+)\.(\d+)\.(\d+)$/);
+check(!!publishedVersion, 'Marketplace release ref must be versioned');
+if (publishedVersion) {
+  const current = manifest.version.split('.').map(Number);
+  const published = publishedVersion.slice(1).map(Number);
+  const difference = current.map((v,i) => v-published[i]).find(v => v !== 0) ?? 0;
+  check(difference >= 0, 'Local package must not be older than its published listing');
+}
 check(themeListing?.source.url === 'https://github.com/im-adarsh/orca.git', 'Public plugin download must work without SSH credentials');
 const panel = fs.readFileSync(path.join(root, 'setup/index.html'), 'utf8');
 const embedded = panel.match(/<script id="palettes" type="application\/json">([\s\S]*?)<\/script>/);

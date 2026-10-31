@@ -66,3 +66,14 @@ The personal profile was inspected read-only. It still used tinted sidebar styli
 
 
 After publication, the temporary profile refreshed the real marketplace and fetched, reviewed, installed, and approved `v1.3.1` over HTTPS. All twelve registered palettes retained 37 tokens and equal main surface values. [Published 1.3.1 installation evidence](surface-consistency-published-install.json) records the resolved commit and content hash.
+
+
+## Local im appearance update, 2026-10-31
+
+The local 1.6.0 collection has 13 app/terminal pairs, 37 tokens per app and 22 terminal colors per pair. All current visible names use `im-`. Islands Darcula was consolidated into Classic Dark because they shared base, foreground, primary and all 16 ANSI colors; small secondary/selection differences were deliberately consolidated. Ten exact duplicate icon files were removed with their mapping references redirected and source records retained as provenance aliases.
+
+All themes now use related sidebar, editor and raised-panel shades, with a clear selection and focus accent. Earlier equal-surface results above describe historical releases and do not describe this update.
+
+Fresh checks passed on installed Orca 1.4.245: `npm test`, `npm run verify:orca -- /Applications/Orca.app`, `npm run test:browser`, `npm run verify:icons`, and `python3 plugins/jetbrains-icons/scripts/validate.py`. The actual installed renderer filter retained all 37 tokens for every theme. Actual host manifest/artifact parsers accepted the local plugins. The setup panel passed every theme selection and startup matching inside the installed CSP shell and an opaque sandbox, including narrow viewport checks. All 247 SVG files across both icon packages matched their recorded hashes, parsed safely, and painted nonempty browser pixels. The Material preview passed 360/768/1440px widths. Previews are illustrative plugin layouts, not screenshots of an installed workspace.
+
+The supplied install folders and archive are local builds. They have not been installed/activated in the user's running profile or published as a marketplace release. Source changes can be submitted for review independently of publication. The existing marketplace indexes remain pinned to the previously published versions, so users will not be sent to a nonexistent release. The catalog builder includes the new Material package for the next publication. Global toolbar replacement and native Islands pane geometry remain outside the public theme/file-icon API. REA tools were unavailable; the external reference was inspected as public source rather than through REA runtime evidence.

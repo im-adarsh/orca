@@ -4,10 +4,10 @@ Four file-icon themes built from the Apache-licensed IntelliJ Community icon sou
 
 | Theme | Use with | Unique SVGs |
 |---|---|---:|
-| JetBrains New UI Dark | Islands Dark, New UI Dark, Graphite, Slate | 52 |
-| JetBrains New UI Light | Islands Light, New UI Light, Matte, Paper | 52 |
-| JetBrains Classic Dark | Classic Dark or Islands Darcula | 31 |
-| JetBrains Classic Light | Classic Light | 31 |
+| im-new-ui-dark | Islands Dark, New UI Dark, Graphite, Slate | 52 |
+| im-new-ui-light | Islands Light, New UI Light, Matte, Paper | 52 |
+| im-classic-dark | Classic Dark or Islands Darcula | 31 |
+| im-classic-light | Classic Light | 31 |
 
 Each theme supplies **267 mappings**: 175 extensions, 89 exact filenames, and default file, folder and expanded-folder icons. Coverage includes Go, JavaScript/TypeScript, Java, C/C++, C#, Python, Rust, Kotlin, Dart, Swift, shell, SQL, JSP/JSPX, JSON, YAML, XML, TOML, config files, archives, images and common build tools. Some categories intentionally share a neutral fallback; mapping coverage does not mean every language has a distinct logo.
 
@@ -39,3 +39,7 @@ Run `python3 scripts/validate.py`. The dependency-free check verifies the four m
 The optional `node scripts/verify-browser.cjs` check requires Playwright in your development environment (or `PLAYWRIGHT_MODULE` pointing at an existing installation). It loads every SVG from its exact bytes, verifies 16 × 16 decoding and nonempty pixel alpha, checks the contact sheet at 360/768/1440 px, and writes [validation-results.json](validation-results.json). It uses an isolated headless Chrome profile. Set `CHROME_PATH` when Chrome is installed elsewhere.
 
 The generated SVGs contain paths/shapes only. They require no fonts, JavaScript, embedded bitmaps or network access. Original upstream SVGs retain their copyright comments. Host SVG sanitization and theme registration still require a compatible Orca build; static validation on 1.4.244 is not a claim of native installation testing on 1.4.245.
+
+## Local 1.1.0 update
+
+Visible theme names now use `im-`. Ten byte-identical SVG files were consolidated into shared canonical files with every filename and extension mapping preserved. Removed source identities remain under `sourceAliases` in provenance. App theme choices now use `im-` names as well; match the appropriate light/dark icon variant. The historical native-installation limits above describe the previous validation run.

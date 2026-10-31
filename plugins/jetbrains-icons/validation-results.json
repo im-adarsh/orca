@@ -1,6 +1,6 @@
 {
   "method": "Every bundled SVG loaded from its exact bytes as a data URL in isolated headless Chrome; decoded dimensions and nonempty alpha readback checked. Contact sheet uses bundled relative paths. Static schema/mapping checks separate. No native Orca1.4.245 installation performed.",
-  "svgs": 138,
+  "svgs": 128,
   "allDecode16x16": true,
   "allPaintPixels": true,
   "contactSheetImages": 140,

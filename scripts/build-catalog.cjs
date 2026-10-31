@@ -11,6 +11,7 @@ const previous = fs.existsSync(catalogPath) ? JSON.parse(fs.readFileSync(catalog
 const packages = [
   ['plugins/goland-style', ['themes', 'appearance']],
   ['plugins/jetbrains-icons', ['icons', 'appearance']],
+  ['plugins/im-material-icons', ['icons', 'appearance']],
   ['plugins/mrs-panel-modern', ['developer-tools', 'prototype']]
 ];
 const entries = packages.map(([relative, categories]) => {

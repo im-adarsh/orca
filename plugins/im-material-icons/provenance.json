@@ -1,0 +1,843 @@
+{
+  "schemaVersion": 1,
+  "package": "material-icon-theme",
+  "version": "5.40.0",
+  "tarball": "https://registry.npmjs.org/material-icon-theme/-/material-icon-theme-5.40.0.tgz",
+  "tarballSha256": "6ea13a2dece7ca953c0315b1e93348660c02bb235706275d215be69f09d98efb",
+  "license": "MIT",
+  "assets": [
+    {
+      "localPath": "assets/file.svg",
+      "upstreamPath": "icons/file.svg",
+      "sha256": "083ea33462b93f80b202f29703ddf57174e34aa67f193b3029869137e7f6e1a5",
+      "bytes": 319,
+      "modified": false
+    },
+    {
+      "localPath": "assets/folder.svg",
+      "upstreamPath": "icons/folder.svg",
+      "sha256": "5b8e272caf788ff0e9b6afee97601a9f9c7ad9d381e8d7b1e63ee78368ea1332",
+      "bytes": 224,
+      "modified": false
+    },
+    {
+      "localPath": "assets/folder-open.svg",
+      "upstreamPath": "icons/folder-open.svg",
+      "sha256": "532456ac9460902d6f7f9ffdb015c09a3b8d87c2493504948f9d16a2f66e22b7",
+      "bytes": 272,
+      "modified": false
+    },
+    {
+      "localPath": "assets/git.svg",
+      "upstreamPath": "icons/git.svg",
+      "sha256": "b0caee7c9cb4e602536e2f5a384740e7c8bc5ab94d98bfdde529f1eb97938213",
+      "bytes": 729,
+      "modified": false
+    },
+    {
+      "localPath": "assets/editorconfig.svg",
+      "upstreamPath": "icons/editorconfig.svg",
+      "sha256": "199762cbea98d7859fedd037feb98093ed712b15942dd3850054e8ce40e8bbbe",
+      "bytes": 8091,
+      "modified": false
+    },
+    {
+      "localPath": "assets/tune.svg",
+      "upstreamPath": "icons/tune.svg",
+      "sha256": "786079eb0fe6434373f36f016470176df8983372756a3facd900ea39e5d36771",
+      "bytes": 268,
+      "modified": false
+    },
+    {
+      "localPath": "assets/npm.svg",
+      "upstreamPath": "icons/npm.svg",
+      "sha256": "6bd740d3e31675d17e615d4c9ea4eab6714d1cd20a0d8220b87897236d82170b",
+      "bytes": 132,
+      "modified": false
+    },
+    {
+      "localPath": "assets/nodejs.svg",
+      "upstreamPath": "icons/nodejs.svg",
+      "sha256": "365af5c7b70d11c2da6d70a21240a47ba941602530c46d808d37ae913be7402e",
+      "bytes": 375,
+      "modified": false
+    },
+    {
+      "localPath": "assets/yarn.svg",
+      "upstreamPath": "icons/yarn.svg",
+      "sha256": "a9ded67f57faa1763a4712aa8edede162f83bb063f4a8274ea415b7ed7cfd34e",
+      "bytes": 918,
+      "modified": false
+    },
+    {
+      "localPath": "assets/prettier.svg",
+      "upstreamPath": "icons/prettier.svg",
+      "sha256": "b81b3661b6ec0aacaf8806311be235ea0bd4eb641fb73b8c0173680efdc6c83f",
+      "bytes": 346,
+      "modified": false
+    },
+    {
+      "localPath": "assets/eslint.svg",
+      "upstreamPath": "icons/eslint.svg",
+      "sha256": "aeb3a553e20f087a60e4a4f09ebbe59f9928a8c58293ce4c80b9e00f2ece1db7",
+      "bytes": 665,
+      "modified": false
+    },
+    {
+      "localPath": "assets/tsconfig.svg",
+      "upstreamPath": "icons/tsconfig.svg",
+      "sha256": "a7bd2a966578a9ecd8916b950d02201e19048ec267e2f287a1b3f4629f5764d6",
+      "bytes": 411,
+      "modified": false
+    },
+    {
+      "localPath": "assets/jsconfig.svg",
+      "upstreamPath": "icons/jsconfig.svg",
+      "sha256": "0852282dcfa5f97583892e5ef397943580ef2f2f89f0570df0cd2bf87772af20",
+      "bytes": 454,
+      "modified": false
+    },
+    {
+      "localPath": "assets/deno.svg",
+      "upstreamPath": "icons/deno.svg",
+      "sha256": "5f39bf43823036884a0ff2dc051d7ce597b92e85b805ab1a380baae33eba1338",
+      "bytes": 1113,
+      "modified": false
+    },
+    {
+      "localPath": "assets/biome.svg",
+      "upstreamPath": "icons/biome.svg",
+      "sha256": "2e10e89217fd486f141bef3b921bf1349cac1a44af4ffb41488cf855d768daf2",
+      "bytes": 311,
+      "modified": false
+    },
+    {
+      "localPath": "assets/angular.svg",
+      "upstreamPath": "icons/angular.svg",
+      "sha256": "ee4b2d180a4c1a9d629218d4df82e2b68f5140e602fd0e75a26507184214fd98",
+      "bytes": 263,
+      "modified": false
+    },
+    {
+      "localPath": "assets/docker.svg",
+      "upstreamPath": "icons/docker.svg",
+      "sha256": "3d032b712bbedea1dd8a1103c40cf5f27ce5b1af83ae0c9312fd15eb3c341c66",
+      "bytes": 1501,
+      "modified": false
+    },
+    {
+      "localPath": "assets/makefile.svg",
+      "upstreamPath": "icons/makefile.svg",
+      "sha256": "a6d8260757abc4928a488455272a9b486b8aa317cd7c198150ad1a885d9da748",
+      "bytes": 943,
+      "modified": false
+    },
+    {
+      "localPath": "assets/cmake.svg",
+      "upstreamPath": "icons/cmake.svg",
+      "sha256": "a7b782fe42372a21b32c22e8dc6e6728b146d7fbfd961e10273bdd2978f5213c",
+      "bytes": 328,
+      "modified": false
+    },
+    {
+      "localPath": "assets/just.svg",
+      "upstreamPath": "icons/just.svg",
+      "sha256": "24ba0970a7bee30bf26c0e513f8f4aa1b2681f04eb7a7a5fb1db07cc18815786",
+      "bytes": 285,
+      "modified": false
+    },
+    {
+      "localPath": "assets/jenkins.svg",
+      "upstreamPath": "icons/jenkins.svg",
+      "sha256": "11e1429bdbb4d1e1ca219b04ca5fc30f7594fdcf1d8e2c1df8c9e9f2ed4a9720",
+      "bytes": 15640,
+      "modified": false
+    },
+    {
+      "localPath": "assets/heroku.svg",
+      "upstreamPath": "icons/heroku.svg",
+      "sha256": "3d0251e2f7f9423b0a933a110ba9bac54505b792ec3051c277e85d49f4d6af40",
+      "bytes": 313,
+      "modified": false
+    },
+    {
+      "localPath": "assets/go-mod.svg",
+      "upstreamPath": "icons/go-mod.svg",
+      "sha256": "16e8eccbe173616d4b253dedfc51c2bb08f63626e00790b75648605e7782d392",
+      "bytes": 745,
+      "modified": false
+    },
+    {
+      "localPath": "assets/python-misc.svg",
+      "upstreamPath": "icons/python-misc.svg",
+      "sha256": "f2bfc56a050de0fdffdae49c4321d3666a511a3a3b542becff03b481606e4b21",
+      "bytes": 683,
+      "modified": false
+    },
+    {
+      "localPath": "assets/poetry.svg",
+      "upstreamPath": "icons/poetry.svg",
+      "sha256": "4707f2fed0418adbbf9925dcd69dcf3e0ff58e68051649177ea5fe7310bcf017",
+      "bytes": 289,
+      "modified": false
+    },
+    {
+      "localPath": "assets/gemfile.svg",
+      "upstreamPath": "icons/gemfile.svg",
+      "sha256": "34841897a8122d4a47c0d9314c4e28fcaefcfde1fe5d92fca61b82ecfe49b88d",
+      "bytes": 260,
+      "modified": false
+    },
+    {
+      "localPath": "assets/ruby.svg",
+      "upstreamPath": "icons/ruby.svg",
+      "sha256": "a7f0628476482b9f3bdb586b455eb48d85f7e92244f90c1c80829e74d093bbb6",
+      "bytes": 491,
+      "modified": false
+    },
+    {
+      "localPath": "assets/gradle.svg",
+      "upstreamPath": "icons/gradle.svg",
+      "sha256": "81711cac2f904ab1c510ee34546776ebee1ec1831db818cd51852157636fe8c8",
+      "bytes": 426,
+      "modified": false
+    },
+    {
+      "localPath": "assets/maven.svg",
+      "upstreamPath": "icons/maven.svg",
+      "sha256": "93f742e09e3081982537cb23dcd2bd4c41c6e916bedbf4a5443ee99700fc1865",
+      "bytes": 861,
+      "modified": false
+    },
+    {
+      "localPath": "assets/settings.svg",
+      "upstreamPath": "icons/settings.svg",
+      "sha256": "8fbcaf6c132a8eef0b23ca597ae35ec362a35510f3e3961950a0f5b2527b75e9",
+      "bytes": 1334,
+      "modified": false
+    },
+    {
+      "localPath": "assets/readme.svg",
+      "upstreamPath": "icons/readme.svg",
+      "sha256": "ed41dbf841368745ed1c9e333c451f45224f53491b4cac4fda0b487df98cfa71",
+      "bytes": 215,
+      "modified": false
+    },
+    {
+      "localPath": "assets/changelog.svg",
+      "upstreamPath": "icons/changelog.svg",
+      "sha256": "30377c6875c27b983c5bfd802bc9ac66990f2f582f3d5545bd6ce77a77e49229",
+      "bytes": 314,
+      "modified": false
+    },
+    {
+      "localPath": "assets/contributing.svg",
+      "upstreamPath": "icons/contributing.svg",
+      "sha256": "32e5eb75555da8e57bd804b5dae5b0eb32b0bbe64c791010ab81e925bae13f06",
+      "bytes": 303,
+      "modified": false
+    },
+    {
+      "localPath": "assets/agent.svg",
+      "upstreamPath": "icons/agent.svg",
+      "sha256": "f67e40c275934b09053be3aa62d8769c428963fcb3511b040615abc8289143ae",
+      "bytes": 597,
+      "modified": false
+    },
+    {
+      "localPath": "assets/license.svg",
+      "upstreamPath": "icons/license.svg",
+      "sha256": "4b0a147a39eade32f9164fcd6b8465fd543cda315b71bbc9e28c236a6abf5d09",
+      "bytes": 225,
+      "modified": false
+    },
+    {
+      "localPath": "assets/xml.svg",
+      "upstreamPath": "icons/xml.svg",
+      "sha256": "51bfeb938c24772c0dfeb12ab3e6bab446fbea0410dadf1ec18106d60d52914a",
+      "bytes": 290,
+      "modified": false
+    },
+    {
+      "localPath": "assets/key.svg",
+      "upstreamPath": "icons/key.svg",
+      "sha256": "b55707c459b99aa88424208f409f2996c1b29efcaec638c362f8500cae6d2fb5",
+      "bytes": 175,
+      "modified": false
+    },
+    {
+      "localPath": "assets/robots.svg",
+      "upstreamPath": "icons/robots.svg",
+      "sha256": "7540bc749364bd0d0367e6f4d9b8e95797b04527f6a8564b169b88c85a29fcd8",
+      "bytes": 402,
+      "modified": false
+    },
+    {
+      "localPath": "assets/favicon.svg",
+      "upstreamPath": "icons/favicon.svg",
+      "sha256": "37f49e458639230f4978a1eb161741218a7e3281d406240286a23bd74aedea88",
+      "bytes": 144,
+      "modified": false
+    },
+    {
+      "localPath": "assets/bun.svg",
+      "upstreamPath": "icons/bun.svg",
+      "sha256": "5aa8b6d3cd8a96a542b00dfff8b16d687f8ed6be967e2d74127897ef82b0e27a",
+      "bytes": 990,
+      "modified": false
+    },
+    {
+      "localPath": "assets/pnpm.svg",
+      "upstreamPath": "icons/pnpm.svg",
+      "sha256": "a3d8e5760f080d0f10a4b92e115918acaa3ec2db3779e31154b1fd1999b4e19f",
+      "bytes": 222,
+      "modified": false
+    },
+    {
+      "localPath": "assets/document.svg",
+      "upstreamPath": "icons/document.svg",
+      "sha256": "64f5da56de591d5f429d2c7f5f5733388b3ce704762631ba0b487a08475f9452",
+      "bytes": 234,
+      "modified": false
+    },
+    {
+      "localPath": "assets/log.svg",
+      "upstreamPath": "icons/log.svg",
+      "sha256": "71501c5f23a5b85b8080f2c619b2b84807ee5203fa48e9ed740cf5acef060116",
+      "bytes": 236,
+      "modified": false
+    },
+    {
+      "localPath": "assets/markdown.svg",
+      "upstreamPath": "icons/markdown.svg",
+      "sha256": "42f95867350ed1f349ab29b3f254405f84ae65e6d42972d74b01442027eddfcd",
+      "bytes": 161,
+      "modified": false
+    },
+    {
+      "localPath": "assets/mdx.svg",
+      "upstreamPath": "icons/mdx.svg",
+      "sha256": "dc10b4ab4abd5f940d6b9d10a6a73b0ed1934504ed6b1e81af18f07719de72c3",
+      "bytes": 161,
+      "modified": false
+    },
+    {
+      "localPath": "assets/http.svg",
+      "upstreamPath": "icons/http.svg",
+      "sha256": "d2e9b95d750c048059d3d5a74e245059036239b1e24a66444033dcc0bf4dba36",
+      "bytes": 919,
+      "modified": false
+    },
+    {
+      "localPath": "assets/javascript.svg",
+      "upstreamPath": "icons/javascript.svg",
+      "sha256": "00eb9422f451901565f2eb8cbaf07718b2da03f9a866fae7f68cdc3807290d6b",
+      "bytes": 291,
+      "modified": false
+    },
+    {
+      "localPath": "assets/react.svg",
+      "upstreamPath": "icons/react.svg",
+      "sha256": "6a7fb2e8b5e168c0d0f605147138f0bb437eea6618008b82b708ce42e56bafae",
+      "bytes": 1104,
+      "modified": false
+    },
+    {
+      "localPath": "assets/typescript.svg",
+      "upstreamPath": "icons/typescript.svg",
+      "sha256": "1822f88268b452ced242ed06a770302c15dff46bb8a2e077e95e19597f737397",
+      "bytes": 267,
+      "modified": false
+    },
+    {
+      "localPath": "assets/react_ts.svg",
+      "upstreamPath": "icons/react_ts.svg",
+      "sha256": "f5caa02786d9ce9650fa25442b6605630a60e40156083679036be101b145ad37",
+      "bytes": 1104,
+      "modified": false
+    },
+    {
+      "localPath": "assets/java.svg",
+      "upstreamPath": "icons/java.svg",
+      "sha256": "755c5b6f3fe0fb1e61e76c1a10eb96f65f59fac1b5a5a181945182639935854e",
+      "bytes": 208,
+      "modified": false
+    },
+    {
+      "localPath": "assets/javaclass.svg",
+      "upstreamPath": "icons/javaclass.svg",
+      "sha256": "8143ec33102142f241b0a6c3fbb9ef1a7675ff8a1edd0cb025fec42165688d6d",
+      "bytes": 208,
+      "modified": false
+    },
+    {
+      "localPath": "assets/csharp.svg",
+      "upstreamPath": "icons/csharp.svg",
+      "sha256": "5446afdcd43ba9f36691f510d411e412d63f127d91806ebbab468732ea1945e9",
+      "bytes": 331,
+      "modified": false
+    },
+    {
+      "localPath": "assets/c.svg",
+      "upstreamPath": "icons/c.svg",
+      "sha256": "4adba54251e85851f3bcc78f10bfb055f17b24aad8a53d0efbd00085dd202bae",
+      "bytes": 245,
+      "modified": false
+    },
+    {
+      "localPath": "assets/h.svg",
+      "upstreamPath": "icons/h.svg",
+      "sha256": "73fa9417071d70dcda54d5e464c292a5ba59cca3105d0e5634b8702e8bb3fd83",
+      "bytes": 185,
+      "modified": false
+    },
+    {
+      "localPath": "assets/cpp.svg",
+      "upstreamPath": "icons/cpp.svg",
+      "sha256": "336346afba3afb620b3edb5f08e0a2bcf14cb85a495113deffb3bbcc87b8aeab",
+      "bytes": 325,
+      "modified": false
+    },
+    {
+      "localPath": "assets/hpp.svg",
+      "upstreamPath": "icons/hpp.svg",
+      "sha256": "a030bcbf24e67aeddc09a9b7b0a8996387549f6105f3466d9480bd0371d60db6",
+      "bytes": 232,
+      "modified": false
+    },
+    {
+      "localPath": "assets/css.svg",
+      "upstreamPath": "icons/css.svg",
+      "sha256": "afe20f8da21f1f2de59b11e0bd0b6bc63866a43e42238af5daca6c5669493cd5",
+      "bytes": 674,
+      "modified": false
+    },
+    {
+      "localPath": "assets/sass.svg",
+      "upstreamPath": "icons/sass.svg",
+      "sha256": "e613bd47d598c54c9bda64db765039b54b3db4a6b45de0b1976b45956ebc1023",
+      "bytes": 1281,
+      "modified": false
+    },
+    {
+      "localPath": "assets/less.svg",
+      "upstreamPath": "icons/less.svg",
+      "sha256": "bbaf08ad608b3e8137dc1a5e25cd4d9cec6b6c2fced6926186b08c51ce160003",
+      "bytes": 325,
+      "modified": false
+    },
+    {
+      "localPath": "assets/stylus.svg",
+      "upstreamPath": "icons/stylus.svg",
+      "sha256": "a81f5daf333cbaaeae38040da91a8b6f0fbe13073630021ed0bc3f87b2594b78",
+      "bytes": 547,
+      "modified": false
+    },
+    {
+      "localPath": "assets/html.svg",
+      "upstreamPath": "icons/html.svg",
+      "sha256": "23e04ad5f1ae9cd16dc79fe52c4290e5bd80f2f7bfe4c0769e7485832b3eb146",
+      "bytes": 232,
+      "modified": false
+    },
+    {
+      "localPath": "assets/json.svg",
+      "upstreamPath": "icons/json.svg",
+      "sha256": "649ad4f4d01cec788959017710bb0c63281a645db8cef389c50008fbd059da03",
+      "bytes": 540,
+      "modified": false
+    },
+    {
+      "localPath": "assets/yaml.svg",
+      "upstreamPath": "icons/yaml.svg",
+      "sha256": "666b724d61cfa091cd085a465faa3727989ba5286c8ac99a6fbf5229cb6c8f9e",
+      "bytes": 199,
+      "modified": false
+    },
+    {
+      "localPath": "assets/xaml.svg",
+      "upstreamPath": "icons/xaml.svg",
+      "sha256": "0956684a8a56ccb44b4b13542fc83de3288c17cd1a83365bbda748f510117e79",
+      "bytes": 305,
+      "modified": false
+    },
+    {
+      "localPath": "assets/svg.svg",
+      "upstreamPath": "icons/svg.svg",
+      "sha256": "120ceffcaa97658ae665caab7f0cbd4aed9aa9d069447f7b908548c755934ec0",
+      "bytes": 1285,
+      "modified": false
+    },
+    {
+      "localPath": "assets/toml.svg",
+      "upstreamPath": "icons/toml.svg",
+      "sha256": "eaeb55ba45f14a504d8f162282ec8f87c930426220ca88035bf340dc8b1e7008",
+      "bytes": 180,
+      "modified": false
+    },
+    {
+      "localPath": "assets/lock.svg",
+      "upstreamPath": "icons/lock.svg",
+      "sha256": "f28fe89b018236f9de2abd1c10abf278bf3f2ec9b757bb6746a44704ebedc084",
+      "bytes": 246,
+      "modified": false
+    },
+    {
+      "localPath": "assets/zip.svg",
+      "upstreamPath": "icons/zip.svg",
+      "sha256": "dad79a45f756542d37abd422502ecfbea15720b92ea1c9d80ef0439ab6b9448a",
+      "bytes": 230,
+      "modified": false
+    },
+    {
+      "localPath": "assets/jar.svg",
+      "upstreamPath": "icons/jar.svg",
+      "sha256": "8f80a612b0a4af600b2e4ac520fc9ba41dcc0cb4070ca5c88f717f76c9186d39",
+      "bytes": 281,
+      "modified": false
+    },
+    {
+      "localPath": "assets/image.svg",
+      "upstreamPath": "icons/image.svg",
+      "sha256": "838e1953a3a2ebf5c6a06b662892ba17e1c605c4379a77c61737639e51fb4f0a",
+      "bytes": 346,
+      "modified": false
+    },
+    {
+      "localPath": "assets/hex.svg",
+      "upstreamPath": "icons/hex.svg",
+      "sha256": "a0fc28268ef0da7fa50b77c9217a07472751ce96704c74e3a8bb50e2c59ba04b",
+      "bytes": 271,
+      "modified": false
+    },
+    {
+      "localPath": "assets/database.svg",
+      "upstreamPath": "icons/database.svg",
+      "sha256": "e0679294defea90793f4107d6783fe7b25978d43c57035ae6c21e5c1ae8d7367",
+      "bytes": 332,
+      "modified": false
+    },
+    {
+      "localPath": "assets/dll.svg",
+      "upstreamPath": "icons/dll.svg",
+      "sha256": "5c45ee3a6a63e5292be4d704b29a96238ed67a625e831d42941b68b0c8fd1d8c",
+      "bytes": 772,
+      "modified": false
+    },
+    {
+      "localPath": "assets/exe.svg",
+      "upstreamPath": "icons/exe.svg",
+      "sha256": "423e33947323264bcfccb2574a222c816589bf2a02cda0f731fa7167162cb9c8",
+      "bytes": 178,
+      "modified": false
+    },
+    {
+      "localPath": "assets/webassembly.svg",
+      "upstreamPath": "icons/webassembly.svg",
+      "sha256": "a1b7c5aa0bd3c32256705be6c12d1db66f4839636be3053759efcdd82c4b6a03",
+      "bytes": 253,
+      "modified": false
+    },
+    {
+      "localPath": "assets/3d.svg",
+      "upstreamPath": "icons/3d.svg",
+      "sha256": "9527b849f0fba57ca7640e2717b3a19cb5f5e046712cbbd8b75d73af338c68fb",
+      "bytes": 385,
+      "modified": false
+    },
+    {
+      "localPath": "assets/lib.svg",
+      "upstreamPath": "icons/lib.svg",
+      "sha256": "dc04429517312f527fce520058f5a1428a2040748d96e4b6249c61aa36d9ef36",
+      "bytes": 287,
+      "modified": false
+    },
+    {
+      "localPath": "assets/console.svg",
+      "upstreamPath": "icons/console.svg",
+      "sha256": "c5f33efa92ce94d240e3dca2041f44c30dcad53e9b1cc937be0e757719a619ce",
+      "bytes": 223,
+      "modified": false
+    },
+    {
+      "localPath": "assets/command.svg",
+      "upstreamPath": "icons/command.svg",
+      "sha256": "59b0661719d3e8f3e297816fb33d222070a968c5da01971b9b2ee07f21b7d207",
+      "bytes": 309,
+      "modified": false
+    },
+    {
+      "localPath": "assets/powershell.svg",
+      "upstreamPath": "icons/powershell.svg",
+      "sha256": "b8ad2264d8f1fe82e7e0a2af062ce85a49083f7d9a8c51a16e77de2a7aec158f",
+      "bytes": 610,
+      "modified": false
+    },
+    {
+      "localPath": "assets/terraform.svg",
+      "upstreamPath": "icons/terraform.svg",
+      "sha256": "90e4e3ca37216e8fd236459f665abccae57e12b481e41fd75268f6db4dd72977",
+      "bytes": 160,
+      "modified": false
+    },
+    {
+      "localPath": "assets/groovy.svg",
+      "upstreamPath": "icons/groovy.svg",
+      "sha256": "f004dba170641fdf568c98c9d8f9c8497f5dedff0ad4240506d31b77d64e3015",
+      "bytes": 1180,
+      "modified": false
+    },
+    {
+      "localPath": "assets/graphql.svg",
+      "upstreamPath": "icons/graphql.svg",
+      "sha256": "731ab2528182fa351d9d9bea512c09392ef3dcb20684ed90a62cd2a13df9eede",
+      "bytes": 1001,
+      "modified": false
+    },
+    {
+      "localPath": "assets/vue.svg",
+      "upstreamPath": "icons/vue.svg",
+      "sha256": "039814fe6b28ff71bbff54a477132b160fdc5c208553c5d154809b834069c0ff",
+      "bytes": 259,
+      "modified": false
+    },
+    {
+      "localPath": "assets/swift.svg",
+      "upstreamPath": "icons/swift.svg",
+      "sha256": "2cf5377f88aa8cb477b773d30aae2518af9ce4af9eec8b044cb163e94f597dcd",
+      "bytes": 502,
+      "modified": false
+    },
+    {
+      "localPath": "assets/prolog.svg",
+      "upstreamPath": "icons/prolog.svg",
+      "sha256": "a8ed06c4886ec62311d473b6ec5c1c6bc02f03a37436074e9b5d865748cd3fec",
+      "bytes": 1041,
+      "modified": false
+    },
+    {
+      "localPath": "assets/perl.svg",
+      "upstreamPath": "icons/perl.svg",
+      "sha256": "82bef5dc3dabaf8ffa10064d350170dd33fd8d31336db7669caff779bd4eae90",
+      "bytes": 1734,
+      "modified": false
+    },
+    {
+      "localPath": "assets/font.svg",
+      "upstreamPath": "icons/font.svg",
+      "sha256": "092850724e8e29ff1ad8afc53a87185d6fb8c7b8287174dd7783f8531d2acccd",
+      "bytes": 165,
+      "modified": false
+    },
+    {
+      "localPath": "assets/table.svg",
+      "upstreamPath": "icons/table.svg",
+      "sha256": "1714898c0d538648edb0f8dd041d97435aa8cbac078c5897f9fa8103b36f029a",
+      "bytes": 268,
+      "modified": false
+    },
+    {
+      "localPath": "assets/diff.svg",
+      "upstreamPath": "icons/diff.svg",
+      "sha256": "30e9f95d4afdedcfbde963c237481ac8cceb0b0c05b2e84a2eed07ebd2f2f4cf",
+      "bytes": 304,
+      "modified": false
+    },
+    {
+      "localPath": "assets/jupyter.svg",
+      "upstreamPath": "icons/jupyter.svg",
+      "sha256": "2656609475ff60fd21adb14103506687c2649cccbe29417f6f5649a9fc605f82",
+      "bytes": 383,
+      "modified": false
+    },
+    {
+      "localPath": "assets/go.svg",
+      "upstreamPath": "icons/go.svg",
+      "sha256": "eb3b74fcad124042c463505961ee93dd335165275a2b84828083fb8dcb5064c9",
+      "bytes": 745,
+      "modified": false
+    },
+    {
+      "localPath": "assets/python.svg",
+      "upstreamPath": "icons/python.svg",
+      "sha256": "798fcd59653af34e5b8124d3fe45412eef79f9c1925e286dadd94f923486fd1f",
+      "bytes": 773,
+      "modified": false
+    },
+    {
+      "localPath": "assets/rust.svg",
+      "upstreamPath": "icons/rust.svg",
+      "sha256": "a58c24641e82c1ba47c74781da039e2a8e372202cfaaaeff39559138a11bcc39",
+      "bytes": 526,
+      "modified": false
+    },
+    {
+      "localPath": "assets/kotlin.svg",
+      "upstreamPath": "icons/kotlin.svg",
+      "sha256": "94583b191f9a789872fa733c70d9ad3e0a8ad81fdafd4c2cda02063b0efe2500",
+      "bytes": 517,
+      "modified": false
+    },
+    {
+      "localPath": "assets/dart.svg",
+      "upstreamPath": "icons/dart.svg",
+      "sha256": "858daa7ed5bfc02734254390d26c4a209ecf9a433c97beabdcbe75d5525225ce",
+      "bytes": 691,
+      "modified": false
+    },
+    {
+      "localPath": "assets/lua.svg",
+      "upstreamPath": "icons/lua.svg",
+      "sha256": "d69816f1ae2002f284f72ba38c019e8faeda0f03d293dc351ed4995813d4932f",
+      "bytes": 576,
+      "modified": false
+    },
+    {
+      "localPath": "assets/r.svg",
+      "upstreamPath": "icons/r.svg",
+      "sha256": "7b12397719a62f72cebcfe9bf96e9e559e99ef8a0061d734d2fa0864bd70f929",
+      "bytes": 731,
+      "modified": false
+    },
+    {
+      "localPath": "assets/elixir.svg",
+      "upstreamPath": "icons/elixir.svg",
+      "sha256": "4a58a6eb889232965feea4dd5d1f73427d172624783d40e59d57c4cb650a420a",
+      "bytes": 290,
+      "modified": false
+    },
+    {
+      "localPath": "assets/erlang.svg",
+      "upstreamPath": "icons/erlang.svg",
+      "sha256": "fb0b8ace00af15fe7929531edcf93f84a7638ea8ab3d6f0127b16da61cc95fff",
+      "bytes": 543,
+      "modified": false
+    },
+    {
+      "localPath": "assets/haskell.svg",
+      "upstreamPath": "icons/haskell.svg",
+      "sha256": "1eee29fa6a7929a7366b4a7c40554ce2b8d35767b237acabce8dd4c9c42b5704",
+      "bytes": 436,
+      "modified": false
+    },
+    {
+      "localPath": "assets/clojure.svg",
+      "upstreamPath": "icons/clojure.svg",
+      "sha256": "cd1f16a57b7eda606a1f1434fb572b7dc439c11021dbe9af786ab2c33c9b1536",
+      "bytes": 1810,
+      "modified": false
+    },
+    {
+      "localPath": "assets/scala.svg",
+      "upstreamPath": "icons/scala.svg",
+      "sha256": "fc08831ec47751aeae5ee85bb1d7f6977bba8d2f952d8be34f0849a0b8bdc21c",
+      "bytes": 390,
+      "modified": false
+    },
+    {
+      "localPath": "assets/sml.svg",
+      "upstreamPath": "icons/sml.svg",
+      "sha256": "e8646ee821c254b363dd483df6163a8b79d5bd2f1f97a5238fcc5126f360c706",
+      "bytes": 278,
+      "modified": false
+    },
+    {
+      "localPath": "assets/ocaml.svg",
+      "upstreamPath": "icons/ocaml.svg",
+      "sha256": "836e92e7e93b9291bb46a6b28280555f733fe447e5142a4695bbe888a2ef30c5",
+      "bytes": 2383,
+      "modified": false
+    },
+    {
+      "localPath": "assets/fsharp.svg",
+      "upstreamPath": "icons/fsharp.svg",
+      "sha256": "483255ce168ae97bbcdd1320cae4d2ca874332340bc9505802f17a570963b4ba",
+      "bytes": 344,
+      "modified": false
+    },
+    {
+      "localPath": "assets/php.svg",
+      "upstreamPath": "icons/php.svg",
+      "sha256": "5163a63d5a8d81921ae0a24c853cc7342d498bdf11e7b5d3c353842fddf1004e",
+      "bytes": 880,
+      "modified": false
+    },
+    {
+      "localPath": "assets/svelte.svg",
+      "upstreamPath": "icons/svelte.svg",
+      "sha256": "5051073698f7574d065363259fe5fbebdd8616c68299fa0f36c3cc069e89d59a",
+      "bytes": 1668,
+      "modified": false
+    },
+    {
+      "localPath": "assets/nim.svg",
+      "upstreamPath": "icons/nim.svg",
+      "sha256": "6071ad3e75e1a1a973a0b1aa99a0405e3ef8710cb1d9c87e5162e3406c26f469",
+      "bytes": 167,
+      "modified": false
+    },
+    {
+      "localPath": "assets/zig.svg",
+      "upstreamPath": "icons/zig.svg",
+      "sha256": "37be0ce02cf471b18d86150b3c38e80caa7c16c49a15078e7db6f1f41788d101",
+      "bytes": 254,
+      "modified": false
+    },
+    {
+      "localPath": "assets/vlang.svg",
+      "upstreamPath": "icons/vlang.svg",
+      "sha256": "cdaa19a4c4715cb79e1c8cccbdcf90d3298b18064aa3ee379b235e31ef5494c2",
+      "bytes": 562,
+      "modified": false
+    },
+    {
+      "localPath": "assets/solidity.svg",
+      "upstreamPath": "icons/solidity.svg",
+      "sha256": "4fd0b071a10dc912cebbcd50562973288c9e2ba562e744edf61837d310db07e1",
+      "bytes": 210,
+      "modified": false
+    },
+    {
+      "localPath": "assets/proto.svg",
+      "upstreamPath": "icons/proto.svg",
+      "sha256": "d8444ce7b1a60f000655ed43c71686b89198154b1f6e38afab4ac7385e6f6734",
+      "bytes": 297,
+      "modified": false
+    },
+    {
+      "localPath": "assets/deno_light.svg",
+      "upstreamPath": "icons/deno_light.svg",
+      "sha256": "34c7d8b5ba2dc92d0fef0d2cde20928d23f4080420066a7642d3efa66294181f",
+      "bytes": 1113,
+      "modified": false
+    },
+    {
+      "localPath": "assets/bun_light.svg",
+      "upstreamPath": "icons/bun_light.svg",
+      "sha256": "8c535ed7546705fafbd93b44fd7fd09ce313d3514de7dba672a9651d789b3683",
+      "bytes": 1727,
+      "modified": false
+    },
+    {
+      "localPath": "assets/pnpm_light.svg",
+      "upstreamPath": "icons/pnpm_light.svg",
+      "sha256": "f6faf81eee3c87603bc2e912708d90f2be96cacd508c92b54e08f238b44c4c04",
+      "bytes": 222,
+      "modified": false
+    },
+    {
+      "localPath": "assets/toml_light.svg",
+      "upstreamPath": "icons/toml_light.svg",
+      "sha256": "e094a52dd142e87def49ea6e26891b8ddd7c0114b7e6ffc0f7d442b5e0461a16",
+      "bytes": 180,
+      "modified": false
+    },
+    {
+      "localPath": "assets/claude.svg",
+      "upstreamPath": "icons/claude.svg",
+      "sha256": "c5c151002782b9e1b3fca196b5f31d82fbf18eec5a8905feadc79a5dbc928ac1",
+      "bytes": 1216,
+      "modified": false
+    }
+  ]
+}

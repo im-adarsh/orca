@@ -1,18 +1,19 @@
 {
   "name": "orca-theme-collection",
   "private": true,
-  "version": "1.5.4",
+  "version": "1.6.0",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node scripts/validate-themes.mjs",
+    "test": "node scripts/validate-themes.mjs && node scripts/verify-im-themes.mjs",
     "verify:orca": "node scripts/verify-orca.mjs",
     "test:browser": "node scripts/verify-browser.cjs",
     "package:marketplace": "node scripts/package-marketplace.mjs",
     "verify:modern": "node scripts/verify-modern.cjs",
-    "verify:manifest-compatibility": "node scripts/verify-manifest-compatibility.cjs"
+    "verify:manifest-compatibility": "node scripts/verify-manifest-compatibility.cjs",
+    "verify:icons": "node scripts/verify-im-icons.cjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",

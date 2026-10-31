@@ -33,18 +33,20 @@
       "sha256": "a7651073498d298bb722195799616d29908ec398df86d86786b3a03e10c9d6e5",
       "bytes": 632,
       "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/classic/Csharp_dark.svg",
-      "upstreamPath": "platform/icons/src/fileTypes/Csharp_dark.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/fileTypes/Csharp_dark.svg",
-      "gitBlobSha1": "1891137f13fdcd8852980fb2347fe0afd2a5fefd",
-      "sha256": "a7651073498d298bb722195799616d29908ec398df86d86786b3a03e10c9d6e5",
-      "bytes": 632,
-      "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/classic/Csharp_dark.svg",
+          "upstreamPath": "platform/icons/src/fileTypes/Csharp_dark.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/fileTypes/Csharp_dark.svg",
+          "gitBlobSha1": "1891137f13fdcd8852980fb2347fe0afd2a5fefd",
+          "sha256": "a7651073498d298bb722195799616d29908ec398df86d86786b3a03e10c9d6e5",
+          "bytes": 632,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -154,7 +156,20 @@
       "sha256": "1e2f45e7ff7eb68961e1e31b0008a3148964512ea4b89b62876e570a69db6087",
       "bytes": 1030,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/http.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/http.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/http.svg",
+          "gitBlobSha1": "9062374077c1e38a14e8ad370331d39f051c8654",
+          "sha256": "1e2f45e7ff7eb68961e1e31b0008a3148964512ea4b89b62876e570a69db6087",
+          "bytes": 1030,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -418,7 +433,20 @@
       "sha256": "c9e0fe6f37b587d792110a526162acff90f7f33f7fe48c1e5f17bc209af77211",
       "bytes": 1501,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/javaClass.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/javaClass.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/javaClass.svg",
+          "gitBlobSha1": "9bb5cad2f03d5e4e27479008fc52248c5d1b3d1c",
+          "sha256": "c9e0fe6f37b587d792110a526162acff90f7f33f7fe48c1e5f17bc209af77211",
+          "bytes": 1501,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -429,7 +457,20 @@
       "sha256": "a3775627cd46630059454a3e7b8972c85c8672b64147f35e68699c208044e5ba",
       "bytes": 1501,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/javaClass_dark.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/javaClass_dark.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/javaClass_dark.svg",
+          "gitBlobSha1": "36a5b889a3d0d1a8fba46089ce20dba9a55d7bdc",
+          "sha256": "a3775627cd46630059454a3e7b8972c85c8672b64147f35e68699c208044e5ba",
+          "bytes": 1501,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -572,7 +613,20 @@
       "sha256": "2753f18580ef18634cf78650c88e5d957aecee1382041ff118c52e3f6dadbc81",
       "bytes": 4461,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/properties.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/properties.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/properties.svg",
+          "gitBlobSha1": "547bba7210b66c09ccc13022a698b92a53b33b27",
+          "sha256": "2753f18580ef18634cf78650c88e5d957aecee1382041ff118c52e3f6dadbc81",
+          "bytes": 4461,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -583,7 +637,20 @@
       "sha256": "0b489a2fca2dfd51de0a85b300791c822fd08d077710b604cc65afce7fd8e2d6",
       "bytes": 4461,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/properties_dark.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/properties_dark.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/properties_dark.svg",
+          "gitBlobSha1": "528d02ebe429a50c5bb6a5c3380e7aac0c1a4f04",
+          "sha256": "0b489a2fca2dfd51de0a85b300791c822fd08d077710b604cc65afce7fd8e2d6",
+          "bytes": 4461,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -752,17 +819,6 @@
     },
     {
       "origin": "JetBrains",
-      "localPath": "assets/new-ui/http.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/http.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/http.svg",
-      "gitBlobSha1": "9062374077c1e38a14e8ad370331d39f051c8654",
-      "sha256": "1e2f45e7ff7eb68961e1e31b0008a3148964512ea4b89b62876e570a69db6087",
-      "bytes": 1030,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
       "localPath": "assets/new-ui/image.svg",
       "upstreamPath": "platform/icons/src/expui/fileTypes/image.svg",
       "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/image.svg",
@@ -791,28 +847,6 @@
       "gitBlobSha1": "00e1a4c96fb5ec318eb5a5079b6cf18b13ef807a",
       "sha256": "2056fcd754bc6a6e0ba13d5cf054b022f363f2f6839828b86c83a47f6ec8defc",
       "bytes": 1217,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/new-ui/javaClass.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/javaClass.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/javaClass.svg",
-      "gitBlobSha1": "9bb5cad2f03d5e4e27479008fc52248c5d1b3d1c",
-      "sha256": "c9e0fe6f37b587d792110a526162acff90f7f33f7fe48c1e5f17bc209af77211",
-      "bytes": 1501,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/new-ui/javaClass_dark.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/javaClass_dark.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/javaClass_dark.svg",
-      "gitBlobSha1": "36a5b889a3d0d1a8fba46089ce20dba9a55d7bdc",
-      "sha256": "a3775627cd46630059454a3e7b8972c85c8672b64147f35e68699c208044e5ba",
-      "bytes": 1501,
       "modified": false,
       "license": "Apache-2.0"
     },
@@ -858,7 +892,20 @@
       "sha256": "bbbc7e1e2b583e2b4cca3a0c4dd507ce41c914a66d7bad1e6599f3ea5395e61c",
       "bytes": 2133,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/sourceMap.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/sourceMap.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/sourceMap.svg",
+          "gitBlobSha1": "d8f707dd53d3946245d5dbafe83b6e68e649d077",
+          "sha256": "bbbc7e1e2b583e2b4cca3a0c4dd507ce41c914a66d7bad1e6599f3ea5395e61c",
+          "bytes": 2133,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -869,7 +916,20 @@
       "sha256": "c4992ee9127e8685d5ec96570f48668d0be7aabfa4f0099ff6dbc5e51796a5f2",
       "bytes": 2133,
       "modified": false,
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "sourceAliases": [
+        {
+          "origin": "JetBrains",
+          "localPath": "assets/new-ui/sourceMap_dark.svg",
+          "upstreamPath": "platform/icons/src/expui/fileTypes/sourceMap_dark.svg",
+          "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/sourceMap_dark.svg",
+          "gitBlobSha1": "29371ab71af610b8c703b095db19dc307f308bb0",
+          "sha256": "c4992ee9127e8685d5ec96570f48668d0be7aabfa4f0099ff6dbc5e51796a5f2",
+          "bytes": 2133,
+          "modified": false,
+          "license": "Apache-2.0"
+        }
+      ]
     },
     {
       "origin": "JetBrains",
@@ -1027,28 +1087,6 @@
     },
     {
       "origin": "JetBrains",
-      "localPath": "assets/new-ui/properties.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/properties.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/properties.svg",
-      "gitBlobSha1": "547bba7210b66c09ccc13022a698b92a53b33b27",
-      "sha256": "2753f18580ef18634cf78650c88e5d957aecee1382041ff118c52e3f6dadbc81",
-      "bytes": 4461,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/new-ui/properties_dark.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/properties_dark.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/properties_dark.svg",
-      "gitBlobSha1": "528d02ebe429a50c5bb6a5c3380e7aac0c1a4f04",
-      "sha256": "0b489a2fca2dfd51de0a85b300791c822fd08d077710b604cc65afce7fd8e2d6",
-      "bytes": 4461,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
       "localPath": "assets/new-ui/regexp.svg",
       "upstreamPath": "platform/icons/src/expui/fileTypes/regexp.svg",
       "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/regexp.svg",
@@ -1110,28 +1148,6 @@
       "gitBlobSha1": "7022d0c7682049203076679244abc00ac1448252",
       "sha256": "09c58f2d69bedc5f3c518f9e42998f3bbb3ec5b7fd33b06cd24d1734c74d6cc7",
       "bytes": 443,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/new-ui/sourceMap.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/sourceMap.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/sourceMap.svg",
-      "gitBlobSha1": "d8f707dd53d3946245d5dbafe83b6e68e649d077",
-      "sha256": "bbbc7e1e2b583e2b4cca3a0c4dd507ce41c914a66d7bad1e6599f3ea5395e61c",
-      "bytes": 2133,
-      "modified": false,
-      "license": "Apache-2.0"
-    },
-    {
-      "origin": "JetBrains",
-      "localPath": "assets/new-ui/sourceMap_dark.svg",
-      "upstreamPath": "platform/icons/src/expui/fileTypes/sourceMap_dark.svg",
-      "url": "https://raw.githubusercontent.com/JetBrains/intellij-community/278ea91039deaad8105adf8827f84897de9d8b8f/platform/icons/src/expui/fileTypes/sourceMap_dark.svg",
-      "gitBlobSha1": "29371ab71af610b8c703b095db19dc307f308bb0",
-      "sha256": "c4992ee9127e8685d5ec96570f48668d0be7aabfa4f0099ff6dbc5e51796a5f2",
-      "bytes": 2133,
       "modified": false,
       "license": "Apache-2.0"
     },
@@ -1435,7 +1451,18 @@
       "license": "Apache-2.0",
       "sha256": "eba3e0518fae2372c1cb30850809e302070bbae35a78971d35a19fcb831f2854",
       "bytes": 370,
-      "description": "Original geometric G/o glyph; not the GoLand or Go logo"
+      "description": "Original geometric G/o glyph; not the GoLand or Go logo",
+      "sourceAliases": [
+        {
+          "origin": "Original",
+          "localPath": "assets/original/new-ui-dark/go.svg",
+          "author": "im-adarsh",
+          "license": "Apache-2.0",
+          "sha256": "eba3e0518fae2372c1cb30850809e302070bbae35a78971d35a19fcb831f2854",
+          "bytes": 370,
+          "description": "Original geometric G/o glyph; not the GoLand or Go logo"
+        }
+      ]
     },
     {
       "origin": "Original",
@@ -1462,7 +1489,18 @@
       "license": "Apache-2.0",
       "sha256": "065beab0dcd4dbeb5d2aa02ea26b526d006395594fdba720ddff6a480cd08b08",
       "bytes": 370,
-      "description": "Original geometric G/o glyph; not the GoLand or Go logo"
+      "description": "Original geometric G/o glyph; not the GoLand or Go logo",
+      "sourceAliases": [
+        {
+          "origin": "Original",
+          "localPath": "assets/original/new-ui-light/go.svg",
+          "author": "im-adarsh",
+          "license": "Apache-2.0",
+          "sha256": "065beab0dcd4dbeb5d2aa02ea26b526d006395594fdba720ddff6a480cd08b08",
+          "bytes": 370,
+          "description": "Original geometric G/o glyph; not the GoLand or Go logo"
+        }
+      ]
     },
     {
       "origin": "Original",
@@ -1484,15 +1522,6 @@
     },
     {
       "origin": "Original",
-      "localPath": "assets/original/new-ui-dark/go.svg",
-      "author": "im-adarsh",
-      "license": "Apache-2.0",
-      "sha256": "eba3e0518fae2372c1cb30850809e302070bbae35a78971d35a19fcb831f2854",
-      "bytes": 370,
-      "description": "Original geometric G/o glyph; not the GoLand or Go logo"
-    },
-    {
-      "origin": "Original",
       "localPath": "assets/original/new-ui-light/code-fallback.svg",
       "author": "im-adarsh",
       "license": "Apache-2.0",
@@ -1508,15 +1537,6 @@
       "sha256": "b3c192fde7b2239693ceeb718746404b644ac9a701406148e0beefc2af8da3bb",
       "bytes": 386,
       "description": "Original expanded folder indicator"
-    },
-    {
-      "origin": "Original",
-      "localPath": "assets/original/new-ui-light/go.svg",
-      "author": "im-adarsh",
-      "license": "Apache-2.0",
-      "sha256": "065beab0dcd4dbeb5d2aa02ea26b526d006395594fdba720ddff6a480cd08b08",
-      "bytes": 370,
-      "description": "Original geometric G/o glyph; not the GoLand or Go logo"
     },
     {
       "origin": "JetBrains",

@@ -9,7 +9,7 @@ const manifest=JSON.parse(fs.readFileSync(path.join(root,'orca-plugin.json'),'ut
 manifest.manifestVersion=2;
 manifest.engines.orca='>=1.4.245';
 // Reserve a higher version so an upgraded host can migrate from the legacy build.
-manifest.version='2.1.0';
+manifest.version='2.2.0';
 for(const panel of manifest.contributes.panels)panel.icon='layers';
 for(const command of manifest.contributes.commands)delete command.context;
 for(const family of ['themes','terminalThemes'])for(const t of manifest.contributes[family]){t.title=t.label;delete t.label}

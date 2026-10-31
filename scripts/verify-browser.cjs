@@ -11,10 +11,8 @@ const fs=require('fs'),path=require('path');
  await page.goto('file://'+root+'/setup/index.html');
  const ids=await page.locator('#palette option').evaluateAll(options=>options.map(o=>({id:o.value,name:o.textContent})));
  const assets=path.join(process.env.ORCA_APP_PATH || '/Applications/Orca.app','Contents/Resources/app.asar.unpacked/out/renderer/assets');
- const source=fs.readFileSync(path.join(assets,fs.readdirSync(assets).find(n=>/^document-theme-.*\.js$/.test(n))),'utf8');
- const start=source.indexOf('var tt=[['),end=source.indexOf('var J,ut=',start);
- if(start<0||end<0)throw Error('Host renderer changed; review filter extraction');
- await page.addScriptTag({content:source.slice(start,end)+';window.hostFilter=lt;'});
+ const {hostFilterSource,hostModule}=require('./host-contract.cjs');
+ await page.addScriptTag({content:hostFilterSource(assets)});
  const cards=[];
  for(const {id,name} of ids){
   await page.selectOption('#palette',id);
@@ -28,9 +26,9 @@ const fs=require('fs'),path=require('path');
    const surfaces=['body','.titlebar','.files','.editor','.terminal','.footer','.card'].map(selector=>getComputedStyle(document.querySelector(selector)).backgroundColor);
    return {tokens:Object.keys(filtered).length,editor,terminal,surfaces,theme:document.documentElement.dataset.theme,mode:getComputedStyle(document.documentElement).colorScheme};
   });
-  if(result.tokens!==37||new Set(result.surfaces).size!==1||result.theme!==id)throw Error(name+JSON.stringify(result));
+  if(result.tokens!==37||new Set(result.surfaces).size<2 || result.editor!==result.terminal||result.theme!==id)throw Error(name+JSON.stringify(result));
   const png=await page.locator('.workspace').screenshot();cards.push({name,png:png.toString('base64')});
-  console.log(name+': browser retained all 37 tokens; all seven preview surfaces match');
+  console.log(name+': browser retained all 37 tokens; layered surfaces; editor and terminal match');
  }
  for(const width of [360,768]){await page.setViewportSize({width,height:1000});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Horizontal overflow at '+width);}
  await page.setViewportSize({width:1280,height:1100});
@@ -40,7 +38,7 @@ const fs=require('fs'),path=require('path');
  await page.setViewportSize({width:1280,height:fullHeight});
  await page.screenshot({path:path.join(root,'artifacts/setup-desktop.png')});
  // Exercise the same CSP and opaque-origin frame wrapper used by installed plugins.
- const host=require(path.resolve(assets,'../../shared/plugins/plugin-panel-shell.js'));
+ const host=hostModule(path.resolve(assets,'../../shared/plugins'),'frames/plugin-panel-shell','plugin-panel-shell');
  let wrapped=host.buildPluginPanelShellHtml(fs.readFileSync(path.join(root,'setup/index.html'),'utf8'));
  wrapped=wrapped.replaceAll(host.PANEL_SHELL_COLOR_SCHEME_PLACEHOLDER,'dark').replaceAll(host.PANEL_SHELL_TOKENS_PLACEHOLDER,'');
  const shell=await browser.newPage({viewport:{width:420,height:1000}});
@@ -70,7 +68,7 @@ const fs=require('fs'),path=require('path');
  console.log('Installed Orca CSP and sandbox wrapper: all theme choices work without overflow.');
 if(errors.length)throw Error(errors.join('\n'));
  const sheet=await browser.newPage({viewport:{width:1440,height:1360},deviceScaleFactor:1});
- const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>GoLand Style for Orca</h1><p>Twelve matched app and terminal palettes · Renderer-verified on Orca 1.4.244</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
+ const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>im Theme Collection</h1><p>Thirteen matched app and terminal palettes · Renderer-verified on Orca 1.4.245</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
  await sheet.setContent(html);await sheet.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
  await sheet.locator('body').screenshot({path:path.join(root,'previews/themes.png')});
  console.log('Setup panel verified at desktop, tablet, and narrow widths; no browser script errors.');

@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
-  "name": "GoLand Style for Orca",
-  "version": "1.5.4",
-  "description": "Twelve consistent GoLand-style palettes, matching terminal themes, and a portable setup guide.",
+  "name": "im Theme Collection",
+  "version": "1.6.0",
+  "description": "Thirteen layered im palettes with distinctive selection accents, matched terminals and a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
     "orca": ">=1.4.244"
@@ -14,131 +14,141 @@
     "themes": [
       {
         "id": "islands-dark",
-        "label": "Islands Dark",
+        "label": "im-islands-dark",
         "path": "themes/islands-dark.json"
       },
       {
         "id": "islands-light",
-        "label": "Islands Light",
+        "label": "im-islands-light",
         "path": "themes/islands-light.json"
       },
       {
-        "id": "islands-darcula",
-        "label": "Islands Darcula",
-        "path": "themes/islands-darcula.json"
-      },
-      {
         "id": "jetbrains-dark",
-        "label": "New UI Dark",
+        "label": "im-studio-dark",
         "path": "themes/jetbrains-dark.json"
       },
       {
         "id": "jetbrains-light",
-        "label": "New UI Light",
+        "label": "im-studio-light",
         "path": "themes/jetbrains-light.json"
       },
       {
         "id": "classic-dark",
-        "label": "Classic Dark (Darcula)",
+        "label": "im-classic-dark",
         "path": "themes/classic-dark.json"
       },
       {
         "id": "classic-light",
-        "label": "Classic Light",
+        "label": "im-classic-light",
         "path": "themes/classic-light.json"
       },
       {
         "id": "high-contrast",
-        "label": "High Contrast",
+        "label": "im-high-contrast",
         "path": "themes/high-contrast.json"
       },
       {
         "id": "matte",
-        "label": "Matte",
+        "label": "im-matte",
         "path": "themes/matte.json"
       },
       {
         "id": "graphite",
-        "label": "Graphite",
+        "label": "im-graphite",
         "path": "themes/graphite.json"
       },
       {
         "id": "paper",
-        "label": "Paper",
+        "label": "im-paper",
         "path": "themes/paper.json"
       },
       {
         "id": "slate",
-        "label": "Slate",
+        "label": "im-slate",
         "path": "themes/slate.json"
+      },
+      {
+        "id": "im-ember",
+        "label": "im-ember",
+        "path": "themes/im-ember.json"
+      },
+      {
+        "id": "im-daylight",
+        "label": "im-daylight",
+        "path": "themes/im-daylight.json"
       }
     ],
     "terminalThemes": [
       {
         "id": "islands-dark-terminal",
-        "label": "Islands Dark",
+        "label": "im-islands-dark",
         "path": "themes/islands-dark-terminal.json"
       },
       {
         "id": "islands-light-terminal",
-        "label": "Islands Light",
+        "label": "im-islands-light",
         "path": "themes/islands-light-terminal.json"
       },
       {
-        "id": "islands-darcula-terminal",
-        "label": "Islands Darcula",
-        "path": "themes/islands-darcula-terminal.json"
-      },
-      {
         "id": "jetbrains-dark-terminal",
-        "label": "New UI Dark",
+        "label": "im-studio-dark",
         "path": "themes/jetbrains-dark-terminal.json"
       },
       {
         "id": "jetbrains-light-terminal",
-        "label": "New UI Light",
+        "label": "im-studio-light",
         "path": "themes/jetbrains-light-terminal.json"
       },
       {
         "id": "classic-dark-terminal",
-        "label": "Classic Dark (Darcula)",
+        "label": "im-classic-dark",
         "path": "themes/classic-dark-terminal.json"
       },
       {
         "id": "classic-light-terminal",
-        "label": "Classic Light",
+        "label": "im-classic-light",
         "path": "themes/classic-light-terminal.json"
       },
       {
         "id": "high-contrast-terminal",
-        "label": "High Contrast",
+        "label": "im-high-contrast",
         "path": "themes/high-contrast-terminal.json"
       },
       {
         "id": "matte-terminal",
-        "label": "Matte",
+        "label": "im-matte",
         "path": "themes/matte-terminal.json"
       },
       {
         "id": "graphite-terminal",
-        "label": "Graphite",
+        "label": "im-graphite",
         "path": "themes/graphite-terminal.json"
       },
       {
         "id": "paper-terminal",
-        "label": "Paper",
+        "label": "im-paper",
         "path": "themes/paper-terminal.json"
       },
       {
         "id": "slate-terminal",
-        "label": "Slate",
+        "label": "im-slate",
         "path": "themes/slate-terminal.json"
+      },
+      {
+        "id": "im-ember-terminal",
+        "label": "im-ember",
+        "path": "themes/im-ember-terminal.json"
+      },
+      {
+        "id": "im-daylight-terminal",
+        "label": "im-daylight",
+        "path": "themes/im-daylight-terminal.json"
       }
     ],
     "panels": [
       {
         "id": "goland-setup",
-        "title": "GoLand Setup",
+        "title": "im Theme Setup",
         "icon": "Palette",
         "entry": "setup/index.html"
       }
@@ -146,19 +156,19 @@
     "commands": [
       {
         "id": "project-window",
-        "title": "GoLand Style: Project Window",
+        "title": "im Workspace: Project Window",
         "context": "global",
         "action": "sidebar.explorer.toggle"
       },
       {
         "id": "version-control",
-        "title": "GoLand Style: Version Control",
+        "title": "im Workspace: Version Control",
         "context": "global",
         "action": "sidebar.sourceControl.toggle"
       },
       {
         "id": "find-in-project",
-        "title": "GoLand Style: Find in Project",
+        "title": "im Workspace: Find in Project",
         "context": "global",
         "action": "sidebar.search.toggle"
       }

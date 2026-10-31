@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "GoLand Style",
+  "name": "im Theme Collection",
   "format": "Reference checklist; this is not an Orca settings import file.",
   "appearance": {
     "ideFont": "Inter Variable (or Inter, depending on the installed font name)",
@@ -36,64 +36,69 @@
   },
   "themePairs": [
     {
-      "app": "Islands Dark",
-      "terminal": "Islands Dark",
+      "app": "im-islands-dark",
+      "terminal": "im-islands-dark",
       "mode": "dark"
     },
     {
-      "app": "Islands Light",
-      "terminal": "Islands Light",
+      "app": "im-islands-light",
+      "terminal": "im-islands-light",
       "mode": "light"
     },
     {
-      "app": "Islands Darcula",
-      "terminal": "Islands Darcula",
+      "app": "im-studio-dark",
+      "terminal": "im-studio-dark",
       "mode": "dark"
     },
     {
-      "app": "New UI Dark",
-      "terminal": "New UI Dark",
-      "mode": "dark"
-    },
-    {
-      "app": "New UI Light",
-      "terminal": "New UI Light",
+      "app": "im-studio-light",
+      "terminal": "im-studio-light",
       "mode": "light"
     },
     {
-      "app": "Classic Dark (Darcula)",
-      "terminal": "Classic Dark (Darcula)",
+      "app": "im-classic-dark",
+      "terminal": "im-classic-dark",
       "mode": "dark"
     },
     {
-      "app": "Classic Light",
-      "terminal": "Classic Light",
+      "app": "im-classic-light",
+      "terminal": "im-classic-light",
       "mode": "light"
     },
     {
-      "app": "High Contrast",
-      "terminal": "High Contrast",
+      "app": "im-high-contrast",
+      "terminal": "im-high-contrast",
       "mode": "dark"
     },
     {
-      "app": "Matte",
-      "terminal": "Matte",
+      "app": "im-matte",
+      "terminal": "im-matte",
       "mode": "light"
     },
     {
-      "app": "Graphite",
-      "terminal": "Graphite",
+      "app": "im-graphite",
+      "terminal": "im-graphite",
       "mode": "dark"
     },
     {
-      "app": "Paper",
-      "terminal": "Paper",
+      "app": "im-paper",
+      "terminal": "im-paper",
       "mode": "light"
     },
     {
-      "app": "Slate",
-      "terminal": "Slate",
+      "app": "im-slate",
+      "terminal": "im-slate",
       "mode": "dark"
+    },
+    {
+      "app": "im-ember",
+      "terminal": "im-ember",
+      "mode": "dark"
+    },
+    {
+      "app": "im-daylight",
+      "terminal": "im-daylight",
+      "mode": "light"
     }
   ],
   "shortcuts": {

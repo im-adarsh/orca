@@ -1,3 +1,5 @@
+Current local 1.6.0: visible choices use `im-` names and layered surface shades with a clear accent. The Islands Darcula choice is consolidated into `im-classic-dark`. The older uniform-surface description below records version 1.3.1 behavior.
+
 # JetBrains UI compatibility
 
 This marketplace installs supported Orca app/terminal palettes and navigation helpers. Version 1.3.1 deliberately unifies every major surface with its editor/terminal base; it preserves family accents rather than reproducing JetBrains chrome contrast. It does not patch Orca's binary or inject global CSS.
