@@ -30,6 +30,15 @@ const fs=require('fs'),path=require('path');
   const png=await page.locator('.workspace').screenshot();cards.push({name,png:png.toString('base64')});
   console.log(name+': browser retained all 37 tokens; layered surfaces; editor and terminal match');
  }
+ await page.selectOption('#palette','im-daylight');
+ await page.locator('#palette-search').fill('catppuccin');
+ if(await page.locator('#palette option').count()!==3)throw Error('Search must show two Catppuccin matches and preserve the current theme');
+ if(await page.locator('#palette').inputValue()!=='im-daylight')throw Error('Searching must not change the current theme');
+ await page.locator('#palette-search').fill('no-matching-palette');
+ if(await page.locator('#palette-results').textContent()!=='0 of '+ids.length+' palettes')throw Error('No-match search feedback is incorrect');
+ if(await page.locator('#palette').inputValue()!=='im-daylight')throw Error('No-match search lost the current palette');
+ await page.locator('#palette-search').fill('');
+ if(await page.locator('#palette option').count()!==ids.length)throw Error('Clearing search must restore every theme');
  for(const width of [360,768]){await page.setViewportSize({width,height:1000});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Horizontal overflow at '+width);}
  await page.setViewportSize({width:1280,height:1100});
  await page.selectOption('#palette','jetbrains-dark');
@@ -68,7 +77,7 @@ const fs=require('fs'),path=require('path');
  console.log('Installed Orca CSP and sandbox wrapper: all theme choices work without overflow.');
 if(errors.length)throw Error(errors.join('\n'));
  const sheet=await browser.newPage({viewport:{width:1440,height:1360},deviceScaleFactor:1});
- const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>im Theme Collection</h1><p>Thirteen matched app and terminal palettes · Renderer-verified on Orca 1.4.245</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
+ const html='<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:36px;background:#e8eaed;color:#25282f;font:15px Inter,Arial,sans-serif}h1{margin:0 0 10px;font-size:28px}p{margin:0 0 24px;color:#555c67}main{display:grid;grid-template-columns:1fr 1fr;gap:26px}h2{font-size:19px;margin:0 0 10px}img{width:100%;display:block;border-radius:7px}footer{margin-top:24px;color:#555c67;font-size:12px}</style></head><body><h1>im Theme Collection</h1><p>'+ids.length+' matched app and terminal palettes · Renderer-verified on Orca 1.4.245</p><main>'+cards.map(c=>'<article><h2>'+c.name+'</h2><img src="data:image/png;base64,'+c.png+'"></article>').join('')+'</main><footer>Rendered setup-panel previews. Orca controls the actual app layout; fonts and opacity are selected in its settings.</footer></body></html>';
  await sheet.setContent(html);await sheet.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
  await sheet.locator('body').screenshot({path:path.join(root,'previews/themes.png')});
  console.log('Setup panel verified at desktop, tablet, and narrow widths; no browser script errors.');

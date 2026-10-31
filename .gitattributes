@@ -1,0 +1,3 @@
+# Preserve the exact bytes of upstream notices, including their final blank lines.
+licenses/** whitespace=-blank-at-eof
+plugins/goland-style/licenses/** whitespace=-blank-at-eof

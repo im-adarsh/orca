@@ -47,7 +47,7 @@ check(manifest.publisher === 'im-adarsh' && manifest.id === 'jetbrains-themes', 
 const apps = manifest.contributes.themes;
 const terminals = manifest.contributes.terminalThemes;
 check(apps.length === terminals.length && apps.length >= 6, 'Every app theme needs a terminal pair');
-// Family base anchors preserve Darcula/New UI identity while main surfaces stay uniform.
+// Preserve editor identities while outer chrome uses a related structural shade.
 const anchors = {
   'jetbrains-dark': ['dark', '#1E1F22', '#1E1F22'],
   'jetbrains-light': ['light', '#FFFFFF', '#FFFFFF'],
@@ -62,8 +62,8 @@ for (const [id, [base, background, editor]] of Object.entries(anchors)) {
   check(!!entry, `${id}: required JetBrains family variant`);
   if (entry) {
     const app = load(entry.path);
-    check(app.base === base && app.tokens['--background'] === background && app.tokens['--editor-surface'] === editor,
-      `${id}: preserve family base surfaces`);
+    check(app.base === base && app.tokens['--editor-surface'] === editor,
+      `${id}: preserve family editor surface and mode`);
   }
 }
 check(new Set([...apps, ...terminals].map(v => v.id)).size === apps.length + terminals.length, 'Theme IDs must be unique');

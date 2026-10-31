@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "notes": "Source editor surfaces retained; structural shades, accents and text adapted to host contrast. Missing terminal colors are explicit fallbacks. ANSI black/white preserved. No syntax-highlighting contribution implied.",
+  "themes": [
+    {
+      "id": "islands-dark",
+      "editor": "#191A1C",
+      "mainAccent": "#3871E1",
+      "sourceAccent": "#3871E1",
+      "selection": "#2D3E5F",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "islands-light",
+      "editor": "#FFFFFF",
+      "mainAccent": "#3871E1",
+      "sourceAccent": "#3871E1",
+      "selection": "#C5D2EA",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "jetbrains-dark",
+      "editor": "#1E1F22",
+      "mainAccent": "#4475D1",
+      "sourceAccent": "#4475D1",
+      "selection": "#34435E",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "jetbrains-light",
+      "editor": "#FFFFFF",
+      "mainAccent": "#3369D6",
+      "sourceAccent": "#3369D6",
+      "selection": "#C4D0E8",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "classic-dark",
+      "editor": "#2B2B2B",
+      "mainAccent": "#6D86A3",
+      "sourceAccent": "#6D86A3",
+      "selection": "#484F57",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "classic-light",
+      "editor": "#FFFFFF",
+      "mainAccent": "#2675BF",
+      "sourceAccent": "#2675BF",
+      "selection": "#C1D3E3",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "high-contrast",
+      "editor": "#000000",
+      "mainAccent": "#1AEBFF",
+      "sourceAccent": "#1AEBFF",
+      "selection": "#144F54",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "matte",
+      "editor": "#E4E1DA",
+      "mainAccent": "#4B5E5A",
+      "sourceAccent": "#4B5E5A",
+      "selection": "#B6B8B2",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "graphite",
+      "editor": "#2D3035",
+      "mainAccent": "#D1AE74",
+      "sourceAccent": "#D1AE74",
+      "selection": "#665D51",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "paper",
+      "editor": "#FAF6EE",
+      "mainAccent": "#85543B",
+      "sourceAccent": "#85543B",
+      "selection": "#D3C5B9",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "slate",
+      "editor": "#2A3541",
+      "mainAccent": "#91B7CF",
+      "sourceAccent": "#91B7CF",
+      "selection": "#526372",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-ember",
+      "editor": "#151110",
+      "mainAccent": "#E07850",
+      "sourceAccent": "#E07850",
+      "selection": "#593A2E",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-daylight",
+      "editor": "#F9F9FA",
+      "mainAccent": "#2864C7",
+      "sourceAccent": "#2864C7",
+      "selection": "#BECBE2",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-dracula",
+      "editor": "#282A36",
+      "mainAccent": "#BD93F9",
+      "sourceAccent": "#BD93F9",
+      "selection": "#584E72",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-one-dark-pro",
+      "editor": "#282C34",
+      "mainAccent": "#61AFEF",
+      "sourceAccent": "#61AFEF",
+      "selection": "#3E566E",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-one-light",
+      "editor": "#FAFAFA",
+      "mainAccent": "#4078F2",
+      "sourceAccent": "#4078F2",
+      "selection": "#C4D1ED",
+      "terminalFallbacks": [
+        "black",
+        "red",
+        "green",
+        "yellow",
+        "blue",
+        "magenta",
+        "cyan",
+        "white",
+        "brightBlack",
+        "brightRed",
+        "brightGreen",
+        "brightYellow",
+        "brightBlue",
+        "brightMagenta",
+        "brightCyan",
+        "brightWhite"
+      ]
+    },
+    {
+      "id": "im-catppuccin-mocha",
+      "editor": "#1E1E2E",
+      "mainAccent": "#CBA6F7",
+      "sourceAccent": "#CBA6F7",
+      "selection": "#564C6D",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-catppuccin-latte",
+      "editor": "#EFF1F5",
+      "mainAccent": "#8839EF",
+      "sourceAccent": "#8839EF",
+      "selection": "#CDBEE8",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-tokyo-night",
+      "editor": "#1A1B26",
+      "mainAccent": "#7AA2F7",
+      "sourceAccent": "#7AA2F7",
+      "selection": "#3D4968",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-nord",
+      "editor": "#2E3440",
+      "mainAccent": "#88C0D0",
+      "sourceAccent": "#88C0D0",
+      "selection": "#40535F",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-github-dark",
+      "editor": "#0D1117",
+      "mainAccent": "#58A6FF",
+      "sourceAccent": "#58A6FF",
+      "selection": "#2D4562",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-github-light",
+      "editor": "#FFFFFF",
+      "mainAccent": "#0969DA",
+      "sourceAccent": "#0969DA",
+      "selection": "#BDD2EB",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-gruvbox-dark",
+      "editor": "#282828",
+      "mainAccent": "#FABD2F",
+      "sourceAccent": "#FABD2F",
+      "selection": "#695830",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-gruvbox-light",
+      "editor": "#FBF1C7",
+      "mainAccent": "#AF3A03",
+      "sourceAccent": "#AF3A03",
+      "selection": "#DFBE93",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-solarized-dark",
+      "editor": "#002B36",
+      "mainAccent": "#2AA198",
+      "sourceAccent": "#2AA198",
+      "selection": "#155459",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-solarized-light",
+      "editor": "#FDF6E3",
+      "mainAccent": "#268BD2",
+      "sourceAccent": "#268BD2",
+      "selection": "#BED2D4",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-rose-pine",
+      "editor": "#191724",
+      "mainAccent": "#EBBCBA",
+      "sourceAccent": "#EBBCBA",
+      "selection": "#5C4E56",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-rose-pine-dawn",
+      "editor": "#FAF4ED",
+      "mainAccent": "#B4637A",
+      "sourceAccent": "#B4637A",
+      "selection": "#DEC7C8",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-night-owl",
+      "editor": "#011627",
+      "mainAccent": "#82AAFF",
+      "sourceAccent": "#82AAFF",
+      "selection": "#2E486B",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-night-owl-light",
+      "editor": "#FBFBFB",
+      "mainAccent": "#4876D6",
+      "sourceAccent": "#4876D6",
+      "selection": "#C9D4E9",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-ayu-dark",
+      "editor": "#10141C",
+      "mainAccent": "#E6B450",
+      "sourceAccent": "#E6B450",
+      "selection": "#554932",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-ayu-light",
+      "editor": "#FCFCFC",
+      "mainAccent": "#C37913",
+      "sourceAccent": "#F29718",
+      "selection": "#E4D2B8",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-monokai",
+      "editor": "#272822",
+      "mainAccent": "#A6E22E",
+      "sourceAccent": "#A6E22E",
+      "selection": "#51632C",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-kanagawa-wave",
+      "editor": "#1F1F28",
+      "mainAccent": "#7E9CD8",
+      "sourceAccent": "#7E9CD8",
+      "selection": "#424A61",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-kanagawa-lotus",
+      "editor": "#F2ECBC",
+      "mainAccent": "#4D699B",
+      "sourceAccent": "#4D699B",
+      "selection": "#C4C3AB",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-material-theme-palenight",
+      "editor": "#292D3E",
+      "mainAccent": "#C792EA",
+      "sourceAccent": "#C792EA",
+      "selection": "#4F4264",
+      "terminalFallbacks": []
+    },
+    {
+      "id": "im-synthwave-84",
+      "editor": "#262335",
+      "mainAccent": "#FF7EDB",
+      "sourceAccent": "#FF7EDB",
+      "selection": "#694369",
+      "terminalFallbacks": [
+        "black",
+        "white",
+        "brightBlack",
+        "brightWhite"
+      ]
+    },
+    {
+      "id": "im-dark-plus",
+      "editor": "#1E1E1E",
+      "mainAccent": "#007ACC",
+      "sourceAccent": "#007ACC",
+      "selection": "#1E4057",
+      "terminalFallbacks": [
+        "black",
+        "red",
+        "green",
+        "yellow",
+        "blue",
+        "magenta",
+        "cyan",
+        "white",
+        "brightBlack",
+        "brightRed",
+        "brightGreen",
+        "brightYellow",
+        "brightBlue",
+        "brightMagenta",
+        "brightCyan",
+        "brightWhite"
+      ]
+    },
+    {
+      "id": "im-light-plus",
+      "editor": "#FFFFFF",
+      "mainAccent": "#0066B8",
+      "sourceAccent": "#0066B8",
+      "selection": "#BBD2E4",
+      "terminalFallbacks": [
+        "black",
+        "red",
+        "green",
+        "yellow",
+        "blue",
+        "magenta",
+        "cyan",
+        "white",
+        "brightBlack",
+        "brightRed",
+        "brightGreen",
+        "brightYellow",
+        "brightBlue",
+        "brightMagenta",
+        "brightCyan",
+        "brightWhite"
+      ]
+    }
+  ]
+}

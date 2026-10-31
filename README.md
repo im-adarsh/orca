@@ -1,6 +1,6 @@
 # Adarsh Orca Marketplace
 
-A marketplace with JetBrains-style file icons, and thirteen matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, im-high-contrast, and four matte alternatives. Both light and dark modes are included.
+A marketplace with JetBrains-style file icons, and 39 matched app/terminal palettes for IntelliJ and GoLand users: Islands, New UI, Classic, im-high-contrast, and four matte alternatives. Both light and dark modes are included.
 
 ![Light and dark palette comparison](previews/themes.png)
 
@@ -95,3 +95,11 @@ All current app, terminal and file-icon choices use `im-` names. The [duplicate 
 [im Material File Icons](plugins/im-material-icons/README.md) supplies shared, pinned MIT artwork with distinct dark/light mappings. It requires Orca 1.4.245+. The installed 1.4.245 host supports file-icon contributions. Global toolbar icons are outside that API. The new local packages are not yet a published marketplace release.
 
 For local installation, choose **Settings → Plugins → Install plugin → Local folder**, then supply the absolute path to `plugins/goland-style`, `plugins/im-material-icons`, or `plugins/jetbrains-icons`. Install each desired package once. Review and enable it in Orca, then select matching app/terminal names and the appropriate file-icon variant. If an old saved selection was Islands Darcula, select `im-classic-dark`. The current local theme identity matches the existing collection, so it updates that package. Do not install both the root legacy collection and its generated modern bundle as separate collections.
+
+## Global IDE palettes (1.7.0)
+
+The collection now contains **39 matched app/terminal pairs**. The 26 additions cover Dracula, One, Catppuccin, Tokyo Night, Nord, GitHub, Gruvbox, Solarized, Rosé Pine, Night Owl, Ayu, Monokai, Kanagawa, Material Palenight, SynthWave ’84 and Default Plus. All names retain the `im-` prefix. See the [complete family list, installation notes and evidence](docs/popular-themes.md).
+
+REA inspected the pinned shipped theme modules; Superdesign proposed the palette directions. All palettes now have stronger structural shades and hue-tinted selection fills that do not rely on a preview-only stripe. The preview supports grouped search. Source editor backgrounds and mode identities remain intact; text and information-bearing terminal colors are adapted for readability. No syntax highlighting or native pane geometry is installed through these palette contributions.
+
+Use `npm run generate:themes` followed by `npm run package:marketplace` to rebuild offline. The generated modern collection is version **2.3.0**; the legacy manifest is **1.7.0**. Package and original-author notices are included in [THIRD_PARTY_THEMES.md](THIRD_PARTY_THEMES.md) and `licenses/`. The previously published marketplace index is unchanged until a release is published.

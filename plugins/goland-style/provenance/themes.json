@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "package": {
+    "name": "@shikijs/themes",
+    "version": "4.5.0",
+    "url": "https://registry.npmjs.org/@shikijs/themes/-/themes-4.5.0.tgz",
+    "integrity": "sha512-zGb87H3UBbpuI4yoh5UguB1XbU+2BDU3kflM7UfZ+Cy2hWo9lBtqjSVK20gmLY6ukYl040hAypGXMgud9vul8Q==",
+    "tarballSha256": "0fa5568e9ababf92a4b36ec797df675f9621cb1a021f67db1183bc254c6bafb5",
+    "license": "MIT",
+    "licensePath": "licenses/Shiki-Themes-MIT.txt"
+  },
+  "rea": {
+    "parentEvidenceId": "ev_2b0fa9958c3fb6f513d80c5b158f130ad42d61dafd25b7741cdb34c03855d7bb",
+    "artifactSha256": "fa99755af3b5932841f4f4e2f510a8e77a034393c26cddeb3bef86bfe4abafbe",
+    "summaryPath": "docs/rea/global-themes-summary.json",
+    "evidencePath": "docs/rea/global-themes-evidence.json.gz",
+    "evidenceSha256": "7e832337660ad9c1036bd096e49b6073610c3fe824e3693db1790ae8edef75ed",
+    "scope": "26 caller-selected shipped ESM theme modules, parsed as inert text; 0 parse failures. 107 other inventoried files were not analyzed. Static inspection does not establish runtime appearance or exact native IDE fidelity."
+  },
+  "superdesign": {
+    "draftId": "1a25da02-533d-4225-a235-27bc9e015639",
+    "projectUrl": "https://superdesign.dev/teams/0c240145-1aa6-49cc-bdae-c4fd918fc26f/projects/bd13ddbe-a7d2-433c-a254-5bb024280911",
+    "nodeUrl": "https://superdesign.dev/teams/0c240145-1aa6-49cc-bdae-c4fd918fc26f/projects/bd13ddbe-a7d2-433c-a254-5bb024280911?node=draft-variant-1a25da02-533d-4225-a235-27bc9e015639",
+    "model": "gemini-3.1-pro",
+    "directionsPath": "presets/global-theme-design.json",
+    "scope": "Design proposed all 26 structural shade/selection directions; the offline generator adapts them to the host contract and readability constraints."
+  },
+  "themes": [
+    {
+      "id": "im-dracula",
+      "source": "dracula",
+      "family": "Dracula",
+      "mode": "dark",
+      "module": "dist/dracula.mjs",
+      "moduleSha256": "e27c59dc81295ed73f60b987b08fdbf7f5946126180fd13d4afcc8ed9115ff8e",
+      "upstreamRepository": "https://github.com/dracula/visual-studio-code",
+      "upstreamLicensePath": "licenses/popular-themes/dracula--visual-studio-code.txt"
+    },
+    {
+      "id": "im-one-dark-pro",
+      "source": "one-dark-pro",
+      "family": "One",
+      "mode": "dark",
+      "module": "dist/one-dark-pro.mjs",
+      "moduleSha256": "506d35fd94e6338ecce55079dbcb3f1a88c92209f852d2f7d593a45feb9d5b7a",
+      "upstreamRepository": "https://github.com/Binaryify/OneDark-Pro",
+      "upstreamLicensePath": "licenses/popular-themes/Binaryify--OneDark-Pro.txt"
+    },
+    {
+      "id": "im-one-light",
+      "source": "one-light",
+      "family": "One",
+      "mode": "light",
+      "module": "dist/one-light.mjs",
+      "moduleSha256": "bbf6d106007d2050ff8eca958eeeed0c3ca8cc3798871b0aec2da02b8761ce48",
+      "upstreamRepository": "https://github.com/akamud/vscode-theme-onelight",
+      "upstreamLicensePath": "licenses/popular-themes/akamud--vscode-theme-onelight.txt"
+    },
+    {
+      "id": "im-catppuccin-mocha",
+      "source": "catppuccin-mocha",
+      "family": "Catppuccin",
+      "mode": "dark",
+      "module": "dist/catppuccin-mocha.mjs",
+      "moduleSha256": "6c275b4ae4ffa62dc6f9fc5a420914a3056c74e46ee57c7a02b73ac43499a812",
+      "upstreamRepository": "https://github.com/catppuccin/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/catppuccin--vscode.txt"
+    },
+    {
+      "id": "im-catppuccin-latte",
+      "source": "catppuccin-latte",
+      "family": "Catppuccin",
+      "mode": "light",
+      "module": "dist/catppuccin-latte.mjs",
+      "moduleSha256": "01267ce737b4421cfee905b18d82f2093ffa454220175062af41a45955e83e44",
+      "upstreamRepository": "https://github.com/catppuccin/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/catppuccin--vscode.txt"
+    },
+    {
+      "id": "im-tokyo-night",
+      "source": "tokyo-night",
+      "family": "Tokyo Night",
+      "mode": "dark",
+      "module": "dist/tokyo-night.mjs",
+      "moduleSha256": "b7e1965bfc1c7f12005b97610a46a827682909f08803fd4c8a0ed73dd4528eda",
+      "upstreamRepository": "https://github.com/enkia/tokyo-night-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/enkia--tokyo-night-vscode-theme.txt"
+    },
+    {
+      "id": "im-nord",
+      "source": "nord",
+      "family": "Nord",
+      "mode": "dark",
+      "module": "dist/nord.mjs",
+      "moduleSha256": "e762149157c9de25cfc32c0230fd9a36db2ca3eba1583bb5899c095665c7f35f",
+      "upstreamRepository": "https://github.com/nordtheme/visual-studio-code",
+      "upstreamLicensePath": "licenses/popular-themes/nordtheme--visual-studio-code.txt"
+    },
+    {
+      "id": "im-github-dark",
+      "source": "github-dark-default",
+      "family": "GitHub",
+      "mode": "dark",
+      "module": "dist/github-dark-default.mjs",
+      "moduleSha256": "8c619b33eb1bfdfc95569195daa25626e99c324253a8f4ff25fb7bcd9b66b4a6",
+      "upstreamRepository": "https://github.com/primer/github-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/primer--github-vscode-theme.txt"
+    },
+    {
+      "id": "im-github-light",
+      "source": "github-light-default",
+      "family": "GitHub",
+      "mode": "light",
+      "module": "dist/github-light-default.mjs",
+      "moduleSha256": "d155fd26ffd50fb4ee12dfc0348741a901e7ec689d7056d9d45d4ede2acb8324",
+      "upstreamRepository": "https://github.com/primer/github-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/primer--github-vscode-theme.txt"
+    },
+    {
+      "id": "im-gruvbox-dark",
+      "source": "gruvbox-dark-medium",
+      "family": "Gruvbox",
+      "mode": "dark",
+      "module": "dist/gruvbox-dark-medium.mjs",
+      "moduleSha256": "d44db648b69a1ef8d0eaf6dd83f19df70e1188b915c2520c3a11633afd83bf68",
+      "upstreamRepository": "https://github.com/jdinhify/vscode-theme-gruvbox",
+      "upstreamLicensePath": "licenses/popular-themes/jdinhify--vscode-theme-gruvbox.txt"
+    },
+    {
+      "id": "im-gruvbox-light",
+      "source": "gruvbox-light-medium",
+      "family": "Gruvbox",
+      "mode": "light",
+      "module": "dist/gruvbox-light-medium.mjs",
+      "moduleSha256": "1c2d2459ed1fd0cbaab5f79cac59dfbb44d482d65f12870a187081e335157341",
+      "upstreamRepository": "https://github.com/jdinhify/vscode-theme-gruvbox",
+      "upstreamLicensePath": "licenses/popular-themes/jdinhify--vscode-theme-gruvbox.txt"
+    },
+    {
+      "id": "im-solarized-dark",
+      "source": "solarized-dark",
+      "family": "Solarized",
+      "mode": "dark",
+      "module": "dist/solarized-dark.mjs",
+      "moduleSha256": "d9fc68f64e44e2286058c7ad3bbb54caa899d3a396e16e33cca52be6d63b7de6",
+      "upstreamRepository": "https://github.com/microsoft/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/microsoft--vscode.txt"
+    },
+    {
+      "id": "im-solarized-light",
+      "source": "solarized-light",
+      "family": "Solarized",
+      "mode": "light",
+      "module": "dist/solarized-light.mjs",
+      "moduleSha256": "30ad697422ed9963a5ec4fdf2fd07d2dbfd01c208afa691ef49448c6c56dc020",
+      "upstreamRepository": "https://github.com/microsoft/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/microsoft--vscode.txt"
+    },
+    {
+      "id": "im-rose-pine",
+      "source": "rose-pine",
+      "family": "Ros\u00e9 Pine",
+      "mode": "dark",
+      "module": "dist/rose-pine.mjs",
+      "moduleSha256": "a308ed6bdbca368a585b24310debe354cfe2b2a7e333f70f8685b15e046928b2",
+      "upstreamRepository": "https://github.com/rose-pine/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/rose-pine--vscode.txt"
+    },
+    {
+      "id": "im-rose-pine-dawn",
+      "source": "rose-pine-dawn",
+      "family": "Ros\u00e9 Pine",
+      "mode": "light",
+      "module": "dist/rose-pine-dawn.mjs",
+      "moduleSha256": "bdefbc795ea17b90b98b100b7e391aec995896f2b69a634be1464212f6666300",
+      "upstreamRepository": "https://github.com/rose-pine/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/rose-pine--vscode.txt"
+    },
+    {
+      "id": "im-night-owl",
+      "source": "night-owl",
+      "family": "Night Owl",
+      "mode": "dark",
+      "module": "dist/night-owl.mjs",
+      "moduleSha256": "6ad7a3faf4d17b6485988803a577602cc2e64970c63c65cf8f9e2b3f31469816",
+      "upstreamRepository": "https://github.com/sdras/night-owl-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/sdras--night-owl-vscode-theme.txt"
+    },
+    {
+      "id": "im-night-owl-light",
+      "source": "night-owl-light",
+      "family": "Night Owl",
+      "mode": "light",
+      "module": "dist/night-owl-light.mjs",
+      "moduleSha256": "cc2f5baa4ccc06c294ab4c55676f30f488d68c9a672c6100416e98d3589a3e02",
+      "upstreamRepository": "https://github.com/sdras/night-owl-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/sdras--night-owl-vscode-theme.txt"
+    },
+    {
+      "id": "im-ayu-dark",
+      "source": "ayu-dark",
+      "family": "Ayu",
+      "mode": "dark",
+      "module": "dist/ayu-dark.mjs",
+      "moduleSha256": "14b7b2d8516b0d0be4763a8d958c95b6ccc4631422ba631af820af8b3c414b21",
+      "upstreamRepository": "https://github.com/ayu-theme/vscode-ayu",
+      "upstreamLicensePath": "licenses/popular-themes/ayu-theme--vscode-ayu.txt"
+    },
+    {
+      "id": "im-ayu-light",
+      "source": "ayu-light",
+      "family": "Ayu",
+      "mode": "light",
+      "module": "dist/ayu-light.mjs",
+      "moduleSha256": "961d40c0d83b7251b99bd3e916b5aa625a4311d66d7de3dd19cb6b9fad9b1ed1",
+      "upstreamRepository": "https://github.com/ayu-theme/vscode-ayu",
+      "upstreamLicensePath": "licenses/popular-themes/ayu-theme--vscode-ayu.txt"
+    },
+    {
+      "id": "im-monokai",
+      "source": "monokai",
+      "family": "Monokai",
+      "mode": "dark",
+      "module": "dist/monokai.mjs",
+      "moduleSha256": "a2b0eb3a7796d3b00dc2db041f6181881fd5ddbc2fcae32d3d1ef6c009989661",
+      "upstreamRepository": "https://github.com/microsoft/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/microsoft--vscode.txt"
+    },
+    {
+      "id": "im-kanagawa-wave",
+      "source": "kanagawa-wave",
+      "family": "Kanagawa",
+      "mode": "dark",
+      "module": "dist/kanagawa-wave.mjs",
+      "moduleSha256": "2ec6b8823f0e976c96bd008daa5ce0572e0f6f1330dd74a4fc59c447e7abe44a",
+      "upstreamRepository": "https://github.com/metapho-re/kanagawa-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/metapho-re--kanagawa-vscode-theme.txt"
+    },
+    {
+      "id": "im-kanagawa-lotus",
+      "source": "kanagawa-lotus",
+      "family": "Kanagawa",
+      "mode": "light",
+      "module": "dist/kanagawa-lotus.mjs",
+      "moduleSha256": "7d6392dae7cb4153b6dc393e25b1579e88701c61e36fb4919d8f746c2af7a38c",
+      "upstreamRepository": "https://github.com/metapho-re/kanagawa-vscode-theme",
+      "upstreamLicensePath": "licenses/popular-themes/metapho-re--kanagawa-vscode-theme.txt"
+    },
+    {
+      "id": "im-material-theme-palenight",
+      "source": "material-theme-palenight",
+      "family": "Material Palenight",
+      "mode": "dark",
+      "module": "dist/material-theme-palenight.mjs",
+      "moduleSha256": "02190e63e46d93fa0e398f175764f8205ca9903f3fee600076a18f77c156fc45",
+      "upstreamRepository": "https://github.com/antfu/vsc-material-theme",
+      "upstreamLicensePath": "licenses/popular-themes/antfu--vsc-material-theme.txt"
+    },
+    {
+      "id": "im-synthwave-84",
+      "source": "synthwave-84",
+      "family": "SynthWave 84",
+      "mode": "dark",
+      "module": "dist/synthwave-84.mjs",
+      "moduleSha256": "6ec00028b63d9a5062a06e5c13fb1856edeed36802ab76eacff43520cb7204a0",
+      "upstreamRepository": "https://github.com/robb0wen/synthwave-vscode",
+      "upstreamLicensePath": "licenses/popular-themes/robb0wen--synthwave-vscode.txt"
+    },
+    {
+      "id": "im-dark-plus",
+      "source": "dark-plus",
+      "family": "Default Plus",
+      "mode": "dark",
+      "module": "dist/dark-plus.mjs",
+      "moduleSha256": "5ce7e9ba2fd8f84f5e8d571c7957d8d87cec0c82b41f0a5ba73553511725e46b",
+      "upstreamRepository": "https://github.com/microsoft/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/microsoft--vscode.txt"
+    },
+    {
+      "id": "im-light-plus",
+      "source": "light-plus",
+      "family": "Default Plus",
+      "mode": "light",
+      "module": "dist/light-plus.mjs",
+      "moduleSha256": "0265d40427c4e3dc36611bcc722a0777703b5f0612318b84b0e86f8e615d0041",
+      "upstreamRepository": "https://github.com/microsoft/vscode",
+      "upstreamLicensePath": "licenses/popular-themes/microsoft--vscode.txt"
+    }
+  ],
+  "upstreamLicenses": {
+    "Binaryify/OneDark-Pro": {
+      "path": "licenses/popular-themes/Binaryify--OneDark-Pro.txt",
+      "url": "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/HEAD/LICENSE.txt",
+      "sha256": "b4bdb28c670386f4fa093650b0bb8773714ce53171a2d1a9adb81756119200f1"
+    },
+    "antfu/vsc-material-theme": {
+      "path": "licenses/popular-themes/antfu--vsc-material-theme.txt",
+      "url": "https://raw.githubusercontent.com/antfu/vsc-material-theme/HEAD/LICENSE",
+      "sha256": "4a24ee3251483b900d604b80d01d8201fb27922804de9fa1c2719ca27df43c83"
+    },
+    "ayu-theme/vscode-ayu": {
+      "path": "licenses/popular-themes/ayu-theme--vscode-ayu.txt",
+      "url": "https://raw.githubusercontent.com/ayu-theme/vscode-ayu/HEAD/LICENSE",
+      "sha256": "b2c797d3cd2f1c96c609ec99485f08a5ac1dfdec80c9cffdec11d35feb37ab52"
+    },
+    "catppuccin/vscode": {
+      "path": "licenses/popular-themes/catppuccin--vscode.txt",
+      "url": "https://raw.githubusercontent.com/catppuccin/vscode/HEAD/LICENSE",
+      "sha256": "814096d2c34cc216c624738a49356f32b7237733b4f7edb0685f4e50ef5074ba"
+    },
+    "dracula/visual-studio-code": {
+      "path": "licenses/popular-themes/dracula--visual-studio-code.txt",
+      "url": "https://raw.githubusercontent.com/dracula/visual-studio-code/HEAD/LICENSE",
+      "sha256": "f08d0bba7f8906ed4e7a76d7e555a883968d83eb550ae298ce893a65aee15dff"
+    },
+    "enkia/tokyo-night-vscode-theme": {
+      "path": "licenses/popular-themes/enkia--tokyo-night-vscode-theme.txt",
+      "url": "https://raw.githubusercontent.com/enkia/tokyo-night-vscode-theme/HEAD/LICENSE.txt",
+      "sha256": "e3f5d0d772cda0f4f67405696f15a0f335460a2b3944eff40f00675aadacb31b"
+    },
+    "jdinhify/vscode-theme-gruvbox": {
+      "path": "licenses/popular-themes/jdinhify--vscode-theme-gruvbox.txt",
+      "url": "https://raw.githubusercontent.com/jdinhify/vscode-theme-gruvbox/HEAD/LICENSE",
+      "sha256": "91943f88b9f92f4b31437ecf791107f9c4076f3a65c7be503c4580278dc90076"
+    },
+    "metapho-re/kanagawa-vscode-theme": {
+      "path": "licenses/popular-themes/metapho-re--kanagawa-vscode-theme.txt",
+      "url": "https://raw.githubusercontent.com/metapho-re/kanagawa-vscode-theme/HEAD/LICENSE",
+      "sha256": "f000cc5415745fb77a55c604e49ed8995d23ea7ee4a1336d0fa89ebc405903f5"
+    },
+    "microsoft/vscode": {
+      "path": "licenses/popular-themes/microsoft--vscode.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/HEAD/LICENSE.txt",
+      "sha256": "9480271317925265e806a9a196aaa33410a962fa9d4d1e248a4a5187bc8c9df9"
+    },
+    "primer/github-vscode-theme": {
+      "path": "licenses/popular-themes/primer--github-vscode-theme.txt",
+      "url": "https://raw.githubusercontent.com/primer/github-vscode-theme/HEAD/LICENSE",
+      "sha256": "e2c871bb6effe9f6ec8d94d6596db33c4bfe4dd94969a6a9a2fb0473ebe6442e"
+    },
+    "robb0wen/synthwave-vscode": {
+      "path": "licenses/popular-themes/robb0wen--synthwave-vscode.txt",
+      "url": "https://raw.githubusercontent.com/robb0wen/synthwave-vscode/HEAD/LICENSE",
+      "sha256": "4f58ea71ef4a8d224c4abc85143cee79325708ea18c6c3684c14901e337129d5"
+    },
+    "rose-pine/vscode": {
+      "path": "licenses/popular-themes/rose-pine--vscode.txt",
+      "url": "https://raw.githubusercontent.com/rose-pine/vscode/HEAD/LICENSE",
+      "sha256": "83815aa92fa62cd283c2b9db7f018426cfaa1033962669b838e6695a340adf6a"
+    },
+    "sdras/night-owl-vscode-theme": {
+      "path": "licenses/popular-themes/sdras--night-owl-vscode-theme.txt",
+      "url": "https://raw.githubusercontent.com/sdras/night-owl-vscode-theme/HEAD/LICENSE.md",
+      "sha256": "7167d2a386e197ad4bf85f9bc60653ddce195bfc1243733dc92975e77dc94968"
+    },
+    "nordtheme/visual-studio-code": {
+      "path": "licenses/popular-themes/nordtheme--visual-studio-code.txt",
+      "url": "https://raw.githubusercontent.com/arcticicestudio/nord-visual-studio-code/HEAD/license",
+      "sha256": "25ac8188d670bd2ad2ce2f4f55ab88573010ee9f7a4502543cb1eea1e2274f8a"
+    },
+    "akamud/vscode-theme-onelight": {
+      "path": "licenses/popular-themes/akamud--vscode-theme-onelight.txt",
+      "url": "https://raw.githubusercontent.com/akamud/vscode-theme-onelight/HEAD/LICENSE",
+      "sha256": "3ef9ebb4bf1676792b5c98efaaf27335a3f6c5861c68d952e565df2fa7524d5e"
+    }
+  }
+}

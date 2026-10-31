@@ -64,3 +64,7 @@ The plugin supplies Mod+Alt+1 for Project, Mod+Alt+9 for Version Control, and Mo
 The theme files, navigation commands/shortcuts, and setup panel install together. Fonts must exist on each operating system. Host preferences remain separate. `presets/goland-style.json` is a reusable reference checklist; it is not accepted by Orca as a global-settings import.
 
 Orca's built-in security styling remains on plugin installation and consent dialogs. The installed 1.4.245 theme API does not expose Go syntax highlighting, global padding, global toolbar icons, or GoLand `.icls` imports. Separate file-icon packages use its supported 1.4.245 API; see [developer setup](developer-kit.md).
+
+## Expanded collection (1.7.0)
+
+The collection now includes 39 matched pairs. Use the setup panel’s grouped search to find a family or mode, then select matching names in Orca. See [the complete popular-theme list](popular-themes.md). App and terminal colors are adapted; native pane geometry and editor syntax schemes remain outside this contribution.
