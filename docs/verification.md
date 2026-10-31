@@ -88,3 +88,8 @@ Superdesign supplied 26 palette directions. The offline generator preserves sour
 Tests cover every pair, source identity, exact original license hashes, absence of byte-identical palette artifacts, all 37 public tokens, 22 terminal colors, native host contrast filtering, metadata/preview/checklist parity, native manifest/artifact parsing, browser sandbox startup matching, grouped search, no-match feedback, preserved selection while searching, and responsive widths. A separate isolated-filesystem test proves byte-for-byte generator repeatability and no partial artifact writes when directions contain invalid colors.
 
 Representative screenshots were inspected visually. These are actual rendered plugin previews, not native workspace screenshots. The shared Material and studio icon packs are unchanged and work across the expanded palette set. The new source is submitted in the existing PR; published marketplace releases and the user's running profile remain unchanged.
+
+
+## Release 1.7.0 publication
+
+The merge/publish instruction authorizes release 1.7.0. The legacy index pins `v1.7.0`; the modern catalog pins the exact committed theme 2.3.0, studio icon 1.1.0 and Material icon 1.0.0 package trees. Historical release hashes and the existing MRs prototype release are retained. Release validation covers all four manifests, catalog schema, package hashes, all 39 theme pairs, installed host parsers/filter, icon rendering, browser sandbox/search behavior, and archive checksums. Earlier unpublished-status paragraphs record the pre-release state. Publication does not change the user's active theme or running profile.

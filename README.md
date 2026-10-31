@@ -11,9 +11,9 @@ Requires **Orca 1.4.244 or newer**. In **Settings → Plugins → Marketplace so
 - **Git URL:** `https://github.com/im-adarsh/orca.git`
 - **Git ref:** `main`
 
-Add the source, install **GoLand Style for Orca**, review it, and enable it. The index pins the plugin to immutable release `v1.5.4`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
+Add the source, install **im Theme Collection**, review it, and enable it. The index pins the plugin to immutable release `v1.7.0`. Public downloads use HTTPS, so a GitHub SSH key is unnecessary. This is a personal marketplace published by `im-adarsh`.
 
-Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.5.4`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
+Already added the source? Refresh it before updating. The development Git remote remains SSH. Direct installation also works with **Install plugin → Git URL**: `https://github.com/im-adarsh/orca.git#v1.7.0`. For **Local folder**, supply an absolute filesystem path to this checkout, not a Git URL.
 
 If Install says “Could not prepare this plugin for review,” follow [the installation troubleshooting guide](docs/install-troubleshooting.md).
 
@@ -92,7 +92,7 @@ The repository contains the installable manifests, `themes/`, `setup/`, the `pre
 
 All current app, terminal and file-icon choices use `im-` names. The [duplicate audit](docs/im-duplicate-audit.json) records the consolidated Darcula choice and ten byte-identical icon files removed with all mappings retained. Generated modern bundles remain necessary for the separate host contract.
 
-[im Material File Icons](plugins/im-material-icons/README.md) supplies shared, pinned MIT artwork with distinct dark/light mappings. It requires Orca 1.4.245+. The installed 1.4.245 host supports file-icon contributions. Global toolbar icons are outside that API. The new local packages are not yet a published marketplace release.
+[im Material File Icons](plugins/im-material-icons/README.md) supplies shared, pinned MIT artwork with distinct dark/light mappings. It requires Orca 1.4.245+. The installed 1.4.245 host supports file-icon contributions. Global toolbar icons are outside that API. These packages are published in release `v1.7.0`.
 
 For local installation, choose **Settings → Plugins → Install plugin → Local folder**, then supply the absolute path to `plugins/goland-style`, `plugins/im-material-icons`, or `plugins/jetbrains-icons`. Install each desired package once. Review and enable it in Orca, then select matching app/terminal names and the appropriate file-icon variant. If an old saved selection was Islands Darcula, select `im-classic-dark`. The current local theme identity matches the existing collection, so it updates that package. Do not install both the root legacy collection and its generated modern bundle as separate collections.
 
@@ -102,4 +102,4 @@ The collection now contains **39 matched app/terminal pairs**. The 26 additions 
 
 REA inspected the pinned shipped theme modules; Superdesign proposed the palette directions. All palettes now have stronger structural shades and hue-tinted selection fills that do not rely on a preview-only stripe. The preview supports grouped search. Source editor backgrounds and mode identities remain intact; text and information-bearing terminal colors are adapted for readability. No syntax highlighting or native pane geometry is installed through these palette contributions.
 
-Use `npm run generate:themes` followed by `npm run package:marketplace` to rebuild offline. The generated modern collection is version **2.3.0**; the legacy manifest is **1.7.0**. Package and original-author notices are included in [THIRD_PARTY_THEMES.md](THIRD_PARTY_THEMES.md) and `licenses/`. The previously published marketplace index is unchanged until a release is published.
+Use `npm run generate:themes` followed by `npm run package:marketplace` to rebuild offline. The generated modern collection is version **2.3.0**; the legacy manifest is **1.7.0**. Package and original-author notices are included in [THIRD_PARTY_THEMES.md](THIRD_PARTY_THEMES.md) and `licenses/`. The marketplace index pins release `v1.7.0`.

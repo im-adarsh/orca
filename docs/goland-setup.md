@@ -2,7 +2,7 @@
 
 ## Install the collection
 
-Add marketplace source `https://github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The published release is pinned to tag `v1.5.4`; local 1.6.0 packages have the im names below. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
+Add marketplace source `https://github.com/im-adarsh/orca.git` with Git ref `main`, then install **GoLand Style for Orca**. The published release is pinned to tag `v1.7.0`, with the im names below. Existing installations keep the same plugin identity; refresh the marketplace and update the plugin.
 
 ## Use matching app and terminal modes
 

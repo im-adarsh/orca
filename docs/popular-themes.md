@@ -35,7 +35,7 @@ Package and original author notices are retained in [THIRD_PARTY_THEMES.md](../T
 
 Open `setup/index.html` for grouped/searchable palette previews. Searching filters the choices while preserving the current palette; no-match searches give explicit feedback. Choose the same app and terminal name in Orca, then select `im-material-dark` or `im-material-light` independently. The existing shared icon packages work with all 39 palettes.
 
-For Orca 1.4.245+, install the local folder `plugins/goland-style`. That generated package includes its licenses and provenance. The root manifest is the compatibility build for 1.4.244. Install one of those theme packages, not both. Published indexes intentionally remain pinned to the previously published release while this source is reviewed in PR#1.
+For Orca 1.4.245+, install the local folder `plugins/goland-style`. That generated package includes its licenses and provenance. The root manifest is the compatibility build for 1.4.244. Install one of those theme packages, not both. Published indexes pin release `v1.7.0`; PR #1 contains the reviewed implementation.
 
 These contributions affect app/terminal palettes and supported file icons. They do not replace global toolbar icons, install native Islands geometry, or import editor syntax schemes. Final checks exercise installed parsers, the actual renderer filter and the sandboxed setup panel; they do not claim visual native-profile installation.
 
