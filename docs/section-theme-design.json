@@ -39,11 +39,11 @@
     "use": "Reference-only inspection of color values; no source assets copied. The user-provided IntelliJ image guides region hierarchy."
   },
   "design": {
-    "frame": "Accent tinted; strongest structural shade",
-    "worktreeSidebar": "Intermediate shade with a small accent tint",
+    "frame": "Subdued neutral family shade; selection carries the theme color",
+    "worktreeSidebar": "Subdued intermediate navigation shade",
     "sidebar": "Neutral family-related explorer shade",
     "editor": "Unchanged source surface, shared by terminal",
-    "card": "Accent tinted tabstrip and raised controls",
+    "card": "Quiet neutral tabstrip and raised controls",
     "popover": "Separate floating layer",
     "focus": "At least 3:1 against all six major surfaces",
     "text": "At least 4.5:1 against all major surfaces",
@@ -52,5 +52,31 @@
       "Native active primary worktree cards blend foreground at 8%; themes cannot substitute the selection fill.",
       "Theme packages cannot alter native pane geometry."
     ]
+  },
+  "correction": {
+    "version": "1.8.1 / modern 2.4.1",
+    "intent": "Color selected items to match each theme; keep the shell subdued.",
+    "rootCauses": [
+      "Native active tabs use foreground-based gray fill and white foreground underline.",
+      "Native active right tool icons and markers use foreground rather than theme ring.",
+      "Native current worktree uses foreground-based gray wash.",
+      "Tinted left-sidebar mode at zero opacity overrides theme accent and ring with neutral foreground blends.",
+      "Selected worktree titles were dimmed to 80% foreground."
+    ],
+    "nativeSourceWorktree": "fix/theme-selection-accents",
+    "reaRuntime": {
+      "evidenceId": "ev_33169306fc6e6d2a11bfd996b4ad522432597d88c39b7b4edbe71561012c8400",
+      "path": "docs/rea/native-selection-capture.json.gz",
+      "sha256": "984aaebfe44a06b190fed5c83cbda99e554b36bef23d870474801ce8811ce53a",
+      "scope": "Owned headless capture of the proposed native presentational fixture; not a full installed Electron app.",
+      "actions": "Wait for selected controls; capture screenshot, DOM, accessibility and URL.",
+      "privateData": "Generic fixture labels only; no user chat screenshots or profile data included."
+    },
+    "superdesign": {
+      "draftId": "6264f138-3dd9-4982-bb5e-e26cb6b8f211",
+      "version": 4,
+      "url": "https://superdesign.dev/teams/0c240145-1aa6-49cc-bdae-c4fd918fc26f/projects/bd13ddbe-a7d2-433c-a254-5bb024280911?node=draft-variant-6264f138-3dd9-4982-bb5e-e26cb6b8f211"
+    },
+    "validation": "39 native fixture palette cases plus two zero/nonzero tint unit tests. Full native dependency installation, app build and Electron verification unavailable."
   }
 }
