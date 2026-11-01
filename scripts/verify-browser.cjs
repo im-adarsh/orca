@@ -23,10 +23,10 @@ const fs=require('fs'),path=require('path');
    const filtered=window.hostFilter(p.tokens,p.tokens,probe);
    const editor=getComputedStyle(document.querySelector('.editor')).backgroundColor;
    const terminal=getComputedStyle(document.querySelector('.terminal')).backgroundColor;
-   const surfaces=['body','.titlebar','.files','.editor','.terminal','.footer','.card'].map(selector=>getComputedStyle(document.querySelector(selector)).backgroundColor);
+   const surfaces=['body','.titlebar','.projects','.files','.editor','.terminal','.footer','.card'].map(selector=>getComputedStyle(document.querySelector(selector)).backgroundColor);
    return {tokens:Object.keys(filtered).length,editor,terminal,surfaces,theme:document.documentElement.dataset.theme,mode:getComputedStyle(document.documentElement).colorScheme};
   });
-  if(result.tokens!==37||new Set(result.surfaces).size<2 || result.editor!==result.terminal||result.theme!==id)throw Error(name+JSON.stringify(result));
+  if(result.tokens!==37||new Set(result.surfaces).size<5 || result.editor!==result.terminal||result.theme!==id)throw Error(name+JSON.stringify(result));
   const png=await page.locator('.workspace').screenshot();cards.push({name,png:png.toString('base64')});
   console.log(name+': browser retained all 37 tokens; layered surfaces; editor and terminal match');
  }
@@ -34,9 +34,12 @@ const fs=require('fs'),path=require('path');
  await page.locator('#palette-search').fill('catppuccin');
  if(await page.locator('#palette option').count()!==3)throw Error('Search must show two Catppuccin matches and preserve the current theme');
  if(await page.locator('#palette').inputValue()!=='im-daylight')throw Error('Searching must not change the current theme');
+ await page.selectOption('#palette','im-catppuccin-latte');
+ if(await page.locator('#palette optgroup[label="Current palette"]').count()!==0)throw Error('Choosing a search match must remove the old current group');
+ if(await page.locator('#pairing-mode').textContent()!=='light'||await page.locator('#pairing-name').textContent()!=='im-catppuccin-latte')throw Error('Pairing guidance must follow the selected palette and its mode');
  await page.locator('#palette-search').fill('no-matching-palette');
  if(await page.locator('#palette-results').textContent()!=='0 of '+ids.length+' palettes')throw Error('No-match search feedback is incorrect');
- if(await page.locator('#palette').inputValue()!=='im-daylight')throw Error('No-match search lost the current palette');
+ if(await page.locator('#palette').inputValue()!=='im-catppuccin-latte')throw Error('No-match search lost the current palette');
  await page.locator('#palette-search').fill('');
  if(await page.locator('#palette option').count()!==ids.length)throw Error('Clearing search must restore every theme');
  for(const width of [360,768]){await page.setViewportSize({width,height:1000});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Horizontal overflow at '+width);}

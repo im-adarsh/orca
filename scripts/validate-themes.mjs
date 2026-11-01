@@ -91,7 +91,7 @@ for (const entry of apps) {
   }
   const sorted = surfaces.map(k => t[`--${k}`]).sort((a, b) => luminance(a) - luminance(b));
   check(new Set(sorted).size >= 2, `${entry.label}: needs layered surfaces`);
-  check(contrast(sorted[0], sorted.at(-1)) <= 1.8, `${entry.label}: excessive difference between app surfaces`);
+  check(contrast(sorted[0], sorted.at(-1)) <= 2.6, `${entry.label}: excessive difference between app surfaces`);
   const c = terminal.terminal;
   check(c.background === t['--editor-surface'], `${entry.label}: terminal and editor must share a surface`);
   check(contrast(c.background, c.foreground) >= 4.5, `${entry.label}: terminal text contrast`);

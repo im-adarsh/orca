@@ -1,6 +1,6 @@
 # Popular IDE palette collection
 
-Version 1.7.0 contains 39 matched app/terminal pairs: 13 existing choices plus 26 adaptations across 16 established IDE-theme families. All displayed names use `im-`. This is a representative collection, not a claim to include every popular theme or an install-count ranking. Near-identical soft/hard/brightness presets were intentionally omitted.
+Version 1.8.0 contains 39 matched app/terminal pairs: 13 existing choices plus 26 adaptations across 16 established IDE-theme families. All displayed names use `im-`. This is a representative collection, not a claim to include every popular theme or an install-count ranking. Near-identical soft/hard/brightness presets were intentionally omitted.
 
 | Family | Added choices |
 |---|---|
@@ -35,7 +35,7 @@ Package and original author notices are retained in [THIRD_PARTY_THEMES.md](../T
 
 Open `setup/index.html` for grouped/searchable palette previews. Searching filters the choices while preserving the current palette; no-match searches give explicit feedback. Choose the same app and terminal name in Orca, then select `im-material-dark` or `im-material-light` independently. The existing shared icon packages work with all 39 palettes.
 
-For Orca 1.4.245+, install the local folder `plugins/goland-style`. That generated package includes its licenses and provenance. The root manifest is the compatibility build for 1.4.244. Install one of those theme packages, not both. Published indexes pin release `v1.7.0`; PR #1 contains the reviewed implementation.
+For Orca 1.4.245+, install the local folder `plugins/goland-style`. That generated package includes its licenses and provenance. The root manifest is the compatibility build for 1.4.244. Install one of those theme packages, not both. The published indexes retain versioned release pins; the section hierarchy update is packaged as legacy 1.8.0 / modern 2.4.0.
 
 These contributions affect app/terminal palettes and supported file icons. They do not replace global toolbar icons, install native Islands geometry, or import editor syntax schemes. Final checks exercise installed parsers, the actual renderer filter and the sandboxed setup panel; they do not claim visual native-profile installation.
 
@@ -51,3 +51,13 @@ npm run test:browser
 ```
 
 Generation is offline and deterministic. Invalid external design colors are rejected before any generated artifact is written. Tests exercise all 39 pairs, source identity, licenses, selection/focus readability, grouped search, empty results and native host filtering.
+
+## Section hierarchy review (1.8.0 / 2.4.0)
+
+The previous generator assigned the same shade to the frame, project rail and explorer and tightly capped the surface range. Each now has its own role: accent-tinted frame, intermediate project rail, neutral explorer, original editor/terminal, tinted tabs/cards and a separate floating layer. Frame/content contrast is at least 1.4:1; rail/explorer contrast is at least 1.1:1. These are structural separation checks, not accessibility requirements for decorative surfaces. Text remains 4.5:1 and focus rings reach 3:1 across every major surface. No extra theme variants or duplicate palettes were added.
+
+UI/UX Pro Max’s active-state guidance informed the section hierarchy and selection treatment. REA 6.8.0 statically inspected two selected installed host modules with zero parse failures; [the exact summary](rea/section-host-summary.json) and [artifact identities and design decisions](section-theme-design.json) record the scope. Direct inspection of installed CSS confirms the primary worktree card uses foreground at 8%; source inspection confirms the active tab uses foreground at 6% over the card and a foreground underline. The preview uses those formulas rather than promising an unsupported blue tab indicator. The Marketplace reference was inspected as a VSIX without executing its code; it primarily supplies code-highlighting colors, while the supplied IntelliJ screenshot guides the spatial hierarchy.
+
+The thirteen original inputs are pinned separately in `presets/original-theme-palettes.json`, so repeated generation never derives a new adaptation from its own output. Browser checks cover all 39 palettes, the installed filter, opaque CSP frames, 360/768 px layouts, search selection cleanup and data-driven light/dark pairing instructions. Native installation was not visually verified: Orca exposed no window to the computer-use bridge, including after a restore attempt.
+
+![Four representative section palettes](../previews/section-personality.png)

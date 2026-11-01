@@ -15,6 +15,12 @@ const L=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12
 const ratio=(a,b)=>(Math.max(L(a),L(b))+.05)/(Math.min(L(a),L(b))+.05);
 for(const entry of manifest.contributes.themes){
  const t=read(entry.path).tokens;
+ assert(ratio(t['--background'],t['--editor-surface'])>=1.4,entry.id+': frame must separate visibly from content');
+ assert(ratio(t['--worktree-sidebar'],t['--sidebar'])>=1.1,entry.id+': project rail and explorer need perceptible separation');
+ const regions=['--background','--worktree-sidebar','--sidebar','--editor-surface'];
+ assert.equal(new Set(regions.map(k=>t[k])).size,4,entry.id+': frame, rail, explorer and editor need independent shades');
+ for(const bg of [...regions,'--card','--popover'])assert(ratio(t['--ring'],t[bg])>=3,entry.id+': focus visible on '+bg);
+ assert(ratio(t['--worktree-sidebar-accent'],t['--worktree-sidebar'])>=1.2,entry.id+': project selection');
  assert(ratio(t['--sidebar-accent'],t['--sidebar'])>=1.2,entry.id+': selected fill visible without preview stripe');
  assert(ratio(t['--sidebar'],t['--editor-surface'])>=1.1,entry.id+': structural shades');
  assert(ratio(t['--ring'],t['--background'])>=3,entry.id+': focus accent');

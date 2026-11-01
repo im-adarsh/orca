@@ -3,7 +3,7 @@
   "id": "jetbrains-themes",
   "publisher": "im-adarsh",
   "name": "im Theme Collection",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "39 layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.",
   "repository": "https://github.com/im-adarsh/orca",
   "engines": {
