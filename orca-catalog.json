@@ -9,7 +9,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.7.0",
+        "ref": "v1.8.0",
         "path": "plugins/goland-style"
       },
       "description": "39 layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.",
@@ -18,6 +18,14 @@
         "appearance"
       ],
       "releases": [
+        {
+          "version": "2.4.0",
+          "commit": "67305babb713d4585e53cee90de505ba6421c771",
+          "contentHash": "5b5ff7b8a37bf6897ee1f302abf58ab382f5c7d54dd9ad535b57709b4b68f3fd",
+          "execution": "sandboxed-ui",
+          "minimumOrca": "1.4.245",
+          "name": "im Theme Collection"
+        },
         {
           "version": "2.3.0",
           "commit": "c237b5ef1e44643ce13a21928031b00594aebad0",
@@ -49,7 +57,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.7.0",
+        "ref": "v1.8.0",
         "path": "plugins/jetbrains-icons"
       },
       "description": "Pinned Apache-licensed JetBrains New UI and Classic file icons, with light/dark choices and clearly identified original fallbacks.",
@@ -89,7 +97,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.7.0",
+        "ref": "v1.8.0",
         "path": "plugins/im-material-icons"
       },
       "description": "Material file icons with shared assets and distinct light/dark mappings.",
@@ -113,7 +121,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.7.0",
+        "ref": "v1.8.0",
         "path": "plugins/mrs-panel-modern"
       },
       "description": "Right-sidebar merge request panel prototype with clearly labelled sample content.",
