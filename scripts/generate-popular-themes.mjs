@@ -31,7 +31,7 @@ function surface(editor,accent,dark,lift,tint=0){
  return color;
 }
 function selected(base,accent){
- for(let amount=.24;amount<=.8;amount+=.01){
+ for(let amount=.40;amount<=.8;amount+=.01){
   const value=mix(base,accent,amount);
   if(contrast(value,base)>=1.28)return value;
  }
@@ -59,12 +59,12 @@ for(const source of [
  const dark=source.mode==='dark',raw=source.colors||{},existing=source.existing?.tokens;
  const editor=opaque(raw['editor.background']||existing['--editor-surface'],'#000000');
  const spec=directions.find(t=>t.id===source.id)||{};
- const proposedAccent=opaque(spec.accent||source.accent||existing['--primary'],editor);
+ const proposedAccent=opaque(source.id==='classic-dark'?'#4C8DFF':spec.accent||source.accent||existing['--primary'],editor);
  const sidebar=surface(editor,proposedAccent,dark,.075);
- const rail=surface(editor,proposedAccent,dark,dark?.11:.115,dark?.065:.025);
- const chrome=surface(editor,proposedAccent,dark,dark?.16:.15,dark?.16:.04);
- const card=surface(editor,proposedAccent,dark,dark?.105:.045,dark?.13:.025);
- const popover=surface(editor,proposedAccent,dark,dark?.19:.015,.015);
+ const rail=surface(editor,proposedAccent,dark,.055);
+ const chrome=surface(editor,proposedAccent,dark,.035);
+ const card=surface(editor,proposedAccent,dark,dark?.065:.025);
+ const popover=surface(editor,proposedAccent,dark,dark?.09:.015);
  const baseSurfaces=[chrome,rail,sidebar,editor,card,popover];
  const primary=readable(proposedAccent,baseSurfaces,dark,3);
  const selection=selected(sidebar,primary),railSelection=selected(rail,primary);
@@ -100,14 +100,14 @@ for(const source of [
 }
 manifest.contributes.themes=entries;
 manifest.contributes.terminalThemes=entries.map(t=>({id:t.id+'-terminal',label:t.label,path:t.path.replace('.json','-terminal.json')}));
-manifest.version='1.8.0';manifest.description=`${entries.length} layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.`;
+manifest.version='1.8.1';manifest.description=`${entries.length} layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.`;
 write('orca-plugin.json',manifest);
 const profile=read('presets/goland-style.json');profile.themePairs=entries.map(e=>({app:e.label,terminal:e.label,mode:read(e.path).base}));write('presets/goland-style.json',profile);
 const palettes=entries.map(e=>({id:e.id,name:e.label,family:input.find(s=>s.id===e.id)?.family||'Originals',...read(e.path),terminal:read(e.path.replace('.json','-terminal.json')).terminal}));
 const panelPath=path.join(root,'setup/index.html');
 let panel=fs.readFileSync(panelPath,'utf8');
 panel=panel.replace(/(<script id="palettes" type="application\/json">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(palettes)+b).replace(/(<script id="preset-data" type="application\/json">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(profile)+b);
-panel=panel.replace(/Marketplace · [\d.]+/,'Marketplace · 1.8.0').replace('Thirteen distinct palette pairs',entries.length+' distinct palette pairs');
+panel=panel.replace(/Marketplace · [\d.]+/,'Marketplace · 1.8.1').replace('Thirteen distinct palette pairs',entries.length+' distinct palette pairs');
 pending.set('setup/index.html',panel);
 write('docs/popular-theme-adaptations.json',{schemaVersion:1,notes:'Source editor surfaces retained; structural shades, accents and text adapted to host contrast. Missing terminal colors are explicit fallbacks. ANSI black/white preserved. No syntax-highlighting contribution implied.',themes:adaptations});
 for(const [file,contents]of pending)fs.writeFileSync(path.join(root,file),contents);

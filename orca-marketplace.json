@@ -7,7 +7,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/im-adarsh/orca.git",
-        "ref": "v1.8.0"
+        "ref": "v1.8.1"
       },
       "description": "39 layered im IDE-inspired palettes, matching terminals, and a searchable setup preview.",
       "categories": [

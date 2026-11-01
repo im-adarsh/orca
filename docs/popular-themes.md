@@ -1,6 +1,6 @@
 # Popular IDE palette collection
 
-Version 1.8.0 contains 39 matched app/terminal pairs: 13 existing choices plus 26 adaptations across 16 established IDE-theme families. All displayed names use `im-`. This is a representative collection, not a claim to include every popular theme or an install-count ranking. Near-identical soft/hard/brightness presets were intentionally omitted.
+Version 1.8.1 contains 39 matched app/terminal pairs: 13 existing choices plus 26 adaptations across 16 established IDE-theme families. All displayed names use `im-`. This is a representative collection, not a claim to include every popular theme or an install-count ranking. Near-identical soft/hard/brightness presets were intentionally omitted.
 
 | Family | Added choices |
 |---|---|
@@ -61,3 +61,13 @@ UI/UX Pro Max’s active-state guidance informed the section hierarchy and selec
 The thirteen original inputs are pinned separately in `presets/original-theme-palettes.json`, so repeated generation never derives a new adaptation from its own output. Browser checks cover all 39 palettes, the installed filter, opaque CSP frames, 360/768 px layouts, search selection cleanup and data-driven light/dark pairing instructions. Native installation was not visually verified: Orca exposed no window to the computer-use bridge, including after a restore attempt.
 
 ![Four representative section palettes](../previews/section-personality.png)
+
+## Selected items correction (1.8.1 / 2.4.1)
+
+The 1.8.0 section treatment was rejected because the whole frame became too bright. The correction keeps low-contrast neutral surfaces and puts each palette’s main hue into selected fills and focus colors. Classic Dark now has a clear blue accent. The original editor identities remain unchanged.
+
+A paired native Orca patch changes the active tab fill/underline, active tool icon/indicator, current worktree fill/border and selected-title readability to consume semantic theme tokens. It also fixes zero-opacity Tinted sidebar appearance overriding the theme with gray. A theme ZIP cannot replace those hardcoded native styles: the native patch requires an updated host. Existing nonzero custom tint behavior is preserved. The setup preview continues to show the existing host’s styles rather than pretending a plugin can install the patch.
+
+UI/UX Pro Max active-state and color-only guidance and [Superdesign’s corrected selection review](https://superdesign.dev/teams/0c240145-1aa6-49cc-bdae-c4fd918fc26f/projects/bd13ddbe-a7d2-433c-a254-5bb024280911?node=draft-variant-6264f138-3dd9-4982-bb5e-e26cb6b8f211) informed the focused changes. REA performed a bounded owned headless capture of the proposed native presentational fixture. [Exact compressed capture](rea/native-selection-capture.json.gz), identity and limitations are recorded in [design provenance](section-theme-design.json). Tooltip/menu and translation context were stubbed in the standalone native fixture harness; actual tab helpers, activity button JSX and worktree CSS were rendered with Tailwind. All 39 palette cases passed the three selection-token checks. Two real resolver unit tests cover zero and nonzero tint. These are component checks, not a full Electron app build or native-window verification.
+
+![Proposed native selected-item appearance](../previews/selected-items.png)
