@@ -4,9 +4,9 @@
   "terminal": {
     "background": "#282A36",
     "foreground": "#F8F8F2",
-    "cursor": "#BD93F9",
+    "cursor": "#C099F9",
     "cursorAccent": "#000000",
-    "selectionBackground": "#584E72",
+    "selectionBackground": "#595170",
     "selectionForeground": "#F8F8F2",
     "black": "#21222C",
     "red": "#FF5555",

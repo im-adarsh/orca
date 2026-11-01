@@ -23,18 +23,19 @@ function readable(color,surfaces,dark,minimum=4.5){
  throw Error('Cannot make source color readable against chosen surfaces');
 }
 function foreground(background){return contrast(background,'#FFFFFF')>=contrast(background,'#000000')?'#FFFFFF':'#000000';}
-function layer(value,editor,dark,role){
- let color=opaque(value,editor);
- if(!dark&&role!=='sidebar'&&luminance(color)<luminance(editor))color='#FFFFFF';
- if(role==='sidebar'&&contrast(color,editor)<1.12){
-  for(let i=1;i<=100;i++){
-   color=mix(editor,dark?'#FFFFFF':'#000000',i/100);
-   if(contrast(color,editor)>=1.12)break;
-  }
- }
- // Keep the complete range cohesive; the host rejects extreme surface/text pairings.
- while(contrast(color,editor)>1.45)color=mix(color,editor,.06);
+// Each host region has a stable role; editor identity remains the upstream value.
+function surface(editor,accent,dark,lift,tint=0){
+ let color=mix(mix(editor,dark?'#FFFFFF':'#000000',lift),accent,tint);
+ // Stay in the mode's readable range even for unusually bright source palettes.
+ while(dark?luminance(color)>=.16:luminance(color)<=.45)color=mix(color,dark?'#000000':'#FFFFFF',.04);
  return color;
+}
+function selected(base,accent){
+ for(let amount=.24;amount<=.8;amount+=.01){
+  const value=mix(base,accent,amount);
+  if(contrast(value,base)>=1.28)return value;
+ }
+ throw Error('Cannot separate selected state from its region');
 }
 const input=read('presets/popular-theme-palettes.json').themes;
 const directions=read('presets/global-theme-design.json').themes;
@@ -43,42 +44,41 @@ for(const source of input){assert(/^im-[a-z0-9-]+$/.test(source.id),'Unsafe them
 assert.deepEqual(directions.map(t=>t.id).sort(),input.map(t=>t.id).sort(),'Superdesign must cover every source');
 for(const spec of directions)for(const key of ['accent','sidebar','card','popover','selection'])assert(/^#[\da-f]{6}$/i.test(spec[key]),spec.id+': invalid design '+key);
 const manifest=read('orca-plugin.json');
+const originals=read('presets/original-theme-palettes.json').themes;
 const additions=new Set(input.map(t=>t.id));
 const entries=manifest.contributes.themes.filter(t=>!additions.has(t.id));
 assert.equal(entries.length,13,'Preserve the thirteen existing choices');
 const ansi=['black','red','green','yellow','blue','magenta','cyan','white','brightBlack','brightRed','brightGreen','brightYellow','brightBlue','brightMagenta','brightCyan','brightWhite'];
-const fallbackDark=read('themes/im-ember-terminal.json').terminal;
-const fallbackLight=read('themes/im-daylight-terminal.json').terminal;
+const fallbackDark=originals['im-ember'].terminal.terminal;
+const fallbackLight=originals['im-daylight'].terminal.terminal;
 const adaptations=[];
 for(const source of [
- ...entries.map(entry=>{const app=read(entry.path);return{id:entry.id,label:entry.label,mode:app.base,existing:app,terminal:read(entry.path.replace('.json','-terminal.json')).terminal};}),
+ ...entries.map(entry=>{const seed=originals[entry.id];assert(seed,entry.id+': missing pinned input');const app=seed.app;return{id:entry.id,label:entry.label,mode:app.base,existing:app,terminal:seed.terminal.terminal};}),
  ...input
 ]){
  const dark=source.mode==='dark',raw=source.colors||{},existing=source.existing?.tokens;
  const editor=opaque(raw['editor.background']||existing['--editor-surface'],'#000000');
  const spec=directions.find(t=>t.id===source.id)||{};
  const proposedAccent=opaque(spec.accent||source.accent||existing['--primary'],editor);
- let sidebar=layer(spec.sidebar||mix(editor,dark?'#FFFFFF':'#000000',dark?.07:.07),editor,dark,'sidebar');
- let card=layer(spec.card||mix(editor,'#FFFFFF',dark?.09:1),editor,dark,'card');
- let popover=layer(spec.popover||mix(editor,'#FFFFFF',dark?.12:1),editor,dark,'popover');
- while(Math.max(...[sidebar,editor,card,popover].map(luminance))+.05>1.8*(Math.min(...[sidebar,editor,card,popover].map(luminance))+.05)){
-  card=mix(card,editor,.06);popover=mix(popover,editor,.06);
- }
- const primary=readable(proposedAccent,[sidebar,editor],dark,3);
- // A hue-tinted fill carries selection in native hosts; no preview-only stripe is needed.
- let selection=mix(sidebar,primary,dark?.28:.22);
- for(let amount=dark?.29:.23;contrast(selection,sidebar)<1.28&&amount<=.7;amount+=.01)selection=mix(sidebar,primary,amount);
- assert(contrast(selection,sidebar)>=1.2,source.id+': selection separation');
+ const sidebar=surface(editor,proposedAccent,dark,.075);
+ const rail=surface(editor,proposedAccent,dark,dark?.11:.115,dark?.065:.025);
+ const chrome=surface(editor,proposedAccent,dark,dark?.16:.15,dark?.16:.04);
+ const card=surface(editor,proposedAccent,dark,dark?.105:.045,dark?.13:.025);
+ const popover=surface(editor,proposedAccent,dark,dark?.19:.015,.015);
+ const baseSurfaces=[chrome,rail,sidebar,editor,card,popover];
+ const primary=readable(proposedAccent,baseSurfaces,dark,3);
+ const selection=selected(sidebar,primary),railSelection=selected(rail,primary);
  const secondary=mix(card,primary,dark?.03:.025);
- const surfaces=[sidebar,editor,card,popover,secondary,selection];
+ const surfaces=[...baseSurfaces,secondary,selection,railSelection];
  const fg=readable(opaque(raw['editor.foreground']||existing?.['--foreground']||(dark?'#D4D4D4':'#303030'),editor),surfaces,dark);
  const muted=readable(opaque(raw.descriptionForeground||existing?.['--muted-foreground']||mix(editor,fg,.65),editor),surfaces,dark);
  const border=mix(sidebar,fg,dark?.23:.2),charts=existing?[1,2,3,4,5].map(n=>existing['--chart-'+n]):[primary,raw['terminal.ansiGreen'],raw['terminal.ansiYellow'],raw['terminal.ansiMagenta'],raw['terminal.ansiCyan']].map((c,i)=>opaque(c||[primary,'#6CA374','#B98A32','#AD78C9','#428E9B'][i],editor));
- const t={'--background':sidebar,'--editor-surface':editor,'--foreground':fg,'--card':card,'--card-foreground':fg,'--popover':popover,'--popover-foreground':fg,'--primary':primary,'--primary-foreground':foreground(primary),'--secondary':secondary,'--secondary-foreground':fg,'--muted':secondary,'--muted-foreground':muted,'--accent':selection,'--accent-foreground':fg,'--border':border,'--input':border,'--ring':primary};
+ const t={'--background':chrome,'--editor-surface':editor,'--foreground':fg,'--card':card,'--card-foreground':fg,'--popover':popover,'--popover-foreground':fg,'--primary':primary,'--primary-foreground':foreground(primary),'--secondary':secondary,'--secondary-foreground':fg,'--muted':secondary,'--muted-foreground':muted,'--accent':selection,'--accent-foreground':fg,'--border':border,'--input':border,'--ring':primary};
  charts.forEach((c,i)=>t['--chart-'+(i+1)]=c);
  for(const prefix of ['sidebar','worktree-sidebar']){
-  t['--'+prefix]=sidebar;t['--'+prefix+'-foreground']=fg;
-  for(const [key,value]of Object.entries({accent:selection,'accent-foreground':fg,border,ring:primary}))t['--'+prefix+'-'+key]=value;
+  const region=prefix==='sidebar'?sidebar:rail;
+  t['--'+prefix]=region;t['--'+prefix+'-foreground']=fg;
+  for(const [key,value]of Object.entries({accent:prefix==='sidebar'?selection:railSelection,'accent-foreground':fg,border:mix(region,fg,dark?.23:.2),ring:primary}))t['--'+prefix+'-'+key]=value;
  }
  t['--sidebar-primary']=primary;t['--sidebar-primary-foreground']=foreground(primary);
  const terminal={background:editor,foreground:fg,cursor:primary,cursorAccent:foreground(primary),selectionBackground:selection,selectionForeground:fg};
@@ -95,19 +95,19 @@ for(const source of [
  }
  const entry={id:source.id,label:source.label||source.id,path:'themes/'+source.id+'.json'};
  write(entry.path,{base:source.mode,tokens:t});write(entry.path.replace('.json','-terminal.json'),{schemaVersion:1,mode:source.mode,terminal});
- adaptations.push({id:source.id,editor,mainAccent:primary,sourceAccent:proposedAccent,selection,terminalFallbacks:fallbacks});
+ adaptations.push({id:source.id,editor,chrome,projectRail:rail,explorer:sidebar,card,popover,mainAccent:primary,sourceAccent:proposedAccent,selection,terminalFallbacks:fallbacks});
  if(!source.existing)entries.push(entry);
 }
 manifest.contributes.themes=entries;
 manifest.contributes.terminalThemes=entries.map(t=>({id:t.id+'-terminal',label:t.label,path:t.path.replace('.json','-terminal.json')}));
-manifest.version='1.7.0';manifest.description=`${entries.length} layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.`;
+manifest.version='1.8.0';manifest.description=`${entries.length} layered im IDE-inspired app and terminal palettes, with clear selection accents and a portable setup guide.`;
 write('orca-plugin.json',manifest);
 const profile=read('presets/goland-style.json');profile.themePairs=entries.map(e=>({app:e.label,terminal:e.label,mode:read(e.path).base}));write('presets/goland-style.json',profile);
 const palettes=entries.map(e=>({id:e.id,name:e.label,family:input.find(s=>s.id===e.id)?.family||'Originals',...read(e.path),terminal:read(e.path.replace('.json','-terminal.json')).terminal}));
 const panelPath=path.join(root,'setup/index.html');
 let panel=fs.readFileSync(panelPath,'utf8');
 panel=panel.replace(/(<script id="palettes" type="application\/json">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(palettes)+b).replace(/(<script id="preset-data" type="application\/json">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(profile)+b);
-panel=panel.replace('Marketplace · 1.6.0','Marketplace · 1.7.0').replace('Thirteen distinct palette pairs',entries.length+' distinct palette pairs');
+panel=panel.replace(/Marketplace · [\d.]+/,'Marketplace · 1.8.0').replace('Thirteen distinct palette pairs',entries.length+' distinct palette pairs');
 pending.set('setup/index.html',panel);
 write('docs/popular-theme-adaptations.json',{schemaVersion:1,notes:'Source editor surfaces retained; structural shades, accents and text adapted to host contrast. Missing terminal colors are explicit fallbacks. ANSI black/white preserved. No syntax-highlighting contribution implied.',themes:adaptations});
 for(const [file,contents]of pending)fs.writeFileSync(path.join(root,file),contents);

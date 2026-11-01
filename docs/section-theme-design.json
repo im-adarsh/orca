@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "hostVersion": "1.4.245",
+  "rea": {
+    "version": "6.8.0",
+    "parentEvidenceId": "ev_e269c0c2aae28016c5efcd1b91ccae24afa9fb9eaa7639848b323799ee1e1fc3",
+    "summaryPath": "docs/rea/section-host-summary.json",
+    "summarySha256": "a8295dbff14673038e136b9d6ffae562443f2619498c4b3d4af9c73c6589ad1d",
+    "selectedSources": [
+      "shared/plugins/artifacts/plugin-theme-artifact.js",
+      "renderer/assets/document-theme-BLBOYB9D.js"
+    ],
+    "parsedSources": 2,
+    "parseFailures": 0,
+    "limitations": [
+      "Static analysis only; no native visual execution.",
+      "The complete 79 MiB Evidence remains local; only the exact tool summary is retained here.",
+      "Unselected application sources remain outside this REA analysis scope."
+    ]
+  },
+  "hostArtifacts": [
+    {
+      "path": "shared/plugins/artifacts/plugin-theme-artifact.js",
+      "sha256": "a6d4d493d9ca97b206d901f2412f4c920310c7d018b4de03cf33edb6c564ce1f"
+    },
+    {
+      "path": "renderer/assets/document-theme-BLBOYB9D.js",
+      "sha256": "0147058a44bc4cf33db0b2ca080c60c3493d77204923be5fbd879eaf438c88a9"
+    },
+    {
+      "path": "renderer/assets/client-C22-rcUz.css",
+      "sha256": "1868e1c5eacb9b289f7c76563ea0191d981cc08a9b54b728bb8b3e537ded6e60"
+    }
+  ],
+  "reference": {
+    "url": "https://marketplace.visualstudio.com/items?itemName=JasonDnfkr.jetbrains-islands-dark-goland",
+    "version": "0.0.6",
+    "vsixSha256": "e408fffe3d639a40a72edee1382a0ef7a687f1623ba5a85babccd2d56f51cd55",
+    "use": "Reference-only inspection of color values; no source assets copied. The user-provided IntelliJ image guides region hierarchy."
+  },
+  "design": {
+    "frame": "Accent tinted; strongest structural shade",
+    "worktreeSidebar": "Intermediate shade with a small accent tint",
+    "sidebar": "Neutral family-related explorer shade",
+    "editor": "Unchanged source surface, shared by terminal",
+    "card": "Accent tinted tabstrip and raised controls",
+    "popover": "Separate floating layer",
+    "focus": "At least 3:1 against all six major surfaces",
+    "text": "At least 4.5:1 against all major surfaces",
+    "limits": [
+      "Themes cannot independently recolor native tab underlines or toolbar glyphs.",
+      "Native active primary worktree cards blend foreground at 8%; themes cannot substitute the selection fill.",
+      "Theme packages cannot alter native pane geometry."
+    ]
+  }
+}

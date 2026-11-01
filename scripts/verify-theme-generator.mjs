@@ -6,7 +6,7 @@ import {execFileSync,spawnSync} from 'node:child_process';
 import crypto from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'im-theme-generator-'));
 try{
- for(const relative of ['scripts/generate-popular-themes.mjs','presets/popular-theme-palettes.json','presets/global-theme-design.json','presets/goland-style.json','orca-plugin.json','setup/index.html','themes','docs/popular-theme-adaptations.json']){
+ for(const relative of ['scripts/generate-popular-themes.mjs','presets/popular-theme-palettes.json','presets/original-theme-palettes.json','presets/global-theme-design.json','presets/goland-style.json','orca-plugin.json','setup/index.html','themes','docs/popular-theme-adaptations.json']){
   const destination=path.join(temp,relative);fs.mkdirSync(path.dirname(destination),{recursive:true});fs.cpSync(path.join(root,relative),destination,{recursive:true});
  }
  const run=()=>execFileSync(process.execPath,[path.join(temp,'scripts/generate-popular-themes.mjs')],{cwd:temp,stdio:'pipe'});
